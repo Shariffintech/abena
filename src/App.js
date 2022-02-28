@@ -1,13 +1,14 @@
 import React from "react";
+import Mission from "./components/home/mission";
+import { Routes, Route } from "react-router-dom";
+import Strategy from "./components/strategies/strategy";
+import Student from "./components/students/student";
+import NavBar from "./components/navBar";
+// import Home from "./components/home/home";
+import Intake from "./components/intake/intake";
+
 // import logo from "./logo.svg";
 // import * as app from "./css/App";
-import Mission from "./components/mission";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-import Strategy from "./components/strategy";
-import Student from "./components/student";
-import NavBar from "./components/navBar";
-import Mission from "./components/mission";
 
 //There should be 3 routes
 
@@ -18,13 +19,16 @@ import Mission from "./components/mission";
 
 function App() {
   return (
-    <Router>
+    <div className="app">
       <NavBar />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/students" component={Student} />
-      <Route exact path="/strategies" component={Strategy} />
-      <Route exact path="/mission" component={Mission} />
-    </Router>
+      <Routes>
+        {/* <Route path="/" component={Home} /> */}
+        <Route path="/students" element={<Student />} />
+        <Route path="/strategies" element={<Strategy />} />
+        <Route path="/mission" element={<Mission />} />
+        <Route path="/intake" element={<Intake />} />
+      </Routes>
+    </div>
   );
 }
 

@@ -13,6 +13,8 @@ export default class Strategy extends Component {
 
     // todo add counter button for did you learn something new on landing page with animation
 
+    // to do add drag able strategy cards to page via react spring
+
     render(){
         return(
             <div>
