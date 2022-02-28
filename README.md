@@ -1,3 +1,7 @@
+
+An MTSS solution for the classroom, providing teachers the necessary tools to support the academic needs for the youth.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
