@@ -37,11 +37,8 @@ class Home extends Component {
           </p>
         </header>
 
-
-        
       </div>
 
-      
     );
   }
 }

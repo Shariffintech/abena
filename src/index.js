@@ -23,23 +23,3 @@ ReactDOM.render(
 );
 reportWebVitals(console.log);
 
-// const Root = ({ store }) => (
-
-//   <Provider store={store}>
-//     <Router>
-//       <Route path="/" component={App}/>
-//       <Route path="/students" component={Student}/>
-//       <Route path="/Strategy" component={Strategy}/>
-//     </Router>
-//   </Provider>
-// );
-
-// Root.propTypes = {
-//   store: PropTypes.object
-// }
-
-// export default Root;
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
