@@ -10,7 +10,7 @@ export const abenaApi = createApi({
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
-            }
+            } 
         },
         getStrategies: {
             url: '/strategies',

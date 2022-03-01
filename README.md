@@ -1,7 +1,8 @@
 
 
 
-# Abena DMS: An MTSS solution for the classroom, providing teachers the necessary tools to support the academic needs for the youth.
+# Abena DMS: 
+An MTSS solution for the classroom, providing teachers the necessary tools to support the academic needs for the youth.
 
 
 # Getting Started
