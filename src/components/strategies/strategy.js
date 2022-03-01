@@ -9,8 +9,7 @@ export default function Strategy() {
   // to do add a button to add a new strategy
 
   // to do add drag able strategy cards to page via react
-  render();
-  {
+ 
     return (
       <div className="strategyCard">
         <h3>{this.props.name}</h3>
@@ -29,7 +28,7 @@ export default function Strategy() {
         </button>
       </div>
     );
-  }
+  
 }
 
 Strategy.defaultProps = {

@@ -10,12 +10,11 @@ import Intake from "./components/intake/intake";
 // import logo from "./logo.svg";
 // import * as app from "./css/App";
 
-//There should be 3 routes
-
-// todo add nav bar with links to scroll to: our team, mission, why abena dms, api documentation, pricing (coming soon)
-// link product hunt button to product hunt page
-// setup emailing list through sendgrid after users join beta
-// show place in line for educators
+// to do: T̶h̶e̶r̶e̶ s̶h̶o̶u̶l̶d̶ b̶e̶ 3̶ r̶o̶u̶t̶e̶s̶
+// to do: add nav bar with links to scroll to: team, mission, why abena dms, api documentation, pricing (coming soon) sections
+// to do: link product hunt button to product hunt page
+// to do: setup emailing list through sendgrid after users join beta
+// to do: show (count) place in line for educators
 
 function App() {
   return (
