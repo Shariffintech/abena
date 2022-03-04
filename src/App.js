@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Mission from "./components/home/mission";
-import Strategy from "./components/strategies/strategy";
+import Strategy from "./components/strategies/strategyCard";
 import Student from "./components/students/student";
 import NavBar from "./components/navBar";
 // import Home from "./components/home/home";
@@ -18,7 +18,7 @@ import Intake from "./components/intake/intake";
 
 function App() {
   return (
-    <div className="app">
+    <div className="App">
       <NavBar />
       <Routes>
         {/* <Route path="/" component={Home} /> */}

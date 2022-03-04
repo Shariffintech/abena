@@ -1,7 +1,12 @@
-import React,  { Component}from "react";
+import React from "react";
+import {Mission} from './mission';
+import {Team} from './team';
+import {FrameWorks} from './frameWorks';
 
-class Home extends Component {
-  render() {
+
+// to do: add respective components to be rendered below
+function Home() {
+  
     return (
       <div className="App">
         <header className="App-header">
@@ -41,6 +46,5 @@ class Home extends Component {
 
     );
   }
-}
 
 export default Home;

@@ -8,9 +8,10 @@ const NavBar = () => {
             <Link to={`/`}>Home</Link>
             <Link to={`/students`}>Students</Link>
             <Link to={`/strategies`}>Strategies</Link>
+            <Link to={`/intake`}>Intake</Link>
 
         </div>
     )
 }
 
-export default NavBar;
+export default NavBar; 

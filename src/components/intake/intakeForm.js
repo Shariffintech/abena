@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+// to do: add chat function with twilio record parent, teacher convo when completing this form
 export default function IntakeForm(addStudent) {
     const [full_name, setName] = useState("");
     
@@ -10,17 +10,17 @@ export default function IntakeForm(addStudent) {
         addStudent({
             full_name: "",
             date_of_birth: "",
-            age_of_child: "",
+            student_age: "",
             team: [""],
             region: "",
             current_school: "",
-            current_school_leadership: "",
+            current_school_contact: "",
             room_number: "",
             prior_academies: [""],
             overall_concern: [""],
             primary_concern: "",
             sleeping_patterns: "",
-            funding_streams: "",
+            funding_stream: "",
             notes: [""],
             created_at: "",
         });
