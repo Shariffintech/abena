@@ -1,11 +1,13 @@
+
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Mission from "./components/home/mission";
 import Strategy from "./components/strategies/strategyCard";
 import Student from "./components/students/student";
-import NavBar from "./components/navBar";
-// import Home from "./components/home/home";
+import NavBar from "./components/navBar/navBar";
+import Home from "./components/home/home";
 import Intake from "./components/intake/intake";
+import {Whoops404} from "./components/error";
 
 // import logo from "./logo.svg";
 // import * as app from "./css/App";
@@ -15,20 +17,24 @@ import Intake from "./components/intake/intake";
 // to do: link product hunt button to product hunt page
 // to do: setup emailing list through sendgrid after users join beta
 // to do: show (count) place in line for educators
+// to do: add a profiler in prod to see where I can improve performance
 
-function App() {
+const greeting = "Hello world";
+
+export default function App() {
   return (
     <div className="App">
+      <h1>{greeting}</h1>
       <NavBar />
       <Routes>
-        {/* <Route path="/" component={Home} /> */}
-        <Route path="/students" element={<Student />} />
         <Route path="/strategies" element={<Strategy />} />
+        <Route path="/Home" component={Home} />
+        <Route path="/students" element={<Student />} />
         <Route path="/mission" element={<Mission />} />
         <Route path="/intake" element={<Intake />} />
+        <Route path="/strategies" element={<Strategy />} />
+        <Route path="*" element={<Whoops404 />} />
       </Routes>
     </div>
   );
 }
-
-export default App;

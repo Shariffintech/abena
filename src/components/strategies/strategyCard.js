@@ -19,12 +19,14 @@ export default function Strategy() {
 
   // to do add drag able strategy cards to page via react
 
-  handleClick = () => {};
+  // handleClick = () => {};
 
-  toggleStrategy = () => {};
+  // toggleStrategy = () => {};
 
+  console.log("this renders")
   return (
     <div className="strategyCard">
+      
       <h3>{this.props.name}</h3>
       <p>{this.props.tier}</p>
       <p>{this.props.category}</p>
@@ -33,12 +35,15 @@ export default function Strategy() {
 
       {/* todo add counter button for did you learn something new on landing page with animation */}
       <p>{this.state.likes}</p>
+      <span role="img">
       <button
         onClick={() => setCount(count + 1)}
         className="like-btn btn-primary"
-      >
+      ><span role="img" aria-label="heart">
         ❤️
+        </span>
       </button>
+      </span>
     </div>
   );
 }

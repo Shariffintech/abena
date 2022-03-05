@@ -1,4 +1,7 @@
-import {Component} from "react";
+import  {Component} from "react";
+
+
+// to do populate students in classroom associated with teacher
 
 export default class Students extends Component {
 
@@ -11,6 +14,7 @@ export default class Students extends Component {
     }
 
     render(){
-        return
+        return 
+        
     }
 }
