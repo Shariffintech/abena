@@ -1,13 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import 'bulma/css/bulma.min.css';
+import { Button } from 'react-bulma-components';
+import { Navbar } from 'react-bulma-components';
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Strategy() {
+
+  useEffect(function () {
+    axios.get('/api/strategies')
+      .then(function (response) {
+        console.log(response);
+      }
+      )
+      .catch(function (error) {
+        console.log(error);
+      }
+      );
+  })
   const [count, setCount] = useState(0);
+
 
   // if they are changing at the same time make the seperate
   // use memo research
 
   // to do refactor to a function component, add state using hooks
   // to do add a button to delete the strategy
+
+
+
+
   // to do add a button to edit the strategy
   // to do add a button to add a new strategy
   // to do use bulma for carousels
@@ -36,13 +58,15 @@ export default function Strategy() {
       {/* todo add counter button for did you learn something new on landing page with animation */}
       <p>{this.state.likes}</p>
       <span role="img">
-      <button
-        onClick={() => setCount(count + 1)}
-        className="like-btn btn-primary"
-      ><span role="img" aria-label="heart">
-        ❤️
+    
+
+      <Button color="primary" onClick={() => setCount(count + 1)}>
+        <span role="img" aria-label="heart">
+          ❤️
         </span>
-      </button>
+      </Button>
+        
+
       </span>
     </div>
   );

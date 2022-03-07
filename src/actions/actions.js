@@ -1,25 +1,171 @@
-export const SET_STUDENTS = "SET_STUDENTS"
-export const ADD_STUDENT = "ADD_STUDENT"
-export const EDIT_STUDENT = "EDIT_STUDENT"
-export const DELETE_STUDENT = "DELETE_STUDENT"
+import {
+  SET_STUDENTS,
+  ADD_STUDENT,
+  DELETE_STUDENT,
+  EDIT_STUDENT,
+  SET_INTAKE,
+  ADD_INTAKE,
+  EDIT_INTAKE,
+  DELETE_INTAKE,
+} from "./actionTypes";
 
+// STUDENTS ACTIONS
 
-export const SET_INTAKE = "SET_PEOPLE"
-export const ADD_INTAKE = "ADD_INTAKE"
-export const DELETE_INTAKE = "DELETE_INTAKE"
-export const EDIT_INTAKE = "EDIT_INTAKE"
+const setStudents = (students) => {
+  return {
+    type: SET_STUDENTS,
+    payload: students,
+  };
+};
 
-export const SET_STRATEGIES = "SET_STRATEGIES"
-export const ADD_STRATEGY = "ADD_STRATEGY"
-export const DELETE_STRATEGY = "DELETE_STRATEGY"
-export const EDIT_STRATEGY = "EDIT_STRATEGY"
+export const addStudent = (student) => {
+  return {
+    type: ADD_STUDENT,
+    payload: student,
+  };
+};
 
-export const SET_FRAMEWORKS = "SET_FRAMEWORKS"
-export const ADD_FRAMEWORK = "ADD_FRAMEWORK"
-export const DELETE_FRAMEWORK = "DELETE_FRAMEWORK"
-export const EDIT_FRAMEWORK = "EDIT_FRAMEWORK"
+const editStudent = (student) => {
+  return {
+    type: EDIT_STUDENT,
+    payload: student,
+  };
+};
 
-export const SET_TEAM= "SET_TEAM"
-export const ADD_TEAM_MEMBER = "ADD_TEAM_MEMBER"
-export const DELETE_TEAM_MEMBER = "DELETE_TEAM_MEMBER"
-export const EDIT_TEAM_MEMBER = "EDIT_TEAM_MEMBER"
+export const deleteStudent = (id) => {
+  return {
+    type: DELETE_STUDENT,
+    payload: id,
+  };
+};
+
+export const getStudents = () => {
+  return (dispatch) => {
+    fetch("http://localhost:3000/students")
+      .then((r) => r.json())
+      .then((data) => dispatch(setStudents(data)));
+  };
+};
+
+export const createStudent = (formData) => {
+  return (dispatch) => {
+    fetch("http://localhost:3000/students", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((student) => dispatch(addStudent(student)));
+      } else {
+        r.json().then((err) => console.error(err));
+      }
+    });
+  };
+};
+
+export const updateStudent = (student) => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/students/${student.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(student),
+    })
+      .then((r) => {
+        if (r.ok) {
+          // add student to redux
+          r.json().then((p) => dispatch(editStudent(p)));
+        } else {
+          r.json().then((err) => console.error(err));
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+};
+
+export const destroyStudent = (id) => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/students/${id}`, {
+      method: "DELETE",
+    }).then((r) => dispatch(deleteStudent(id)));
+  };
+};
+
+// INTAKE ACTION CREATORS
+
+const setIntake = (intake) => ({
+  type: SET_INTAKE,
+  payload: intake,
+});
+
+const addIntake = (intake) => ({ type: ADD_INTAKE, payload: intake });
+const editIntake = (intake) => ({ type: EDIT_INTAKE, payload: intake });
+const deleteIntake = (id) => ({ type: DELETE_INTAKE, payload: id });
+
+export const fetchIntakes = () => {
+  return (dispatch) => {
+    fetch("http://localhost:3000/intakes")
+      .then((r) => r.json())
+      .then((intakes) => dispatch(setIntake(intakes)))
+      .catch((err) => console.error(err));
+  };
+};
+
+export const createIntake = (intake) => {
+  return (dispatch) => {
+    fetch("http://localhost:3000/intakes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(intake),
+    })
+      .then((r) => {
+        if (r.ok) {
+          r.json().then((intake) => dispatch(addIntake(intake)));
+        } else {
+          r.json().then((err) => console.error(err));
+        }
+      })
+      .catch((err) => console.error(err));
+  };
+};
+
+export const updateIntake = (intake) => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/intakes/${intake.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(intake),
+    })
+      .then((r) => {
+        if (r.ok) {
+          r.json().then((intake) => dispatch(editIntake(intake)));
+        } else {
+          r.json().then((err) => console.error(err));
+        }
+      })
+      .catch((err) => console.error(err));
+  };
+};
+
+export const destroyIntake = (id) => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/intakes/${id}`, {
+      method: "DELETE",
+    })
+      .then((r) => {
+        dispatch(deleteIntake(id));
+      })
+      .catch((err) => console.error(err));
+  };
+};

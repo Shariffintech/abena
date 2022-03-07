@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import { createStrategy, updateStrategy } from '../../actions/actions';
-
+import 'bulma/css/bulma.min.css';
 import {useForm} from 'react-hook-form';
-// bulma for styling
+import {addStrategy, getStrategies, deleteStrategy, updateStrategy} from '../../actions/actions';
 
 export default function strategyForm() {
 
