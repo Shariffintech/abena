@@ -107,7 +107,7 @@ const addIntake = (intake) => ({ type: ADD_INTAKE, payload: intake });
 const editIntake = (intake) => ({ type: EDIT_INTAKE, payload: intake });
 const deleteIntake = (id) => ({ type: DELETE_INTAKE, payload: id });
 
-export const fetchIntakes = () => {
+export const getIntakes = () => {
   return (dispatch) => {
     fetch("http://localhost:3000/intakes")
       .then((r) => r.json())

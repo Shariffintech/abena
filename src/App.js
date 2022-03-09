@@ -20,13 +20,16 @@ import {Whoops404} from "./components/error";
 
 export default function App() {
 
+  // write functions, variables here
+
+
   return (
     <div className="App">
       <NavBar />
       <Routes>
         <Route path="/strategies" element={<Strategy />} />
         <Route path="/Home" component={Home} />
-        <Route path="/students" element={<Student />} />
+        <Route path="/students" element={<Student/>} />
         <Route path="/mission" element={<Mission />} />
         <Route path="/intake" element={<Intake />} />
         <Route path="/strategies" element={<Strategy />} />

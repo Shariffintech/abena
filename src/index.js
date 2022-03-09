@@ -12,10 +12,11 @@ import reportWebVitals from "./reportWebVitals";
 // const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk));
 
 ReactDOM.render(
-  
+  <React.StrictMode>
     <Router>
         <App />
-    </Router>,
+    </Router>
+    </React.StrictMode>,
       
   document.getElementById("root")
 );

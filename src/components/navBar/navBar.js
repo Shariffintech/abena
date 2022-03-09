@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bulma/css/bulma.min.css";
-import { Navbar, Button } from "react-bulma-components";
+import { Navbar} from "react-bulma-components";
 
-export default function NavBar() {
+ const NavBar = () => {
   return (
     <div className="navbar">
-
       <Navbar>
         <Navbar.Brand>
           <Navbar.Item renderAs="a" href="#">
             <img
-              src="https://bulma.io/images/bulma-logo.png"
-              alt="Bulma: a modern CSS framework based on Flexbox"
-              width="112"
-              height="28"
+              src="https://user-images.githubusercontent.com/22308837/157111938-79d1b507-3d6a-4e13-8039-c6f390c0cddf.jpg"
+              alt="Strengthing early childhood education classrooms."
+              width="100"
+              height="100"
+              onClick={<Link to="/" />}
             />
           </Navbar.Item>
           <Navbar.Burger />
@@ -32,12 +32,19 @@ export default function NavBar() {
                   <Link to="/mission">Mission</Link>
                 </Navbar.Item>
 
-                <Navbar.Item href="#">Subitem 2</Navbar.Item>
+                <Navbar.Item href="#">
+                  <Link to="/team">Team</Link>
+                </Navbar.Item>
+
+                <Navbar.Item href="#">
+                  <Link to="/why">Why Abena?</Link>
+                </Navbar.Item>
               </Navbar.Dropdown>
             </Navbar.Item>
 
+
             <Navbar.Item href="#">
-              <Link to="/students">Students</Link>
+              <Link to="/students">Student Portal</Link>
             </Navbar.Item>
 
             <Navbar.Item href="#">
@@ -47,7 +54,7 @@ export default function NavBar() {
 
           <Navbar.Container position="end">
             <Navbar.Item href="#">
-              <Link to="/strategies">Strategies</Link>
+              <Link to="/strategies">Strategy Portal</Link>
             </Navbar.Item>
           </Navbar.Container>
         </Navbar.Menu>
@@ -55,3 +62,5 @@ export default function NavBar() {
     </div>
   );
 }
+
+export default NavBar;
