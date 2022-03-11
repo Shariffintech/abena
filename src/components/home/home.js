@@ -3,8 +3,6 @@ import Mission from './mission';
 import Team from './team';
 import FrameWorks from './frameWorks';
 
-
-// to do: add respective components to be rendered below
 export default function Home() {
   
     return (
@@ -13,7 +11,6 @@ export default function Home() {
      <Team />
      <FrameWorks />
       </>
-     
     );
   }
 

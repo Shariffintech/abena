@@ -4,9 +4,6 @@ import {
   DELETE_STUDENT,
   EDIT_STUDENT,
   SET_INTAKE,
-  ADD_INTAKE,
-  EDIT_INTAKE,
-  DELETE_INTAKE,
 } from "./actionTypes";
 
 // STUDENTS ACTIONS
@@ -93,79 +90,5 @@ export const destroyStudent = (id) => {
     fetch(`http://localhost:3000/students/${id}`, {
       method: "DELETE",
     }).then((r) => dispatch(deleteStudent(id)));
-  };
-};
-
-// INTAKE ACTION CREATORS
-
-const setIntake = (intake) => ({
-  type: SET_INTAKE,
-  payload: intake,
-});
-
-const addIntake = (intake) => ({ type: ADD_INTAKE, payload: intake });
-const editIntake = (intake) => ({ type: EDIT_INTAKE, payload: intake });
-const deleteIntake = (id) => ({ type: DELETE_INTAKE, payload: id });
-
-export const getIntakes = () => {
-  return (dispatch) => {
-    fetch("http://localhost:3000/intakes")
-      .then((r) => r.json())
-      .then((intakes) => dispatch(setIntake(intakes)))
-      .catch((err) => console.error(err));
-  };
-};
-
-export const createIntake = (intake) => {
-  return (dispatch) => {
-    fetch("http://localhost:3000/intakes", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(intake),
-    })
-      .then((r) => {
-        if (r.ok) {
-          r.json().then((intake) => dispatch(addIntake(intake)));
-        } else {
-          r.json().then((err) => console.error(err));
-        }
-      })
-      .catch((err) => console.error(err));
-  };
-};
-
-export const updateIntake = (intake) => {
-  return (dispatch) => {
-    fetch(`http://localhost:3000/intakes/${intake.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(intake),
-    })
-      .then((r) => {
-        if (r.ok) {
-          r.json().then((intake) => dispatch(editIntake(intake)));
-        } else {
-          r.json().then((err) => console.error(err));
-        }
-      })
-      .catch((err) => console.error(err));
-  };
-};
-
-export const destroyIntake = (id) => {
-  return (dispatch) => {
-    fetch(`http://localhost:3000/intakes/${id}`, {
-      method: "DELETE",
-    })
-      .then((r) => {
-        dispatch(deleteIntake(id));
-      })
-      .catch((err) => console.error(err));
   };
 };

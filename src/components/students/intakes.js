@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { useEffect, useState } from "react";
 import IntakeForm from "./intakeForm";
-import { getIntakes } from "../../actions/actions";
-import Intake from "../intake/intake";
+import Intake from "./intake";
 
 export default function Intakes(props ) {
   // const [intakes, setIntakes] = useState([]);
@@ -29,7 +28,6 @@ export default function Intakes(props ) {
   return (
     <div className="Intakes">
       <h1>Intakes Screen</h1>
-      <IntakeForm />
       <ul>
         <section>
         {intakes.map((intake) => (

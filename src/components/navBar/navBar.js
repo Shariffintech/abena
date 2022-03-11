@@ -5,7 +5,7 @@ import { Navbar} from "react-bulma-components";
 
  const NavBar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar is-fixed-top ">
       <Navbar>
         <Navbar.Brand>
           <Navbar.Item renderAs="a" href="#">
@@ -14,7 +14,7 @@ import { Navbar} from "react-bulma-components";
               alt="Strengthing early childhood education classrooms."
               width="100"
               height="100"
-              onClick={<Link to="/" />}
+              onClick={<Link to="/home" />}
             />
           </Navbar.Item>
           <Navbar.Burger />
@@ -24,7 +24,7 @@ import { Navbar} from "react-bulma-components";
           <Navbar.Container>
             <Navbar.Item dropdown hoverable href="#">
               <Navbar.Link>
-                <Link to={`/`}>Home</Link>
+                <Link to={`/home`}>Home</Link>
               </Navbar.Link>
 
               <Navbar.Dropdown>
@@ -47,15 +47,15 @@ import { Navbar} from "react-bulma-components";
               <Link to="/students">Student Portal</Link>
             </Navbar.Item>
 
-            <Navbar.Item href="#">
-              <Link to="/intake">Intake</Link>
-            </Navbar.Item>
-          </Navbar.Container>
-
           <Navbar.Container position="end">
             <Navbar.Item href="#">
               <Link to="/strategies">Strategy Portal</Link>
             </Navbar.Item>
+
+            <Navbar.Item href="#">
+              <Link to="/intake/new">Create Intake</Link>
+            </Navbar.Item>
+          </Navbar.Container>
           </Navbar.Container>
         </Navbar.Menu>
       </Navbar>

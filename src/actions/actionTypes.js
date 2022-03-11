@@ -4,11 +4,6 @@ export const EDIT_STUDENT = "EDIT_STUDENT"
 export const DELETE_STUDENT = "DELETE_STUDENT"
 
 
-export const SET_INTAKE = "SET_PEOPLE"
-export const ADD_INTAKE = "ADD_INTAKE"
-export const DELETE_INTAKE = "DELETE_INTAKE"
-export const EDIT_INTAKE = "EDIT_INTAKE"
-
 export const SET_STRATEGIES = "SET_STRATEGIES"
 export const ADD_STRATEGY = "ADD_STRATEGY"
 export const DELETE_STRATEGY = "DELETE_STRATEGY"
