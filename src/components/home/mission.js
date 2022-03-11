@@ -22,9 +22,9 @@ function Mission() {
 
     <div className="mission">
       <h1>Mission</h1>
-    
+      <div className="eclipse"/>
       <div className="mission-statement">
-
+      
       <p>
         At Abena, our goal is to help our teachers be thoughtful and intentional
         as they support the academic, social emotional, developmental and
@@ -52,6 +52,8 @@ function Mission() {
         informed with the launch of Abena DMS in 2022 and the next phase of
         education.
       </p>
+      
+     
 
       <div className="mtss-pyramid">
         <div className="group-313 flex-col">
@@ -88,7 +90,9 @@ function Mission() {
       </div>
       </div>
       
-      {/* add event listener handleScroll to listen for user to scroll to bottom */}
+
+
+     
     </div>
   );
 }

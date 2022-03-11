@@ -30,7 +30,6 @@ export default function App() {
         <Route path="/students" element={<Student/>} />
         <Route path="/mission" element={<Mission />} />
         <Route path="/student/new" element={<Intake />} />
-        <Route path="/strategies" element={<Strategy />} />
         <Route path="*" element={<Whoops404 />} />
       </Routes>
     </div>

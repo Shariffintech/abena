@@ -1,66 +1,72 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bulma/css/bulma.min.css";
-import { Navbar} from "react-bulma-components";
+import "../../bulma.css";
+import "../../App.css";
+import { Navbar, Image, scrollToElement } from "react-bulma-components";
 
- const NavBar = () => {
+// on click scroll to mission div 
+
+// on click scroll to team div
+// on click scroll to why div
+
+
+
+
+const NavBar = () => {
   return (
     <div className="navbar is-fixed-top ">
-      <Navbar>
+      
+        
         <Navbar.Brand>
-          <Navbar.Item renderAs="a" href="#">
-            <img
-              src="https://user-images.githubusercontent.com/22308837/157111938-79d1b507-3d6a-4e13-8039-c6f390c0cddf.jpg"
-              alt="Strengthing early childhood education classrooms."
-              width="100"
-              height="100"
-              onClick={<Link to="/home" />}
-            />
+          <Navbar.Item className="homepage" href="#" to="/home">
+                  <Image
+                    navbar
+                    src="https://user-images.githubusercontent.com/22308837/157813235-24e05afb-589d-4452-a858-f1fca1e782c7.png"
+                    alt="Strengthing early childhood education classrooms."
+                  />
           </Navbar.Item>
-          <Navbar.Burger />
         </Navbar.Brand>
 
         <Navbar.Menu>
           <Navbar.Container>
             <Navbar.Item dropdown hoverable href="#">
-              <Navbar.Link>
+              <Navbar.Link  href="#">
                 <Link to={`/home`}>Home</Link>
               </Navbar.Link>
 
-              <Navbar.Dropdown>
-                <Navbar.Item href="#">
-                  <Link to="/mission">Mission</Link>
+              <Navbar.Dropdown >
+                <Navbar.Item href="#" onClick={() => scrollToElement("#mission")}>
+                  <Link to="/mission" >Mission</Link>
                 </Navbar.Item>
 
-                <Navbar.Item href="#">
+                <Navbar.Item href="#" onClick={() => scrollToElement("#team")}>
                   <Link to="/team">Team</Link>
                 </Navbar.Item>
 
-                <Navbar.Item href="#">
+                <Navbar.Item href="#" onClick={() => scrollToElement("#why")}>
                   <Link to="/why">Why Abena?</Link>
                 </Navbar.Item>
               </Navbar.Dropdown>
             </Navbar.Item>
 
-
             <Navbar.Item href="#">
               <Link to="/students">Student Portal</Link>
             </Navbar.Item>
 
-          <Navbar.Container position="end">
-            <Navbar.Item href="#">
-              <Link to="/strategies">Strategy Portal</Link>
-            </Navbar.Item>
+            <Navbar.Container position="end">
+              <Navbar.Item href="#">
+                <Link to="/strategies">Strategy Portal</Link>
+              </Navbar.Item>
 
-            <Navbar.Item href="#">
-              <Link to="/intake/new">Create Intake</Link>
-            </Navbar.Item>
-          </Navbar.Container>
+              <Navbar.Item href="#">
+                <Link to="/intake/new">Create Intake</Link>
+              </Navbar.Item>
+            </Navbar.Container>
           </Navbar.Container>
         </Navbar.Menu>
-      </Navbar>
+
     </div>
   );
-}
+};
 
 export default NavBar;
