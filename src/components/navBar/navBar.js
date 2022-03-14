@@ -9,9 +9,6 @@ import { Navbar, Image, scrollToElement } from "react-bulma-components";
 // on click scroll to team div
 // on click scroll to why div
 
-
-
-
 const NavBar = () => {
   return (
     <div className="navbar is-fixed-top ">
@@ -26,6 +23,7 @@ const NavBar = () => {
                   />
           </Navbar.Item>
         </Navbar.Brand>
+        
 
         <Navbar.Menu>
           <Navbar.Container>
@@ -35,17 +33,19 @@ const NavBar = () => {
               </Navbar.Link>
 
               <Navbar.Dropdown >
-                <Navbar.Item href="#" onClick={() => scrollToElement("#mission")}>
+                <Navbar.Item href="#" onClick={() => scrollToElement("#mission-container")}>
                   <Link to="/mission" >Mission</Link>
                 </Navbar.Item>
 
-                <Navbar.Item href="#" onClick={() => scrollToElement("#team")}>
+                <Navbar.Item href="#" onClick={() => scrollToElement("#team-container")}>
                   <Link to="/team">Team</Link>
                 </Navbar.Item>
 
-                <Navbar.Item href="#" onClick={() => scrollToElement("#why")}>
-                  <Link to="/why">Why Abena?</Link>
+                <Navbar.Item href="#" onClick={() => scrollToElement("#why-containers")}>
+                  <Link to="/whyabena">Why Abena?</Link>
                 </Navbar.Item>
+
+              
               </Navbar.Dropdown>
             </Navbar.Item>
 

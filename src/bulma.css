@@ -2645,20 +2645,323 @@ div.icon-text {
     height: 128px;
     width: 128px;
 }
-
+.mission-container {
+  position: absolute;
+    top: 0;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+   
+}
 .mission-statement {
     position: absolute;
-    width: 504px;
+    width: 550px;
     height: 548px;
+    top: 20%;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    font-size: 24px;
     line-height: 33px;
+    left: 10%;
 
     color: #22215B;
 
 }
 
+
+.mission {
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 1);
+    width: 1223px;
+    height: 802px;
+}
+
+.mission-title {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    left: 200px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 33px;
+    color: #22215B;
+    top: -50px;
+}
+
+.why-abena-title {
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #22215B;
+    font-size: 30px;
+    left: 40%;
+    top: 20px;
+    font-size: 45px;
+
+    
+}
+
+.affordable-abena-subtitle{
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    color: #22215B;
+    left: 60%;
+    top: 450px;
+}
+
+.affordable-offering-paragraph{
+    position:absolute;
+    left: 60%;
+    top: 500px;
+    width: 500px;
+}
+
+.smart-abena-subtitle{
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    color: #22215B;
+    left: 11%;
+    top: 450px;
+
+}
+
+.smart-offering-paragraph{
+    position:absolute;
+    left: 11%;
+    top: 500px;
+    width: 500px;
+}
+
+.legos-abena-subtitle{
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    color: #22215B;
+    left: 11%;
+    top: 620px;
+}
+
+.legos-offering-paragraph{
+    position:absolute;
+    left: 11%;
+    top: 670px;
+    width: 500px;
+}
+
+
+.team {
+    position: absolute;
+    top: 2280px;
+    left: 0%;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 1);
+    width: 1223px;
+    height: 438px;
+}
+
+.why-abena-img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    margin-top: 100px;
+    margin-left: 150px;
+    
+}
+.container.why-content-container{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+    width: 1223px;
+    height: 802px;
+}
+
+/* .container.reduced-lead-container{
+  
+    top: -85%;
+    width: 800px;
+} */
+
+/* .container.parent-portal-container{
+    position: absolute;
+    top:290%;
+    width: 800px;
+} */
+
+
+.why-abena-subtitle{
+    font-weight: bold;
+    font-size: 24px;
+    color: #22215B;
+}
+
+.reduced-abena-subtitle{
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    color: #22215B;
+    left: 67%;
+    top: 90px;
+    margin-left: -100px;
+}
+
+.reduced-offering-paragraph{
+    position:absolute;
+    left: 60%;
+    top: 130px;
+    align-items: center;
+}
+
+.frameworks-buttons{
+    position: absolute;
+    left: 18%;
+}
+
+
+.parent-abena-subtitle{
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    color: #22215B;
+    left: 60%;
+    top: 310px;
+}
+
+.parent-offering-paragraph{
+    position:absolute;
+    left: 60%;
+    top: 360px;
+}
+.container.affordable-liscensing-container{
+    position: absolute;
+    top: 385%;
+    width: 800px;
+    left:40%;
+
+}
+.button.is-abena-purple{
+    background-color: #645FEA;
+    border-color: transparent;
+    color: #fff;
+}
+
+.offering-paragraph{
+    color: #22215B;
+    font-weight:300;
+    font-size: 18px;
+    /* position: absolute */
+}
+
+.container.smart-reporting-container{
+    position: absolute;
+    top: 500%;
+    width: 800px;
+    left:40%;
+
+}
+
+.container.education-legos-container{
+    position: absolute;
+    top: 500%;
+    width: 400px;
+   
+}
+
+.team-image{
+
+    width: 227px;
+    height: 227px;
+}
+
+
+
+.why-abena {
+    position: absolute;
+    border-radius: 6px;
+    background-color: #F0FBFF;
+    top: 1220px;
+    left: 0px;
+    width:100%;
+    height: 800px;
+
+}
+
+.bold-blu{
+    color: #22215B;
+}
+
+.lighthouse-right-light {
+    position: absolute;
+    width: 204px;
+    height: 454px;
+
+    /* Abena Lighthouse gradient */
+
+    background: linear-gradient(180deg, rgba(233, 236, 73, 0.84011) 12.5%, rgba(239, 207, 250, 0.954627) 70.83%, rgba(233, 157, 239, 0.69) 100%);
+    opacity: 0.5;
+    filter: blur(30px);
+    transform: rotate(-90deg);
+}
+
+.light-house-left-light {
+    position: absolute;
+    width: 204px;
+    height: 454px;
+    
+    background: linear-gradient(180deg, rgba(233, 236, 73, 0.84011) 12.5%, rgba(239, 207, 250, 0.954627) 70.83%, rgba(233, 157, 239, 0.69) 100%);
+    opacity: 0.5;
+    filter: blur(30px);
+    transform: rotate(90deg);
+}
+
+.product-hunt {
+    position: absolute;
+    width: 149px;
+    height: 38px;
+
+    background: #FDFFF0;
+    box-shadow: 0px 4px 12px rgba(237, 186, 243, 0.25);
+    border-radius: 5px;
+}
+
+.join-beta {
+    position: absolute;
+    width: 149px;
+    height: 38px;
+
+    background: #FDFFF0;
+    box-shadow: 0px 4px 12px rgba(237, 186, 243, 0.25);
+    border-radius: 5px;
+}
+
+.beta-email {
+    position: absolute;
+    width: 306px;
+    height: 38px;
+
+    background: #FFFFFF;
+    border: 1px solid #FDFFF0;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 12px rgba(237, 186, 243, 0.25);
+    border-radius: 5px;
+}
+.paragraph-1 {
+    line-height: 33px;
+
+}
+
+.paragraph-2 {
+    top: -50px;
+    line-height: 33px;
+}
+.paragraph-3 {
+
+    line-height: 33px;
+}
 .eclipse {
 
     position: absolute;
@@ -2673,17 +2976,131 @@ div.icon-text {
 
 }
 
+.supported-frameworks{
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    width: 1223px;
+    height: 802px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.frameworks-img {
+    position: absolute;
+    width: 150.22px;
+    height: 215px;
+    left: 17%;
+    top: 5%;
+}
+
+.frameworks-img-2 {
+    position: absolute;
+    left: 73%;
+    width: 150.22px;
+    height: 215px;
+    top: 5%;
+}
+
 .mtss-pyramid {
     position: absolute;
-
-
+    top: -5%;
+    /* left: 140%; */
+    right: 20px;
+    width: 100%;
+    height: 333.68px;
 }
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #ffffff;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  .switch {
+    width: 160px;
+    height: 100px;
+    background: linear-gradient(250deg, #7b2ff7, #f107a3);
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    top: 1290
+  }
+  
+  .switch[data-isOn="true"] {
+    justify-content: flex-end;
+  }
+  
+  .handle {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 40px;
+  }
 
 .notification {
     background-color: whitesmoke;
     border-radius: 4px;
     position: relative;
     padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+}
+
+
+.frameworks{
+    position: absolute;
+    top: 970px;
+    left: 0px;
+    border-radius: 6px;
+    background-color: #22215B;
+    width:100%;
+    height: 250px;
+}
+.group-313{
+
+    top: 50px;
+    left: 433px;
+ 
+}
+.tier-1 {
+    top: 0px;
+    left: 100px;
+    border-radius: 6px;
+    width:100%;
+    height: 247px;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+
+.tier-2 {
+    top: 0px;
+    left: 100px;
+    border-radius: 6px;
+    width:100%;
+    height: 247px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.tier-3 {
+    top: 0px;
+    left: 100px;
+    border-radius: 6px;
+    width:100%;
+    height: 247px;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .notification a:not(.button):not(.dropdown-item) {

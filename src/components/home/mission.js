@@ -1,9 +1,13 @@
 import React from "react";
-import { Button, Card } from "react-bulma-components";
+import { Button, Card, Container, Form } from "react-bulma-components";
+
 import "../../style.css";
 
 function Mission() {
   // to do: add event listeners for scroll down to move lights with lighthouse
+
+
+  const { Input, Field, Control, Label } = Form;
 
   const handleScroll = (e) => {
     const scrollTop = e.target.scrollTop;
@@ -20,42 +24,43 @@ function Mission() {
     // to do: add chat bubble next to student icons
     // to do: add email validation for users signing up for beta release
 
-    <div className="mission">
-      <h1>Mission</h1>
+    <div className="mission-container">
+      
       <div className="eclipse"/>
       <div className="mission-statement">
-      
-      <p>
+      <h1 className="mission-title">Mission</h1>
+      <p className="paragraph-1">
         At Abena, our goal is to help our teachers be thoughtful and intentional
-        as they support the academic, social emotional, developmental and
-        behavioral needs of children in their classroom. We have discovered an
+        as they support the <strong className="bold-blu">academic, social emotional, developmental and
+        behavioral needs of children </strong> in their classroom. We have discovered an
         ideal way to build a product that resonates with this mission and have
         developed a roadmap to attend to the unique needs and interactions among
         children, teachers, parents and community-based partners.
       </p>
 
-      <p>
+      <br />
+      <p className="paragraph-2">
         Abena DMS is a clever tool used to boost data-driven decision making and
         demystifying complexities of using SEL, PBIS. RTI and MTSS in the
         classroom. This integrated approach for supporting children encourages
-        all team members to streamline communication and easily pick-up dialogue
+        all team members to <stong className="bold-blu">streamline communication</stong> and easily pick-up dialogue
         where each use may leave off. By simplifying methods for gathering,
-        analyzing and storing critical data, child outcomes may be improved. 
+        analyzing and storing critical data, <strong className="bold-blu">child outcomes may be improved. </strong>
       </p>
+      
 
-      {' '}
+     <br />
 
-      <p>
+      <p className="paragraph-3">
         A few specific area we're elevating in our system is how to proactively
         support the needs of all children and rapidly respond when a concern
         arises while keeping all stakeholders involved along the way! Stay
-        informed with the launch of Abena DMS in 2022 and the next phase of
-        education.
+        informed with the launch of Abena DMS in <strong className="bold-blu">2022 and the next phase of
+        education.</strong>
       </p>
       
-     
-
-      <div className="mtss-pyramid">
+    
+      <section className="mtss-pyramid">
         <div className="group-313 flex-col">
           <p className="tier-1">Tier 1</p>
           <p className="tier-2">Tier 2</p>
@@ -87,12 +92,13 @@ function Mission() {
           alt=" not found"
           className="girl-11"
         />
-      </div>
+      </section>
+      <br/>
+
+      <Input className="form-input" type="email" placeholder="Enter email here..." />
       </div>
       
-
-
-     
+      
     </div>
   );
 }

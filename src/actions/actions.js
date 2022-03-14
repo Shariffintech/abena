@@ -3,7 +3,6 @@ import {
   ADD_STUDENT,
   DELETE_STUDENT,
   EDIT_STUDENT,
-  SET_INTAKE,
 } from "./actionTypes";
 
 // STUDENTS ACTIONS

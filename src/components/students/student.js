@@ -3,28 +3,35 @@ import { Link } from "react-router-dom";
 import {addStudent, deleteStudent,getStudents, updateStudent} from "../../actions/actions";
 import 'bulma/css/bulma.min.css';
 import {Card} from "react-bulma-components";
+import {motion, Variants} from "framer-motion";
 
 
-export default function Student(props) {
+// to do populate students in classroom associated with teacher
 
-    return (
 
+
+const Student = (props) => {
+    return (  
         <div className="students-container">
-            <Card>
-                <Card.Image></Card.Image>
-            <h1>Students</h1>
-            <p>
-                <button className="btn btn-primary" onClick={() => addStudent()}>Add Student</button>
+        <Card>
+            <Card.Image></Card.Image>
+        <h1>Students</h1>
+        <p>
+            <button className="btn btn-primary" onClick={() => addStudent()}>Add Student</button>
 
-            </p>
-            <p>
-                <Link to="/students/1">Student 1</Link>
-            </p>
-            </Card>
-            
-        </div>
+        </p>
+        <p>
+            <Link to="/students/1">Student 1</Link>
+        </p>
+        </Card>
+
+
+
+
+
+        
+    </div>
     );
-
 
     function mapDispatchToProps(dispatch) {
         return {
@@ -35,6 +42,8 @@ export default function Student(props) {
         };
     }
 }
+ 
+export default Student;
 
-// to do populate students in classroom associated with teacher
+
 
