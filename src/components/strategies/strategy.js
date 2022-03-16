@@ -9,6 +9,8 @@ import {
   Image,
   Icon,
   Button,
+  Container,
+  Columns,
 } from "react-bulma-components";
 import {
   IoExpand,

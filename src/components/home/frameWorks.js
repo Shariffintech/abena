@@ -6,7 +6,7 @@ function frameWorks(props) {
   // to do: load frameworks like a carousel
 
   return (
-    <div className="frameworks">
+    <div className="frameworks pt-6">
       <h1 className="supported-frameworks"> Supported Frameworks</h1>
 
       <img

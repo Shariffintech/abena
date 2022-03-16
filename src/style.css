@@ -36,21 +36,8 @@ p {
   height: 802px;
 }
 
-.mtss-pyramid {
-  position: absolute;
-  top: 176px;
-  left: 632px;
-  width: 520px;
-  height: 333.68px;
-}
 
-.group-313 {
-  position: absolute;
-  top: 50px;
-  none: 0px;
-  width: 102px;
-  height: 277px;
-}
+
 
 .txt-584 {
   font-size: 24px;
@@ -85,7 +72,7 @@ p {
 }
 
 .polygon-1 {
-  position: absolute;
+
   top: 0px;
   left: 0px;
   width: 395.12px;
@@ -93,33 +80,27 @@ p {
 }
 
 .peruvian-1 {
-  position: absolute;
-  top: 238px;
-  left: 111px;
+
+
   width: 52.43px;
   height: 55.26px;
 }
 
 .girl-1 {
-  position: absolute;
-  top: 177px;
-  left: 194px;
+
   width: 56.68px;
   height: 56.68px;
 }
 
 .boy-1 {
-  position: absolute;
-  top: 122px;
-  left: 126px;
+
+
   width: 55.26px;
   height: 55.26px;
 }
 
 .girl-11 {
-  position: absolute;
-  top: 9px;
-  left: 170px;
+
   width: 52.43px;
   height: 52.43px;
 }

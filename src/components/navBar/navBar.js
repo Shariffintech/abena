@@ -11,7 +11,7 @@ import { Navbar, Image, scrollToElement } from "react-bulma-components";
 
 const NavBar = () => {
   return (
-    <div className="navbar is-fixed-top ">
+    <div className="navbar is-fixed-top " >
       
         
         <Navbar.Brand>

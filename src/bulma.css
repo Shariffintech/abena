@@ -2232,7 +2232,7 @@ fieldset[disabled] .button {
 
 @media screen and (min-width: 1408px) {
     .container:not(.is-max-desktop):not(.is-max-widescreen) {
-        max-width: 1344px;
+        max-width: 1600px;
     }
 }
 
@@ -2646,15 +2646,14 @@ div.icon-text {
     width: 128px;
 }
 .mission-container {
-  position: absolute;
-    top: 0;
-    left: 5%;
+    
     width: 100%;
     height: 100%;
+    left:7%;
+    
    
 }
 .mission-statement {
-    position: absolute;
     width: 550px;
     height: 548px;
     top: 20%;
@@ -2680,36 +2679,31 @@ div.icon-text {
 
 .mission-title {
     font-family: 'Open Sans', sans-serif;
-    position: absolute;
     left: 200px;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 33px;
     color: #22215B;
-    top: -50px;
+    top: -20px;
 }
 
 .why-abena-title {
-    position: absolute;
+
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     color: #22215B;
-    font-size: 30px;
-    left: 40%;
-    top: 20px;
     font-size: 45px;
 
     
 }
 
 .affordable-abena-subtitle{
-    position: absolute;
+
     font-weight: bold;
     font-size: 24px;
     color: #22215B;
-    left: 60%;
-    top: 450px;
+  
 }
 
 .affordable-offering-paragraph{
@@ -2754,13 +2748,10 @@ div.icon-text {
 
 
 .team {
-    position: absolute;
-    top: 2280px;
-    left: 0%;
+    top: 575px;
     border-radius: 6px;
     background-color: rgba(255, 255, 255, 1);
-    width: 1223px;
-    height: 438px;
+    
 }
 
 .why-abena-img {
@@ -2772,6 +2763,8 @@ div.icon-text {
     margin-left: 150px;
     
 }
+
+
 .container.why-content-container{
     position: absolute;
     top: 500px;
@@ -2799,21 +2792,23 @@ div.icon-text {
     color: #22215B;
 }
 
+.team-box{
+    background-color: #22215B;
+ 
+}
+
+.why-abena-box{
+    background-color: transparent;
+    border-radius: 6px;
+    margin-left: 25px;
+    drop-shadow: none;
+}
+
 .reduced-abena-subtitle{
-    position: absolute;
     font-weight: bold;
     font-size: 24px;
     color: #22215B;
-    left: 67%;
-    top: 90px;
-    margin-left: -100px;
-}
-
-.reduced-offering-paragraph{
-    position:absolute;
-    left: 60%;
-    top: 130px;
-    align-items: center;
+  
 }
 
 .frameworks-buttons{
@@ -2822,20 +2817,13 @@ div.icon-text {
 }
 
 
-.parent-abena-subtitle{
-    position: absolute;
+.abena-offering-subtitle{
+  
     font-weight: bold;
     font-size: 24px;
     color: #22215B;
-    left: 60%;
-    top: 310px;
 }
 
-.parent-offering-paragraph{
-    position:absolute;
-    left: 60%;
-    top: 360px;
-}
 .container.affordable-liscensing-container{
     position: absolute;
     top: 385%;
@@ -2871,22 +2859,60 @@ div.icon-text {
    
 }
 
-.team-image{
+.shawna-team-image{
 
     width: 227px;
     height: 227px;
+    position: relative;
+    
+
+}
+
+.team-title{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    color: #22215B;
+    top: -50px;
+}
+
+/* .team-name{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 33px;
+    color: #22215B;
+    top: -50px;
+} */
+
+.sharif-team-image{
+
+    width: 227px;
+    height: 227px;
+    position: relative;
+    
+
 }
 
 
+.profile-container-image{
+    position: relative;
+
+  
+}
+
 
 .why-abena {
-    position: absolute;
-    border-radius: 6px;
+    
+
     background-color: #F0FBFF;
-    top: 1220px;
-    left: 0px;
-    width:100%;
-    height: 800px;
+    top: 540px;
+    width: 100%;
+   
+ 
 
 }
 
@@ -2929,12 +2955,7 @@ div.icon-text {
 }
 
 .join-beta {
-    position: absolute;
-    width: 149px;
-    height: 38px;
 
-    background: #FDFFF0;
-    box-shadow: 0px 4px 12px rgba(237, 186, 243, 0.25);
     border-radius: 5px;
 }
 
@@ -3004,10 +3025,7 @@ div.icon-text {
 }
 
 .mtss-pyramid {
-    position: absolute;
-    top: -5%;
-    /* left: 140%; */
-    right: 20px;
+   position: reelativ;
     width: 100%;
     height: 333.68px;
 }
@@ -3059,48 +3077,44 @@ div.icon-text {
 
 .frameworks{
     position: absolute;
-    top: 970px;
-    left: 0px;
-    border-radius: 6px;
     background-color: #22215B;
     width:100%;
     height: 250px;
+    top: 870px;
 }
-.group-313{
 
-    top: 50px;
-    left: 433px;
- 
+
+.group-313 {
+    position: absolute;
+
 }
 .tier-1 {
-    top: 0px;
-    left: 100px;
+    
     border-radius: 6px;
     width:100%;
-    height: 247px;
+    height: 147px;
     font-weight: bold;
     font-size: 24px;
+    color: #22215B;
 
 }
 
 .tier-2 {
-    top: 0px;
-    left: 100px;
+
     border-radius: 6px;
     width:100%;
-    height: 247px;
+    height: 147px;
     font-weight: bold;
     font-size: 24px;
+    color: #22215B;
 }
 
 .tier-3 {
-    top: 0px;
-    left: 100px;
     border-radius: 6px;
     width:100%;
-    height: 247px;
     font-weight: bold;
     font-size: 24px;
+    color: #22215B;
 }
 
 .notification a:not(.button):not(.dropdown-item) {
