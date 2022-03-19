@@ -1,4 +1,5 @@
-class CommentsController < ApplicationController
+class Api::V1::CommentsController < ApplicationController
+  before_action :get_strategy
   before_action :set_comment, only: [:show, :update, :destroy]
 
   # GET /comments
