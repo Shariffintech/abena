@@ -26,6 +26,7 @@ class Api::V1::ClassroomsController < ApplicationController
 
   # PATCH/PUT /classrooms/1
   def update
+    
     if @classroom.update(classroom_params)
       render json: @classroom
     else

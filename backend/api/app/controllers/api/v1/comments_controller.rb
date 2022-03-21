@@ -4,7 +4,8 @@ class Api::V1::CommentsController < ApplicationController
 
   # GET /comments
   def index
-    @comments = Comment.all
+
+    @comments = @strategy.comments.order(:created_at => :desc)
 
     render json: @comments
   end
@@ -14,9 +15,13 @@ class Api::V1::CommentsController < ApplicationController
     render json: @comment
   end
 
+  def new
+    @comment = @strategy.comments.build
+  end
+
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
+    @comment = @strategy.comments.build(comment_params)
 
     if @comment.save
       render json: @comment, status: :created, location: @comment

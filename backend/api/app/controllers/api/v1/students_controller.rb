@@ -1,22 +1,28 @@
 class Api::V1::StudentsController < ApplicationController
-  before_action :get_user
+  before_action :get_classroom
   before_action :set_student, only: [:show, :update, :destroy]
 
   # GET /students
   def index
-    @students = Student.all
+    if current_user.role == nil
+      redirect_to api_v1_users_sign_in
+    else
+      @students = Student.where(user_id: current_user.id).order(:student_name => :asc)
+      render json: @students
+    end
 
-    render json: @students
+
   end
 
   # GET /students/1
   def show
+    @student = Student.find(params[:id])
     render json: @student
   end
 
   # POST /students
   def create
-    @student = Student.new(student_params)
+    @student = @classroom.students.build(student_params)
 
     if @student.save
       render json: @student, status: :created, location: @student
@@ -27,6 +33,7 @@ class Api::V1::StudentsController < ApplicationController
 
   # PATCH/PUT /students/1
   def update
+    @student = Student.find_by(id: params[:id])
     if @student.update(student_params)
       render json: @student
     else
@@ -42,7 +49,8 @@ class Api::V1::StudentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student
-      @student = Student.find(params[:id])
+      # @student = Student.find(params[:id])
+      @student = @classroom.students.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

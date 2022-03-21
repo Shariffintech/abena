@@ -1,5 +1,4 @@
 class Api::V1::StrategiesController < ApplicationController
-  before_action :get_students
   before_action :set_strategy, only: [:show, :update, :destroy]
 
   # GET /strategies

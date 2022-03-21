@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   enum role: {teacher: 0, ece_professional: 1, ece_admin: 2}
-ß
+
   has_many :classrooms, dependent: :destroy
   has_many :students, through: :classrooms
   # Others available are:

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_181734) do
+ActiveRecord::Schema.define(version: 2022_03_20_144650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,12 +48,12 @@ ActiveRecord::Schema.define(version: 2022_03_17_181734) do
 
   create_table "strategies", force: :cascade do |t|
     t.string "name"
-    t.string "category"
-    t.string "tier"
+    t.string "category", default: "Academic"
+    t.string "tier", default: "Tier 1", null: false
     t.string "description"
     t.string "reference"
-    t.bigint "students_id", null: false
-    t.bigint "classrooms_id", null: false
+    t.integer "students_id"
+    t.integer "classrooms_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["classrooms_id"], name: "index_strategies_on_classrooms_id"

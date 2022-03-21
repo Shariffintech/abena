@@ -4,7 +4,7 @@ class Api::V1::NotesController < ApplicationController
 
   # GET /notes
   def index
-    @notes = Note.all
+    @notes = Note.where(student_id: @student.id)
 
     render json: @notes
   end
@@ -16,7 +16,7 @@ class Api::V1::NotesController < ApplicationController
 
   # POST /notes
   def create
-    @note = Note.new(note_params)
+    @note = @student.notes.build(note_params)
 
     if @note.save
       render json: @note, status: :created, location: @note
@@ -27,6 +27,7 @@ class Api::V1::NotesController < ApplicationController
 
   # PATCH/PUT /notes/1
   def update
+    @note = Note.find_by(id: params[:id])
     if @note.update(note_params)
       render json: @note
     else
@@ -42,7 +43,8 @@ class Api::V1::NotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
-      @note = Note.find(params[:id])
+      @note = Note.find_by(id: params[:id])
+     
     end
 
     # Only allow a list of trusted parameters through.
