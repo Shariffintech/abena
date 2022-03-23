@@ -53,6 +53,10 @@ class Api::V1::StudentsController < ApplicationController
       @student = @classroom.students.find(params[:id])
     end
 
+    def get_classroom
+      @classroom = Classroom.find(params[:classroom_id])
+    end
+
     # Only allow a list of trusted parameters through.
     def student_params
       params.require(:student).permit(:fullname, :overall_concern, :funding_stream, :sleeping_patterns, :prior_school, :notes, :team)

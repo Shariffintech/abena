@@ -1,4 +1,11 @@
 class Classroom < ApplicationRecord
-  has_many :students, through: => :users
-  belongs_to :users
+  belongs_to :strategies
+  belongs_to :students, optional: true
+  has_many :comments, dependent: :destroy, foreign_key: :classrooms_id
+  accepts_nested_attributes_for :comments
+
+  validates :strategy_id, presence: true
+  validates :student_id, presence: true
+  validates :comments, presence: true
+  
 end

@@ -25,7 +25,7 @@ export default function strategyForm() {
         }
      })
 
-     //   state = {
+//   state = {
 //     name: this.props.name ? this.props.name : ""
 //   }
 

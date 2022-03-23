@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import IntakeForm from "./intakeForm";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Intake = (props) => {
-  // const [selectedId, setSelectedId] = useState(null)
+
   return (
     <>
       {/* <motion.div
@@ -14,16 +14,14 @@ const Intake = (props) => {
         }}
       /> */}
 
-
       {/* <AnimatePresence>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         > */}
-         <IntakeForm /> 
+          {/* <IntakeForm /> */}
         {/* </motion.div>
-    
       </AnimatePresence> */}
     </>
   );

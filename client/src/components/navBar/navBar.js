@@ -11,7 +11,7 @@ import { Navbar, Image } from "react-bulma-components";
 
 const NavBar = () => {
   return (
-    <div className="navbar is-fixed-top " >
+    <div className="navbar is-fixed-top is-transparent ">
       
         
         <Navbar.Brand>
@@ -25,7 +25,7 @@ const NavBar = () => {
         </Navbar.Brand>
         
 
-        <Navbar.Menu>
+        <Navbar.Menu alignContent="right" >
           <Navbar.Container>
             <Navbar.Item dropdown hoverable href="#">
               <Navbar.Link  href="#">
@@ -37,11 +37,11 @@ const NavBar = () => {
                   <Link to="/mission" >Mission</Link>
                 </Navbar.Item>
 
-                <Navbar.Item href="#" onClick={() => scrollToElement("#team-container")}>
+                <Navbar.Item href="#" onClick={() => scrollToElement("#team")}>
                   <Link to="/team">Team</Link>
                 </Navbar.Item>
 
-                <Navbar.Item href="#" onClick={() => scrollToElement("#why-containers")}>
+                <Navbar.Item href="#" onClick={() => scrollToElement("#why-abena")}>
                   <Link to="/whyabena">Why Abena?</Link>
                 </Navbar.Item>
 
@@ -59,7 +59,7 @@ const NavBar = () => {
               </Navbar.Item>
 
               <Navbar.Item href="#">
-                <Link to="/intake/new">Create Intake</Link>
+                <Link to="/students/new">Create Intake</Link>
               </Navbar.Item>
             </Navbar.Container>
           </Navbar.Container>

@@ -6392,9 +6392,9 @@ print {
 
 .navbar {
     background-color: white;
-    min-height: 3.25rem;
+    /* min-height: 4.25rem;
     position: relative;
-    z-index: 30;
+    z-index: 30; */
 }
 
 .navbar.is-white {
@@ -7397,8 +7397,9 @@ a.navbar-item.is-active,
     .navbar-menu,
     .navbar-start,
     .navbar-end {
-        align-items: stretch;
+        align-items: center;
         display: flex;
+        height:7%;
     }
 
     .navbar {

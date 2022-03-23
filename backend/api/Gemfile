@@ -30,6 +30,14 @@ gem 'devise'
 
 gem 'active_model_serializers'
 
+gem "better_errors"
+
+gem 'pry-rails'
+
+gem 'pry-byebug'
+
+gem 'cors'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

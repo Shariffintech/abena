@@ -1,8 +1,8 @@
-import { createAsyncThunk , createSlice} from '@reduxjs/toolkit';
+import { configureStore, createAsyncThunk} from '@reduxjs/toolkit';
 import {abenaApi} from '../services/api';
+import { strategySlice } from '../components/strategies/strategySlice';
+import { studentSlice } from '../components/students/studentSlice';
 
-// import {configureStore} from '@reduxjs/toolkit';
-// import { strategySlice } from './strategySlice';
 
 // createAsyncThunk accepts three parameters: a string action type value, a payloadCreator callback, and an options object.
 // For example, a type argument of 'users/requestStatus' will generate these action types:
@@ -17,6 +17,8 @@ const fetchUserById = createAsyncThunk(
         const response = await abenaApi.get(`/users/${id}`);
         return response.data;
     }
+
+    
 );
 
 const fetchStrategyByStatus = createAsyncThunk(
@@ -36,48 +38,14 @@ const submitReqStrategy = createAsyncThunk(
 
 )
 
-const usersSlice = createSlice({
-    name: 'users',
-    initialState: {entities:[], loading: 'idle'},
-    reducers: {
-        // standard reducer logic, with auto-generated action types per reducer
-    },
-    extraReducers: (builder) => {
-        // Add reducers for additional action types here, and handle loading state as needed
-        builder.addCase(fetchUserById.fulfilled, (state, action) => {
-          // Add user to the state array
-          state.entities.push(action.payload)
-        })
-      },
-
-
-})
-
-const strategySlice = createSlice({
-    name: 'strategy',
-    initialState: {entities: ['not reviewed'], loading:'idle'},
-    reducers: {
-
-    },
-    extraReducers: (builder) =>{
-        builder.addCase(fetchStrategyByStatus.fullfilled, (state,action) =>{
-            state.entities.push(action.payload)
-        })
-    }
-
-})
-
-
 
 // Later, dispatch the thunk as needed in the app
-dispatch(fetchUserById(123))
 
 
-
-
-// export const store = configureStore({
-//     reducer:{
-//         strategySlice: strategySlice
+export const store = configureStore({
+    reducer:{
+        strategySlice: strategySlice,
+        studentSlice: studentSlice
         
-//     }
-// })
+    }
+})

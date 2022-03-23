@@ -4,7 +4,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-// import { Provider } from "react-redux";
+import {store} from "./services/store";
+import { Provider } from "react-redux";
 // import { applyMiddleware, configureStore } from "@reduxjs/toolkit";
 // import rootReducer from './app/reducer';
 // import thunk from 'redux-thunk';
@@ -16,7 +17,9 @@ ReactDOM.render(
     <Router>
         <App />
     </Router>
-    </React.StrictMode>,
+  </React.StrictMode>,
+
+
       
   document.getElementById("root")
 );
