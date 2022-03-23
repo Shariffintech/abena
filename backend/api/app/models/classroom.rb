@@ -4,7 +4,7 @@ class Classroom < ApplicationRecord
   has_many :comments, dependent: :destroy, foreign_key: :classrooms_id
   accepts_nested_attributes_for :comments
 
-  validates :strategy_id, presence: true
+  validates :strategies_id, presence: true
   validates :student_id, presence: true
   validates :comments, presence: true
   
