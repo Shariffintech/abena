@@ -42,12 +42,12 @@ class Api::V1::StrategiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_strategy
-      @strategy = @classroom.strategies.find(params[:id])
+      @strategy = Strategies.find(params[:id])
     end
 
     def get_classroom
       if @classroom != nil
-        @classroom = Classroom.find(params[:strategy][:classroom_id])
+        @classroom = Classroom.find(params[:classroom_id])
       else
         @classroom = nil
       end
