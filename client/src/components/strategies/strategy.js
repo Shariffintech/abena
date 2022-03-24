@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+// import Modal from "../strategies/strategyModal";
+import Backdrop from "./backdrop";
 import "bulma/css/bulma.min.css";
 import "../../App.css";
-import { motion } from "framer-motion";
-import Modal from "./modal";
-import Backdrop from "./backdrop";
 
 import {
   Card,
@@ -27,6 +27,8 @@ import {
 } from "react-icons/io5";
 
 function Strategy(props) {
+
+
   
   // const strategy = useSelector((state) => state.strategy);
   // const [setStrategyPerCategory] = useDispatch(
@@ -147,6 +149,8 @@ function Strategy(props) {
                         (() => toggleSwitch(), dispatch(toggleStrategy()))
                       }
                     >
+                      {/* { toggleStrategy() ? ( <IoToggleSharp /> ) : ( <IoToggleSharp /> ) } */}
+
                       <motion.div
                         className="handle"
                         layout

@@ -1,4 +1,4 @@
-import { createSlice } from 'redux-toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const studentSlice = createSlice({
     name: 'students',

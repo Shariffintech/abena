@@ -102,15 +102,15 @@ const setStrategies = (strategies) => {
 }
 
 
-export const getStrategies = () => {
+// export const getStrategies = () => {
 
-  return (dispatch) => {
-    fetch("http://localhost:3000/strategies")
-      .then((r) => r.json())
-      .then((data) => dispatch(setStrategies(data)));
-  };
+//   return (dispatch) => {
+//     fetch("http://localhost:3000/strategies")
+//       .then((r) => r.json())
+//       .then((data) => dispatch(setStrategies(data)));
+//   };
 
-}
+// }
 
 const addStrategy = (strategy) => {
   return {
@@ -172,21 +172,19 @@ export const updateStrategy = (strategy) => {
 }
 
 
-const setComment= (comment) => {
-
+const setComments= (comments) => {
   return {
     type: SET_COMMENTS,
-    payload: comment,
+    payload: comments,
   };
-
 }
 
-export const getComment = () => {
+export const getComments = (strategy) => {
   
     return (dispatch) => {
-      fetch("http://localhost:3000/comments")
+      fetch(`http://localhost:3000/strategies/${strategy.id}/comments`)
         .then((r) => r.json())
-        .then((data) => dispatch(setComment(data)));
+        .then((data) => dispatch(setComments(data)));
     };
   
   }
@@ -200,16 +198,16 @@ const addComment = (comment) => {
 }
 
 
-export const createComment = (formData) => {
+export const createComment = (strategies, comments) => {
     
     return (dispatch) => {
-      fetch("http://localhost:3000/comments", {
+      fetch(`http://localhost:3000/strategies/${strategies.id}/comments/${comments.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(strategies),
       }).then((r) => {
         if (r.ok) {
           r.json().then((comment) => dispatch(addComment(comment)));

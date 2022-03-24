@@ -10,6 +10,7 @@ import Home from "./components/home/home";
 import {Whoops404} from "./components/error";
 
 
+
 // to do: add nav bar with links to scroll to: team, mission, why abena dms, api documentation, pricing (coming soon) sections
 // to do: link product hunt button to product hunt page
 // to do: setup emailing list through sendgrid after users join beta
@@ -24,6 +25,7 @@ export default function App() {
   // add fetch request to backend to get strategies
   // add fetch request to backend to create strategies
   // add fetch request to backend to create students
+
 
 
   return (

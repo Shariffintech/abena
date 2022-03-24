@@ -1,77 +1,90 @@
-import React from 'react';
-import 'bulma/css/bulma.min.css';
-import {useForm} from 'react-hook-form';
-import {addStrategy, getStrategies, deleteStrategy, editStrategy} from '../../actions/actions';
+import React from "react";
+import "bulma/css/bulma.min.css";
+import { useForm } from "react-hook-form";
+import {
+  addCategory,
+  addReference,
+  addStatus,
+  addTier,
+  addName,
+} from "../../store/strategySlice";
 
 export default function strategyForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaulValues: preLoadedValues,
+  });
 
-    const {register, handleSubmit, formState:{errors}} = useForm()
+  const preLoadedValues = {};
 
-     // add in review, approved, and rejected statuses for each submitted strategy
+  // move strategy to "in review" status for each submitted strategy once the strategy is submitted
 
-     useForm({
-        defaultValues: {
-            status: "not reviewed",
-            tier: "1",
-            category: "",
-            title: "",
-            description: "",
-            url: "",
-            image: "",
-            comments: "",
-            user_id: "",
-            classroom_id: "",
-            id: ""
-        }
-     })
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+  };
 
-//   state = {
-//     name: this.props.name ? this.props.name : ""
-//   }
+  const handleNewInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewInput({ ...newInput, [name]: value });
+  };
 
-//   handleChange = e => {
-//     this.setState({
-//       name: e.target.value
-//     })
-//   }
+  // add in a way to sort by status
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input
+        ref={register}
+        type="text"
+        placeholder="Strategy Name"
+        value={addName}
+        onChange={handleNewInputChange}
+        id="strategy-name"
+      />
 
-//   handleSubmit = e => {
-//     e.preventDefault()
-//     if(this.props.id){
-//       // dispatch an action to edit Strategy
-//       this.props.updateStrategy({...this.state, id: this.props.id})
-//       this.props.toggleEdit()
-//     } else {
-//       this.props.createStrategy(this.state)
-//     }
-    
-//     this.setState({name: ""})
-//   }
-    
-//     return (
-//       <form onSubmit={this.handleSubmit}>
-//         <input 
-//           type="text" 
-//           placeholder='name' 
-//           value={this.state.name}
-//           onChange={this.handleChange}
-//         />
-//         <input type="submit" value={this.props.id ? "Edit" : "Create"} />
-//       </form>
-//     )
-// }
+      <input
+        ref={register}
+        type="text"
+        placeholder="Description"
+        {...register({
+          validate: (value) => value.length > 0 || "Please enter a description",
+        })}
+        id="strategy-description"
+      />
 
-    // add in a way to sort by status
-    return(
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <input type="text" name="title" ref={register} placeholder="Title"/>
-            <input type="text" name="tier" ref={register} placeholder="Tier"/>
-            <input type="text" name="category" ref={register} placeholder="Category"/>
-            <input type="text" name="description" ref={register} placeholder="Description"/>
-            <input type="text" name="reference" ref={register} placeholder="Reference"/>
-            <input type="text" name="status" ref={register} placeholder="Status"/>
-        </form>
-    )
+      <input
+        ref={register}
+        type="text"
+        placeholder="Reference"
+        {...register({
+          validate: (value) =>
+            value.length > 0 || "Please enter a valid reference",
+        })}
+        id="strategy-reference"
+      />
+
+      <input
+        ref={register}
+        type="number "
+        placeholder="Category"
+        {...register({
+          validate: (value) => value > 0 || "Please enter a valid category",
+        })}
+        id="strategy-category"
+      />
+
+      <input
+        ref={register}
+        type="number"
+        placeholder="Tier"
+        {...register({
+          validate: (value) => value > 0 || "Please enter a tier",
+        })}
+        id="strategy-tier"
+      />
+
+      <input type="submit" value="Submit" />
+    </form>
+  );
 }
-
-// export default connect(null, { createStrategy, updateStrategy })(strategiesForm);

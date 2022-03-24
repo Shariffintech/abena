@@ -1,7 +1,7 @@
 import React from "react";
 import "bulma/css/bulma.min.css";
-import { useState,useForm } from "react-hook-form";
-import { Form, Container, Button } from "react-bulma-components";
+import { useForm } from "react-hook-form";
+import { Form, Button } from "react-bulma-components";
 // import {Progress, Form , Field} from "react-bulma-components";
 // import { motion, useViewportScroll } from "framer-motion";
 
@@ -19,78 +19,103 @@ import { Form, Container, Button } from "react-bulma-components";
 
 // to do: add chat function with twilio record parent, teacher convo when completing this form
 
-
 function IntakeForm() {
   
-
   const { Group, Label, Control } = { ...Form };
   
   const {register, handleSubmit, formState: { errors }} = useForm();
 
   const onSubmit = (data) => console.log(data);
   
-  console.log(errors);
-
-
-//   const [full_name, setName] = useState("Enter student name");
-//   const [date_of_birth, setDOB] = useState("Enter DOB");
-//   const [student_age, setStudentAge] = useState("Enter Age");
-//   const [team, setTeam] = useState("Enter students team");
-//   const [current_school, setSchool] = useState("Enter current school name");
-//   const [current_school_contact, setSchoolContact] = useState(
-//     "Enter Admin Contact"
-//   );
-//   const [room_number, setRoomNumber] = useState("Enter Student Room Number");
-//   const [previous_school, setPriorSchool] = useState("Enter prior school");
-//   const [overall_concern, setOverallConcern] = useState(
-//     "Select overall concern"
-//   );
-//   const [sleeping_patterns, setSleepingPatterns] = useState(
-//     "Selet sleeping patterns"
-//   );
-//   const [funding_stream, setFundingStream] = useState("Select Funding Stream");
-//   const [notes, setNotes] = useState("Add notes to student profile");
-
   return (
 
       <form className="simpleForm" onSubmit={handleSubmit(onSubmit)}>
         <Group>
-          <Label>First name</Label>
-          <Control
-            type="text"
-            placeholder="First name"
-            {...register("First name")}
-          />
+          <Label>Student Full Name</Label>
+          <Control>
+            <input
+              ref={register({
+                required: "Please enter a name",
+                })}
+              type="text"
+              placeholder="Student Full Name"
+              id="student-name"
+            />
+          </Control>
         </Group>
 
         <Group>
-          <Label>Last Name</Label>
-          <Control
-            type="text"
-            placeholder="Last name"
-            {...register("Last name")}
-          />
+          <Label>Overall Concern</Label>
+          <Control>
+            <input
+              ref={register({
+                required: "Please select a concern",
+                })}
+              type="text"
+              placeholder="Overall Concern"
+              id="overall-concern"
+            />
+          </Control>
         </Group>
-        <Group>
-          <Label>Email</Label>
-          <Control type="text" placeholder="Email" {...register("Email")} />
-        </Group>
-        <Group>
-          <Label>Mobile number</Label>
-          <Control
-            type="tel"
-            placeholder="Mobile number"
-            {...register("Mobile number")}
-          />
-        </Group>
-        <Group>
-          <Label>Comments</Label>
-          <Control as="textarea" {...register("Your comments")} />
 
-          <Button type="submit">Send</Button>
+        <Group>
+          <Label>Funding Stream</Label>
+          <Control>
+            <input
+              ref={register({
+                required: "Please select a funding stream",
+                })}
+              type="text"
+              placeholder="Funding Stream"
+              id="funding-stream"
+            />
+          </Control>
         </Group>
+
+        <Group>
+          <Label>Sleeping Pattenrs</Label>
+          <Control>
+            <input
+              ref={register({
+                required: "Select a sleeping pattern",
+                })}
+              type="text"
+              placeholder="Sleeping Pattern #1"
+              id="sleeping-pattern-1"
+            />
+            </Control>
+            </Group>
+
+            <Group>
+          <Label>Prior School</Label>
+          <Control>
+            <input
+              ref={register({
+                required: "Please enter a prior school",
+                })}
+              type="text"
+              placeholder="Prior School"
+              id="prior-school"
+            />
+          </Control>
+        </Group>
+
+        <Group>
+          <Label>Team</Label>
+          <Control>
+            <input
+              ref={register({
+                required: "Please enter a team",
+                })}
+              type="text"
+              placeholder="Team"
+              id="team"
+            />
+          </Control>
+        </Group>
+        
+          <Button type="submit">Submit Student</Button>
       </form>
-
   );
 }
 

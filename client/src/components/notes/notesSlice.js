@@ -1,25 +1,31 @@
-import {createSlice} from '@reduxjs/toolkit';
-import {abenaApi} from '../services/api';
-import {strategySlice} from '../services/slices/strategySlice';
-import {studentSlice} from '../services/slices/studentSlice';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-export const notesSlice = createSlice({
+
+const notesSlice = createSlice({
     name: 'notes',
     initialState: {
         notes: [],
     },
     reducers: {
-        setNotes: (state, action) => {
-            return {...state, notes: [...action.payload]};
+        addNotes: (state,{payload}) => {
+            state.notes.push(payload);
+        },
+        deleteNotes: (state,{payload}) => {
+            state.notes.splice(payload,1);
+        },
+        updateNotes: (state,{payload}) => {
+            state.notes[payload.index] = payload.note;
+        },
+        deleteProp(state,{payload}) {
+            delete state[payload.prop];
         }
+
     },
-    extraReducers: (builder) => {
-        builder.addCase(strategySlice.actions.setStrategyPerCategory.fulfilled, (state, action) => {
-            state.notes.push(action.payload);
-        });
-    }
 })
 
-export const {setNotes} = notesSlice.actions;
+
+export const {addNotes,deleteNotes,updateNotes,deleteProp} = notesSlice.actions;
+
+export const setNotes = (notes) => ({ notes: notes });
 
 export default notesSlice.reducer;

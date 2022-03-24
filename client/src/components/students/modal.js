@@ -1,20 +1,8 @@
 import React from "react";
-import "bulma/css/bulma.min.css";
-import {
-  Button,
-  ButtonGroup,
-  Modal,
-  ModalCard,
-  ModalCardBody,
-  ModalCardFoot,
-  ModalCardHead,
-  ModalCardTitle,
-  Media,
-  MediaItem,
-  Content,
-  Image,
+import {Button, ModelCard,Media, Content} from "react-bulma-components";
 
-} from "react-bulma-components";
+
+import "bulma/css/bulma.min.css";
 
 const strategyModal = () => {
   return (
@@ -68,3 +56,4 @@ const strategyModal = () => {
 };
 
 export default strategyModal;
+

@@ -13,13 +13,13 @@ import { Provider } from "react-redux";
 // const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk));
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
+  
     <Router>
         <App />
     </Router>
-  </React.StrictMode>,
 
-
+  </Provider>,
       
   document.getElementById("root")
 );

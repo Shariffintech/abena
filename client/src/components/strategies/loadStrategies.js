@@ -1,25 +1,32 @@
 import React from "react";
 import "bulma/css/bulma.min.css";
 import Strategy from "./strategy";
+import {useSelector} from "react-redux";
 import { useEffect, useState } from "react";
-import { getStrategies } from "../../actions/actions";
+// import { getStrategies } from "../../actions/actions";
 
-export default function Strategies(props) {
+export default function Strategies() {
+
+  const {strategies, isLoading} = useSelector(state => state.strategy);
   // to do show strategies as animated carousels with framer
 
-const [strategies, setStrategies] = useState([]);
+
 // pull strategies from the backend api
 
-  useEffect(() => {
-    dispatch(
-      getStrategies().then((strategies) => {
-        setStrategies(strategies);
-      })
-    );
-  }, []);
+  // useEffect(() => {
+  //   const fetchStrategies = async () => {
+  //     const response = await getStrategies()
+  //       .then((response) => {
+  //         setStrategies(response);
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  //   };
+  // }, []);
 
-  
-  // const strategies = [
+
+  // const props = [
   //   {
   //     id: 1,
   //     name: "Strategy 1",
@@ -48,18 +55,20 @@ const [strategies, setStrategies] = useState([]);
   //     category: "Category 3",
   //   }
   // ];
+
+  
   return (
     <section>
-      {strategies.map((strategy) => (
+      {strategies.map((props) => (
         <Strategy
-          name={strategy.name}
-          description={strategy.description}
-          tier={strategy.tier}
-          category={strategy.category}
-          reference={strategy.reference}
-          createdAt={strategy.createdAt}
-          status={strategy.status}
-          id={strategy.id}
+          name={props.name}
+          description={props.description}
+          tier={props.tier}
+          category={props.category}
+          reference={props.reference}
+          createdAt={props.createdAt}
+          status={props.status}
+          id={props.id}
         />
       ))}
     </section>
