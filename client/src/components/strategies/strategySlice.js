@@ -1,51 +1,44 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import axios from "axios";
+// import {api} from '../services/api';
 
 const initialState = {
     strategies: [],
     loading: false,
-
 };
 
 export const getStrategies = createAsyncThunk(
   "strategies/getStrategies",
   async (thunkAPI) => {
-    const res = await fetch(`http://localhost:3000/api/v1/strategies`)
-      .then((data) => data.json())
-      .catch((err) => console.error(err));
-
-    return res;
-
-    //   try {
-    //     return fetch(`http://localhost:3000/api/v1/strategies`)
-    //       .then((res) => res.json());
-    //   } catch (error) {
-    //     return thunkAPI.rejectWithValue({ error: error.message });
-    //   }
+      try {
+        return fetch(`http://localhost:3001/api/v1/strategies`)
+          .then((res) => res.json());
+      } catch (error) {
+        return thunkAPI.rejectWithValue({ error: error.message });
+      }
   }
 );
 
-// export const addStrategy = createAsyncThunk(
-//   "strategies/addStrategy",
-//   async (thunkAPI) => {
-//     try {
-//       return await axios
-//         .post(`http://localhost:3000/api/v1/strategies`)
-//         .then((res) => res.json());
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue({ error: error.message });
-//     }
-//   }
-// );
+export const addStrategy = createAsyncThunk(
+  "strategies/addStrategy",
+  async (thunkAPI) => {
+    try {
+      return await axios
+        .post(`http://localhost:3000/api/v1/strategies`)
+        .then((res) => res.json());
+    } catch (error) {
+      return thunkAPI.rejectWithValue({ error: error.message });
+    }
+  }
+);
 
-// export const fetchStrategyByStatus = createAsyncThunk(
-//   'strategies/fetchStrategyByStatus',
-//   async () => {
-//     return await fetch(`http://localhost:3000/api/v1/strategies/status/${status}`).then((res) =>
-//       res.json()
-//     );
-//   }
-// )
+export const fetchStrategyByStatus = createAsyncThunk(
+  'strategies/fetchStrategyByStatus',
+  async () => {
+    return await fetch(`http://localhost:3000/api/v1/strategies/status/${status}`).then((res) =>
+      res.json()
+    );
+  }
+)
 
 // add default status to each strategy "not reviewed"
 

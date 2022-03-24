@@ -10,7 +10,7 @@ import {
 import "bulma/css/bulma.min.css";
 import { Card } from "react-bulma-components";
 import IntakeForm from "./intakeForm";
-import Intake from "./intake";
+import Intake from "./intakeContainer";
 import { motion, Variants } from "framer-motion";
 
 // to do populate students in classroom associated with teacher

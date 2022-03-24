@@ -115,9 +115,9 @@ const Mission = () => {
         <Columns.Column size={4} multiline={false}>
           <Block className="tier-block" size={6}>
             <div className="group-313" align="right">
-              <p className="tier-1">Tier 1 -</p>
-              <p className="tier-2">Tier 2 -</p>
-              <p className="tier-3">Tier 3 -</p>
+              <p className="tier-1">Tier 1 </p>
+              <p className="tier-2">Tier 2 </p>
+              <p className="tier-3">Tier 3 </p>
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/2aRhaU5AJgN2L6tA3rcWuk-410%3A315?alt=media&token=f65e54d1-6cff-4157-88b6-95f900ff93fa"
                 alt=" not found"

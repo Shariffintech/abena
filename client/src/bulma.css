@@ -3042,6 +3042,14 @@ div.icon-text {
     align-items: center;
   }
   
+  /* .form-container {
+    background: #37C6F7;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  } */
   
   
   .switch {

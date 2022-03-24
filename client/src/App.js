@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Mission from "./components/home/mission";
 import Strategy from "./components/strategies/loadStrategies";
 import Student from "./components/students/student";
-import Intake from "./components/students/intake";
+import Intake from "./components/students/intakeContainer";
 import NavBar from "./components/navBar/navBar";
 import Home from "./components/home/home";
 import {Whoops404} from "./components/error";
@@ -37,7 +37,7 @@ export default function App() {
         <Route path="/home" element={<Home/>} />
         <Route path="/students" element={<Student/>} />
         <Route path="/mission" element={<Mission />} />
-        <Route path="/student/new" element={<Intake />} />
+        <Route path="/intake" element={<Intake />} />
         <Route path="*" element={<Whoops404 />} />
       </Routes>
     </div>

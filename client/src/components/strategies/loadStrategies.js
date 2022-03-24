@@ -1,60 +1,26 @@
 import React from "react";
 import "bulma/css/bulma.min.css";
 import Strategy from "./strategy";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector } from "react-redux";
+
 import { useEffect, useState } from "react";
-// import { getStrategies } from "../../actions/actions";
+import{ getStrategies } from "./strategySlice.js";
+
 
 export default function Strategies() {
 
-  const {strategies, isLoading} = useSelector(state => state.strategy);
-  // to do show strategies as animated carousels with framer
+  const {strategies} = useSelector(state => state.strategy);
 
+  // to do show strategies as animated carousels with framer
+  // to do: add counter button for did you learn something new on landing page with animation
+  // to do: when strategy is turned on it is applied to the student
 
 // pull strategies from the backend api
+const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getStrategies());
+  }, []);
 
-  // useEffect(() => {
-  //   const fetchStrategies = async () => {
-  //     const response = await getStrategies()
-  //       .then((response) => {
-  //         setStrategies(response);
-  //       })
-  //       .catch((error) => {
-  //         console.log(error);
-  //       });
-  //   };
-  // }, []);
-
-
-  // const props = [
-  //   {
-  //     id: 1,
-  //     name: "Strategy 1",
-  //     description: "Description 1",
-  //     reference: "Reference 1",
-  //     status: "Not Reviewed",
-  //     tier: "1",
-  //     category: "Category 1",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Strategy 2",
-  //     description: "Description 2",
-  //     reference: "Reference 2",
-  //     status: "Not Reviewed",
-  //     tier: "2",
-  //     category: "Category 2",
-  //   },
-
-  //   {
-  //     id: 3,
-  //     name: "Strategy 3",
-  //     description: "Description 3",
-  //     status: "Not Reviewed",
-  //     tier: "3",
-  //     category: "Category 3",
-  //   }
-  // ];
 
   
   return (

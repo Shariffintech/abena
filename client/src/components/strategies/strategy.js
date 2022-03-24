@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-// import Modal from "../strategies/strategyModal";
-import Backdrop from "./backdrop";
 import "bulma/css/bulma.min.css";
 import "../../App.css";
 
@@ -12,25 +10,28 @@ import {
   Content,
   Image,
   Icon,
-  Button,
-  Container,
-  Columns,
 } from "react-bulma-components";
 import {
-  IoExpand,
   IoChatbubblesOutline,
   IoThumbsDownOutline,
   IoHeartOutline,
   IoStarOutline,
-  IoToggleSharp,
   IoEllipsisHorizontalSharp,
 } from "react-icons/io5";
 
+
 function Strategy(props) {
-
-
-  
   // const strategy = useSelector((state) => state.strategy);
+
+
+  const [isOn, setIsOn] = useState(false);
+  const toggleSwitch = () => setIsOn(!isOn);
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30,
+  };
+
   // const [setStrategyPerCategory] = useDispatch(
   //   strategySlice.actions.setStrategyPerCategory
   // );
@@ -48,32 +49,11 @@ function Strategy(props) {
   // );
 
   // const [count, setCount] = useState(0);
-  // const [toggleStrategy, setToggleStrategy] = useState("On");
   // const [favorite, setfavorite] = useState(false);
   // const [loved, setloved] = useState(false);
   // const [disliked, setdisliked] = useState(false);
   // const [status, setstatus] = useState("Not Reviewed");
   // const [modal, setmodal] = useState(false);
-
-  // use memo research
-
-  // todo add counter button for did you learn something new on landing page with animation
-
-  // when strategy is turned on it is applied to the student
-
-  // have strategies automatically move in a carousel upon load
-
-  // add a create button / function that will pop a modal for creating a new strategy and import the strategyForm to insert in the modal
-
-  // add a search bar to search for strategies , add a sort function to sort by category/ tier
-
-  const [isOn, setIsOn] = useState(false);
-  const toggleSwitch = () => setIsOn(!isOn);
-  const spring = {
-    type: "spring",
-    stiffness: 700,
-    damping: 30,
-  };
 
   return (
     <div className="strategyCard colums is-mobile" key={props.id}>
