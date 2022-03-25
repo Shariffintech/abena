@@ -122,7 +122,7 @@ const addStrategy = (strategy) => {
 export const createStrategy = (formData) => {
 
   return (dispatch) => {
-    fetch("http://localhost:3000/strategies", {
+    fetch(`http://localhost:3001/api/v1/strategies`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -147,16 +147,16 @@ const editStrategy = (strategy) => {
   };
 }
 
-export const updateStrategy = (strategy) => {
+export const updateStrategy = (strategies) => {
 
   return (dispatch) => {
-    fetch(`http://localhost:3000/strategies/${strategy.id}`, {
+    fetch(`http://localhost:3001/api/v1/strategies/${strategies.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(strategy),
+      body: JSON.stringify(strategies),
     })
       .then((r) => {
         if (r.ok) {
@@ -179,10 +179,10 @@ const setComments= (comments) => {
   };
 }
 
-export const getComments = (strategy) => {
+export const getComments = (strategies) => {
   
     return (dispatch) => {
-      fetch(`http://localhost:3000/strategies/${strategy.id}/comments`)
+      fetch(`http://localhost:3001/api/v1/strategies/${strategies.id}/comments`)
         .then((r) => r.json())
         .then((data) => dispatch(setComments(data)));
     };
@@ -198,10 +198,10 @@ const addComment = (comment) => {
 }
 
 
-export const createComment = (strategies, comments) => {
+export const createComment = (strategies, comment) => {
     
     return (dispatch) => {
-      fetch(`http://localhost:3000/strategies/${strategies.id}/comments/${comments.id}`, {
+      fetch(`http://localhost:3001/api/v1/strategies/${strategies.id}/comments/${comment.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -219,10 +219,10 @@ export const createComment = (strategies, comments) => {
   
   }
 
-export const updateComment = (comment) => {
+export const updateComment = (strategies, comment) => {
 
   return (dispatch) => {
-    fetch(`http://localhost:3000/strategies/${comment.id}`, {
+    fetch(`http://localhost:3001/api/v1/strategies/${strategies.id}/comments/${comment.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -260,9 +260,9 @@ const deleteComment = (id) => {
 }
 
 
-export const destroyComment = (id) => {
+export const destroyComment = (strategies, comment) => {
   return (dispatch) => {
-    fetch(`http://localhost:3000/comments/${id}`, {
+    fetch(`http://localhost:3001/api/v1/strategies/${strategies.id}/comments/${comment.id}`, {
       method: "DELETE",
     }).then((r) => dispatch(deleteComment(id)));
   };

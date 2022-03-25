@@ -1,6 +1,5 @@
 import React from "react";
-import "bulma/css/bulma.min.css";
-import { useForm } from "react-hook-form";
+import { useForm, useDispatch } from "react-hook-form";
 import {
   addCategory,
   addReference,
@@ -8,6 +7,7 @@ import {
   addTier,
   addName,
 } from "../../store/strategySlice";
+import "bulma/css/bulma.min.css";
 
 export default function strategyForm() {
   const {
@@ -19,6 +19,23 @@ export default function strategyForm() {
   });
 
   const preLoadedValues = {};
+
+
+  // const [setStrategyPerCategory] = useDispatch(
+  //   strategySlice.actions.setStrategyPerCategory
+  // );
+  // const [setStrategyPerStudent] = useDispatch(
+  //   strategySlice.actions.setStrategyPerStudent
+  // );
+  // const [setStrategyPerReference] = useDispatch(
+  //   strategySlice.actions.setStrategyPerReference
+  // );
+  // const [setStrategyPerStatus] = useDispatch(
+  //   strategySlice.actions.setStrategyPerStatus
+  // );
+  // const [setStrategyPerTier] = useDispatch(
+  //   strategySlice.actions.setStrategyPerTier
+  // );
 
   // move strategy to "in review" status for each submitted strategy once the strategy is submitted
 

@@ -9,7 +9,7 @@ export const getStudents = createAsyncThunk(
   "students/getStudents",
   async (thunkAPI) => {
     try {
-      return fetch(`http://localhost:3001/api/v1/students`).then((res) =>
+      return fetch(`http://localhost:3001//api/v1/classrooms/${classroom.id}/students/${student.id}`).then((res) =>
         res.json()
       );
     } catch (error) {
@@ -22,7 +22,7 @@ export const addStudent = createAsyncThunk(
   "students/addStudent",
   async (thunkAPI) => {
     try {
-      return await fetch(`http://localhost:3000/api/v1/students`, {
+      return await fetch(`http://localhost:3001//api/v1/classrooms/${classroom.id}/students`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

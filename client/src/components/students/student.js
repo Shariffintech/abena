@@ -22,8 +22,8 @@ import { motion, Variants } from "framer-motion";
 
 function Student(props) {
 
-    useEffect(() => {
-        fetch("http://localhost:3000/api/vi/students/")
+    useEffect((classroom) => {
+        fetch("http://localhost:3000/api/vi/classrooms/${classroom.id}/students/${student.id}")
           .then((resp) => resp.json())
           .then((intakes) => {
             console.log(intakes);

@@ -15,13 +15,11 @@ const NavBar = () => {
         <Navbar.Brand>
           <Navbar.Item className="homepage" href="#" to="/home">
                   <Image
-                    navbar
                     src="https://user-images.githubusercontent.com/22308837/157813235-24e05afb-589d-4452-a858-f1fca1e782c7.png"
                     alt="Strengthing early childhood education classrooms."
                   />
           </Navbar.Item>
         </Navbar.Brand>
-        
 
         <Navbar.Menu alignContent="right" >
           <Navbar.Container>
@@ -43,7 +41,6 @@ const NavBar = () => {
                   <Link to="/whyabena">Why Abena?</Link>
                 </Navbar.Item>
 
-              
               </Navbar.Dropdown>
             </Navbar.Item>
 
@@ -62,7 +59,6 @@ const NavBar = () => {
             </Navbar.Container>
           </Navbar.Container>
         </Navbar.Menu>
-
     </div>
   );
 };

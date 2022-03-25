@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import "bulma/css/bulma.min.css";
 import "../../App.css";
@@ -23,6 +24,7 @@ import {
 function Strategy(props) {
   // const strategy = useSelector((state) => state.strategy);
 
+  const dispatch = useDispatch();
 
   const [isOn, setIsOn] = useState(false);
   const toggleSwitch = () => setIsOn(!isOn);
@@ -31,22 +33,6 @@ function Strategy(props) {
     stiffness: 700,
     damping: 30,
   };
-
-  // const [setStrategyPerCategory] = useDispatch(
-  //   strategySlice.actions.setStrategyPerCategory
-  // );
-  // const [setStrategyPerStudent] = useDispatch(
-  //   strategySlice.actions.setStrategyPerStudent
-  // );
-  // const [setStrategyPerReference] = useDispatch(
-  //   strategySlice.actions.setStrategyPerReference
-  // );
-  // const [setStrategyPerStatus] = useDispatch(
-  //   strategySlice.actions.setStrategyPerStatus
-  // );
-  // const [setStrategyPerTier] = useDispatch(
-  //   strategySlice.actions.setStrategyPerTier
-  // );
 
   // const [count, setCount] = useState(0);
   // const [favorite, setfavorite] = useState(false);
@@ -124,17 +110,19 @@ function Strategy(props) {
 
                     <div
                       className="switch"
+                      size={8}
                       data-isOn={isOn}
                       onClick={
-                        (() => toggleSwitch(), dispatch(toggleStrategy()))
+                        (() => toggleSwitch())
                       }
+                     
                     >
-                      {/* { toggleStrategy() ? ( <IoToggleSharp /> ) : ( <IoToggleSharp /> ) } */}
 
                       <motion.div
                         className="handle"
                         layout
                         transition={spring}
+                      
                       />
                     </div>
 

@@ -35,7 +35,7 @@ const Mission = () => {
 
     <Container className="mission-container ml-auto" margin="auto">
       <div className="eclipse" />
-      <Columns multiline={true} className="mt-6 pt-auto" margin="auto">
+      <Columns multiline="true" className="mt-6 pt-auto" margin="auto">
         <Columns.Column
           className="mission-statement ml-6 pt-6"
           size="half"
@@ -86,8 +86,8 @@ const Mission = () => {
 
           <Columns.Column
             className="join-beta-text mt-5"
-            multiline={true}
-            centered={true}
+            multiline="true"
+            centered="true"
             size="two-thirds"
             margin="auto"
           >
@@ -112,7 +112,7 @@ const Mission = () => {
         </Columns.Column>
 
         {/* <Container align="center" className="ml-5"> */}
-        <Columns.Column size={4} multiline={false}>
+        <Columns.Column size={4} multiline="false">
           <Block className="tier-block" size={6}>
             <div className="group-313" align="right">
               <p className="tier-1">Tier 1 </p>

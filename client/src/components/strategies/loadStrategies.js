@@ -1,42 +1,33 @@
-import React from "react";
-import "bulma/css/bulma.min.css";
+import React, { useEffect } from "react";
 import Strategy from "./strategy";
-import {useDispatch, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getStrategies } from "./strategySlice.js";
+import "bulma/css/bulma.min.css";
 
-import { useEffect, useState } from "react";
-import{ getStrategies } from "./strategySlice.js";
+const Strategies = () => {
 
 
-export default function Strategies() {
+  // pull strategies from the backend api
 
-  const {strategies} = useSelector(state => state.strategy);
+  const dispatch = useDispatch();
 
-  // to do show strategies as animated carousels with framer
-  // to do: add counter button for did you learn something new on landing page with animation
-  // to do: when strategy is turned on it is applied to the student
-
-// pull strategies from the backend api
-const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getStrategies());
-  }, []);
+    dispatch(getStrategies())
+  }, [dispatch])
 
+  const strategies = useSelector(getStrategies);
 
-  
+  console.log(strategies)
   return (
-    <section>
-      {strategies.map((props) => (
-        <Strategy
-          name={props.name}
-          description={props.description}
-          tier={props.tier}
-          category={props.category}
-          reference={props.reference}
-          createdAt={props.createdAt}
-          status={props.status}
-          id={props.id}
-        />
-      ))}
-    </section>
+    <div className="columns">
+      <div className="column ">
+        <h1 className="title">Strategies</h1>
+        <Strategy />
+      </div>
+    </div>
+
   );
 }
+
+
+export default Strategies;

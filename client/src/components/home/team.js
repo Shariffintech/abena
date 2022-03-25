@@ -17,7 +17,7 @@ export default function Team(props) {
       <h1 className="why-abena-title" align="center">
         Team
       </h1>
-      <Columns multiline={false} centered={true}>
+      <Columns multiline="false" centered="true">
         <Columns.Column size="one-third">
           <motion.div
             className="team-image"

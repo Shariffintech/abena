@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 
   const [count, setCount] = useState(0);
-  const [toggleStrategy, setToggleStrategy] = useState("On");
+
   const [favorite, setfavorite] = useState(false);
   const [loved, setloved] = useState(false);
   const [disliked, setdisliked] = useState(false);

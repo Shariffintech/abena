@@ -1,29 +1,31 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import {api} from '../services/api';
 
 const initialState = {
     strategies: [],
     loading: false,
 };
 
-export const getStrategies = createAsyncThunk(
-  "strategies/getStrategies",
-  async (thunkAPI) => {
-      try {
-        return fetch(`http://localhost:3001/api/v1/strategies`)
-          .then((res) => res.json());
+export const getStrategies = createAsyncThunk('strategies/getStrategies', async () => {
+    try {
+        return fetch('http://127.0.0.1:3000/api/v1/strategies').then((res) => 
+        res.json()
+         )
       } catch (error) {
         return thunkAPI.rejectWithValue({ error: error.message });
       }
-  }
-);
+  });
 
 export const addStrategy = createAsyncThunk(
   "strategies/addStrategy",
   async (thunkAPI) => {
     try {
-      return await axios
-        .post(`http://localhost:3000/api/v1/strategies`)
+      return await fetch(`http://localhost:3001/api/v1/strategies`),{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
         .then((res) => res.json());
     } catch (error) {
       return thunkAPI.rejectWithValue({ error: error.message });
@@ -31,52 +33,35 @@ export const addStrategy = createAsyncThunk(
   }
 );
 
-export const fetchStrategyByStatus = createAsyncThunk(
-  'strategies/fetchStrategyByStatus',
-  async () => {
-    return await fetch(`http://localhost:3000/api/v1/strategies/status/${status}`).then((res) =>
-      res.json()
-    );
-  }
-)
-
 // add default status to each strategy "not reviewed"
 
 const strategySlice = createSlice({
-  name: "strategies",
-  initialState: { strategies: [], status: null },
+  name: 'strategies',
+  initialState: { 
+    strategies: [], 
+    status: null 
+  },
   reducers: {
-    addName: (state, action) => {
-      return { ...state, addTitle: [...action.payload] };
-    },
-    addCategory: (state, action) => {
-      return { ...state, addCategory: [...action.payload] };
-    },
-    addTier: (state, action) => {
-      return { ...state, addTier: [...action.payload] };
-    },
-    addReference: (state, action) => {
-      return { ...state, addReference: [...action.payload] };
-    },
-    addDescription: (state, action) => {
-      return { ...state, addDescription: [...action.payload] };
-    },
+    getAll: (state, action) => {
+      return { ...state, strategies: [...action.payload] };
+    }
   },
   extraReducers: {
-    [getStrategies.pending]: (state, action) => {
+    [getStrategies.pending]: (state) => {
       state.status = "loading";
     },
     [getStrategies.fulfilled]: (state, action) => {
       state.strategies = action.payload;
-      state.status = "succeeded";
+      state.status = "succeess";
     },
-    [getStrategies.rejected]: (state, action) => {
+    [getStrategies.rejected]: (state) => {
       state.status = "failed";
     },
   },
 });
 
-export const { addName, addDescription, addReference, addCategory, addTier } =
-  strategySlice.actions;
+export const { getAll } = strategySlice.actions;
+
+const selectStrategies = (state) => state.strategies.strategies;
 
 export default strategySlice.reducer;
