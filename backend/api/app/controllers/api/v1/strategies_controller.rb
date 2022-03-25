@@ -4,7 +4,7 @@ class Api::V1::StrategiesController < ApplicationController
 
   # GET /strategies
   def index
-      @strategies = Strategies.order(:name => :asc)
+      @strategies = Strategy.order(:name => :asc)
 
     render json: @strategies
   end
