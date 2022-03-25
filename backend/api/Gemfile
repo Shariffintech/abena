@@ -38,6 +38,8 @@ gem 'pry-byebug'
 
 gem 'cors'
 
+gem 'nokogiri'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
