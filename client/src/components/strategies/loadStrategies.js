@@ -15,13 +15,19 @@ const Strategies = () => {
    dispatch(getStrategies());
   }, [dispatch])
 
-  console.log(strategy);
-
   return (
     <div className="strategies-container">
       <div className="columns">
         {strategy.map((strategy) => (
-          <Strategy key={strategy.id} strategy={strategy} />
+          <Strategy 
+          key={strategy.id} 
+          name={strategy.name}
+          description={strategy.description}
+          reference={strategy.reference}
+          category={strategy.category}
+          tier={strategy.tier}
+
+          />
         ))}
       </div>
     </div>

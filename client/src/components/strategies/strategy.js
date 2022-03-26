@@ -40,7 +40,7 @@ function Strategy(props) {
   // const [disliked, setdisliked] = useState(false);
   // const [status, setstatus] = useState("Not Reviewed");
   // const [modal, setmodal] = useState(false);
-  console.log(props);
+  console.log(props, ' my props');
 
   return (
     //map through the strategies and display them
@@ -49,16 +49,16 @@ function Strategy(props) {
       <section className="section">
         <div className="pending-strategies">
           <div className="container">
-            <div className="columns is-3">
+            <div className="columns mt-6">
               <Card className="accepted-t1-strategies">
                 <Icon>
                   <span className="rbc rbc-bars" />
                 </Icon>
 
-                <Card.Content size={8} vertical="true">
+                <Card.Content size={4} vertical="true" width={4}>
                   <Media>
                     <Media.Item renderAs="figure" position="center">
-                      <h1 className="strategy-tier">Tier {props.tier} </h1>
+                      <h1 className="strategy-tier">{props.tier} </h1>
                       <br />
                       <Image
                         className="tier-1"
@@ -71,12 +71,10 @@ function Strategy(props) {
                     <Media.Item>
                       <IoEllipsisHorizontalSharp position="right" />
                       <Heading size={4} position="left">
-                        <div className="strategy-name">
-                          <p className="strategy-name">Strategy Name</p>
-                        </div>
+                        {props.name}
                       </Heading>
                       <Heading subtitle size={6} position="center">
-                        <p className="strategy-name">{props.name}</p>
+                        
                       </Heading>
 
                       <p size={4} position="right">
@@ -149,12 +147,18 @@ function Strategy(props) {
                   </Card.Footer.Item>
                 </Card.Footer>
               </Card>
+
+
             </div>
           </div>
         </div>
       </section>
     </div>
+
+    
   </motion.div>
+
+
   );
 }
 
