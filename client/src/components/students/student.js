@@ -1,14 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {
-  addStudent,
-  deleteStudent,
-  getStudents,
-  updateStudent,
-} from "../../actions/actions";
-import "bulma/css/bulma.min.css";
+import { useDispatch, useSelector } from "react-redux";
 import { Card } from "react-bulma-components";
+import {getStudents} from "./studentSlice.js";
+import "bulma/css/bulma.min.css";
 import IntakeForm from "./intakeForm";
 import Intake from "./intakeContainer";
 import { motion, Variants } from "framer-motion";
@@ -21,19 +17,18 @@ import { motion, Variants } from "framer-motion";
 
 
 function Student(props) {
+  const dispatch = useDispatch();
 
-    useEffect((classroom) => {
-        fetch("http://localhost:3000/api/vi/classrooms/${classroom.id}/students/${student.id}")
-          .then((resp) => resp.json())
-          .then((intakes) => {
-            console.log(intakes);
-          });
+    useEffect(() => {
+        dispatch(getStudents())
       }, []);
       
     return ( 
         <div className="students-container">
       <Card>
-        <Card.Image></Card.Image>
+        <Card.Image>
+          <img src="https://bulma.io/images/placeholders/128x128.png" />
+        </Card.Image>
         <h1>Students</h1>
         <p>
           <button className="btn btn-primary" onClick={() => addStudent()}>
@@ -48,16 +43,6 @@ function Student(props) {
 
      );
 }
-
-
-function mapDispatchToProps(dispatch) {
-    return {
-      addStudent: (student) => dispatch(addStudent(student)),
-      deleteStudent: (id) => dispatch(deleteStudent(id)),
-      getStudents: () => dispatch(getStudents()),
-      updateStudent: (student) => dispatch(updateStudent(student)),
-    };
-  }
 
 export default Student;
 

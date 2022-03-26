@@ -5,29 +5,27 @@ import { getStrategies } from "./strategySlice.js";
 import "bulma/css/bulma.min.css";
 
 const Strategies = () => {
-
-
-  // pull strategies from the backend api
+  
+  // // pull strategies from the backend api
 
   const dispatch = useDispatch();
+  const strategy = useSelector((state) => state.strategy.strategies);
 
   useEffect(() => {
-    dispatch(getStrategies())
+   dispatch(getStrategies());
   }, [dispatch])
 
-  const strategies = useSelector(getStrategies);
+  console.log(strategy);
 
-  console.log(strategies)
   return (
-    <div className="columns">
-      <div className="column ">
-        <h1 className="title">Strategies</h1>
-        <Strategy />
+    <div className="strategies-container">
+      <div className="columns">
+        {strategy.map((strategy) => (
+          <Strategy key={strategy.id} strategy={strategy} />
+        ))}
       </div>
     </div>
-
   );
-}
-
+};
 
 export default Strategies;

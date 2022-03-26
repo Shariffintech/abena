@@ -18,13 +18,13 @@ import {
   IoHeartOutline,
   IoStarOutline,
   IoEllipsisHorizontalSharp,
+  IoThumbsUpOutline
 } from "react-icons/io5";
-
 
 function Strategy(props) {
   // const strategy = useSelector((state) => state.strategy);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [isOn, setIsOn] = useState(false);
   const toggleSwitch = () => setIsOn(!isOn);
@@ -40,8 +40,11 @@ function Strategy(props) {
   // const [disliked, setdisliked] = useState(false);
   // const [status, setstatus] = useState("Not Reviewed");
   // const [modal, setmodal] = useState(false);
+  console.log(props);
 
   return (
+    //map through the strategies and display them
+    <motion.div whileHover={{ scale: .95 }}  className="columns">
     <div className="strategyCard colums is-mobile" key={props.id}>
       <section className="section">
         <div className="pending-strategies">
@@ -86,21 +89,20 @@ function Strategy(props) {
                     <div className="strategy-description" position="center">
                       <h3 className="description-title">Description</h3>
                       <textarea
-                        class="textarea is-warning has-fixed-size"
+                        className="textarea is-warning has-fixed-size"
                         placeholder="Primary textarea"
-                        readonly="true"
+                        readOnly={true}
                       >
                         {props.description}
                       </textarea>
-                      <strategyModal />
                     </div>
 
                     <div className="strategy-reference">
                       <h3 className="reference-title">Reference</h3>
                       <textarea
-                        class="textarea is-warning has-fixed-size"
+                        className="textarea is-warning has-fixed-size"
                         placeholder="Primary textarea"
-                        readonly="true"
+                        readOnly={true}
                       >
                         {props.reference}
                       </textarea>
@@ -111,18 +113,13 @@ function Strategy(props) {
                     <div
                       className="switch"
                       size={8}
-                      data-isOn={isOn}
-                      onClick={
-                        (() => toggleSwitch())
-                      }
-                     
+                      data-ison={isOn}
+                      onClick={() => toggleSwitch()}
                     >
-
                       <motion.div
                         className="handle"
                         layout
                         transition={spring}
-                      
                       />
                     </div>
 
@@ -132,13 +129,23 @@ function Strategy(props) {
 
                 <Card.Footer>
                   <Card.Footer.Item>
+
+                    <div className="column">
                     <p> Was this helpful?</p>
+                    </div>
+                    <div className="column">
                     <IoChatbubblesOutline />
                     Comments
+                    </div>
+                    <div className="column">
+                    <IoThumbsUpOutline />
+                    </div>
+                    <div className="column">
                     <IoThumbsDownOutline />
-                    Dislike
+                    </div>
+                    <div className="column">
                     <IoHeartOutline />
-                    Love
+                    </div>
                   </Card.Footer.Item>
                 </Card.Footer>
               </Card>
@@ -147,6 +154,7 @@ function Strategy(props) {
         </div>
       </section>
     </div>
+  </motion.div>
   );
 }
 

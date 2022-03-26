@@ -64,7 +64,7 @@ const Mission = () => {
             and demystifying complexities of using SEL, PBIS. RTI and MTSS in
             the classroom. This integrated approach for supporting children
             encourages all team members to{" "}
-            <stong className="bold-blu">streamline communication</stong> and
+            <strong className="bold-blu">streamline communication</strong> and
             easily pick-up dialogue where each use may leave off. By simplifying
             methods for gathering, analyzing and storing critical data,{" "}
             <strong className="bold-blu">

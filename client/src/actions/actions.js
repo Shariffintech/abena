@@ -3,6 +3,18 @@ import {
   ADD_STUDENT,
   DELETE_STUDENT,
   EDIT_STUDENT,
+  SET_STRATEGIES,
+  ADD_STRATEGY,
+  DELETE_STRATEGY,
+  EDIT_STRATEGY,
+  SET_COMMENTS,
+  ADD_COMMENT,
+  DELETE_COMMENT,
+  EDIT_COMMENT,
+  SET_NOTES,
+  ADD_NOTE,
+  DELETE_NOTE,
+  EDIT_NOTE,
 } from "./actionTypes";
 
 // STUDENTS ACTIONS
@@ -43,54 +55,7 @@ export const getStudents = () => {
   };
 };
 
-export const createStudent = (formData) => {
-  return (dispatch) => {
-    fetch("http://localhost:3000/students", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((student) => dispatch(addStudent(student)));
-      } else {
-        r.json().then((err) => console.error(err));
-      }
-    });
-  };
-};
 
-export const updateStudent = (student) => {
-  return (dispatch) => {
-    fetch(`http://localhost:3000/students/${student.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(student),
-    })
-      .then((r) => {
-        if (r.ok) {
-          // add student to redux
-          r.json().then((p) => dispatch(editStudent(p)));
-        } else {
-          r.json().then((err) => console.error(err));
-        }
-      })
-      .catch((err) => console.log(err));
-  };
-};
-
-export const destroyStudent = (id) => {
-  return (dispatch) => {
-    fetch(`http://localhost:3000/students/${id}`, {
-      method: "DELETE",
-    }).then((r) => dispatch(deleteStudent(id)));
-  };
-};
 
 // strategy actions
 
@@ -101,20 +66,23 @@ const setStrategies = (strategies) => {
   };
 }
 
-
-// export const getStrategies = () => {
-
-//   return (dispatch) => {
-//     fetch("http://localhost:3000/strategies")
-//       .then((r) => r.json())
-//       .then((data) => dispatch(setStrategies(data)));
-//   };
-
-// }
-
 const addStrategy = (strategy) => {
   return {
     type: ADD_STRATEGY,
+    payload: strategy,
+  };
+}
+
+const editStrategy = (strategy) => {
+  return {
+    type: EDIT_STRATEGY,
+    payload: strategy,
+  };
+}
+
+const deleteStrategy = (strategy) => {
+  return {
+    type: DELETE_STRATEGY,
     payload: strategy,
   };
 }
@@ -140,12 +108,7 @@ export const createStrategy = (formData) => {
 
 }
 
-const editStrategy = (strategy) => {
-  return {
-    type: EDIT_STRATEGY,
-    payload: strategy,
-  };
-}
+
 
 export const updateStrategy = (strategies) => {
 

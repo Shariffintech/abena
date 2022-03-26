@@ -125,7 +125,7 @@ function IntakeForm() {
       </Form.Field>
       <Form.Field className="pb-5">
         <br/>
-        <Button color="primary" type="submit" size="medium">
+        <Button color="primary" type="submit" size="medium" onClick={handleSubmit(onSubmit)}>
           Submit
         </Button>
       </Form.Field>

@@ -4,7 +4,7 @@ import {Button, ModelCard,Media, Content} from "react-bulma-components";
 
 import "bulma/css/bulma.min.css";
 
-const strategyModal = () => {
+const StrategyModal = () => {
 
     // add a create button / function that will pop a modal for creating a new strategy and import the strategyForm to insert in the modal
   return (
@@ -57,5 +57,5 @@ const strategyModal = () => {
   );
 };
 
-export default strategyModal;
+export default StrategyModal;
 
