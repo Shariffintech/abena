@@ -2636,6 +2636,10 @@ div.icon-text {
     width: 64px;
 }
 
+/* .pending-strategies {
+    width: 150%;
+} */
+
 .image.is-96x96 {
     height: 96px;
     width: 96px;
@@ -7334,6 +7338,25 @@ a.navbar-item.is-active,
     display: none;
     height: 2px;
     margin: 0.5rem 0;
+}
+.scroll{
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.carousel{
+    cursor: grab;
+    display: flex;
+    overflow:hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.inner-carousel{
+    display: flex;
+    
 }
 
 @media screen and (max-width: 1023px) {

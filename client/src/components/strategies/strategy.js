@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { motion } from "framer-motion";
+import { motion, Scroll } from "framer-motion";
 import "bulma/css/bulma.min.css";
 import "../../App.css";
 
 import {
   Card,
   Media,
-  Heading,
+  Columns,
   Content,
   Image,
   Icon,
@@ -18,7 +18,7 @@ import {
   IoHeartOutline,
   IoStarOutline,
   IoEllipsisHorizontalSharp,
-  IoThumbsUpOutline
+  IoThumbsUpOutline,
 } from "react-icons/io5";
 
 function Strategy(props) {
@@ -40,125 +40,111 @@ function Strategy(props) {
   // const [disliked, setdisliked] = useState(false);
   // const [status, setstatus] = useState("Not Reviewed");
   // const [modal, setmodal] = useState(false);
-  console.log(props, ' my props');
+  console.log(props, " my props");
 
   return (
-    //map through the strategies and display them
-    <motion.div whileHover={{ scale: .95 }}  className="columns">
-    <div className="strategyCard colums is-mobile" key={props.id}>
-      <section className="section">
-        <div className="pending-strategies">
-          <div className="container">
-            <div className="columns mt-6">
-              <Card className="accepted-t1-strategies">
-                <Icon>
-                  <span className="rbc rbc-bars" />
-                </Icon>
+    <motion.div whileHover={{ scale: 0.95 }}>
+      <div key={props.id}>
+        <section className="section mt-6">
+          <div className="column" style={{ width: "140%" }} size={6}>
+            <Card>
+              <Icon>
+                <span className="rbc rbc-bars" />
+              </Icon>
+              <Card.Content>
+                <h1 className="strategy-tier">{props.tier} </h1>
+                <br />
+                <Image
+                  size={64}
+                  alt="64x64"
+                  src="https://user-images.githubusercontent.com/22308837/157333646-7be6a078-4b0a-4101-a34e-7d90b5b92f66.png"
+                  position="right"
+                />
 
-                <Card.Content size={4} vertical="true" width={4}>
-                  <Media>
-                    <Media.Item renderAs="figure" position="center">
-                      <h1 className="strategy-tier">{props.tier} </h1>
-                      <br />
-                      <Image
-                        className="tier-1"
-                        size={64}
-                        alt="64x64"
-                        src="https://user-images.githubusercontent.com/22308837/157333646-7be6a078-4b0a-4101-a34e-7d90b5b92f66.png"
-                      />
-                    </Media.Item>
-
-                    <Media.Item>
-                      <IoEllipsisHorizontalSharp position="right" />
-                      <Heading size={4} position="left">
-                        {props.name}
-                      </Heading>
-                      <Heading subtitle size={6} position="center">
-                        
-                      </Heading>
-
-                      <p size={4} position="right">
-                        Favorite <IoStarOutline />
-                      </p>
-                    </Media.Item>
-                  </Media>
-
-                  <Content>
-                    <div className="strategy-description" position="center">
-                      <h3 className="description-title">Description</h3>
-                      <textarea
-                        className="textarea is-warning has-fixed-size"
-                        placeholder="Primary textarea"
-                        readOnly={true}
-                      >
-                        {props.description}
-                      </textarea>
-                    </div>
-
-                    <div className="strategy-reference">
-                      <h3 className="reference-title">Reference</h3>
-                      <textarea
-                        className="textarea is-warning has-fixed-size"
-                        placeholder="Primary textarea"
-                        readOnly={true}
-                      >
-                        {props.reference}
-                      </textarea>
-                    </div>
-
+                <Content>
+                  <div className="strategy-name" position="center">
+                    <h3>Strategy Name</h3>
+                    <textarea
+                      size={4}
+                      className="textarea is-primary has-fixed-size"
+                      placeholder="Primary textarea"
+                      readOnly={true}
+                      value={props.name}
+                    />
                     <br />
-
-                    <div
-                      className="switch"
-                      size={8}
-                      data-ison={isOn}
-                      onClick={() => toggleSwitch()}
+                  </div>
+                  <div className="strategy-description" position="center">
+                    <h3 className="description-title">Description</h3>
+                    <textarea
+                      className="textarea is-primary has-fixed-size"
+                      placeholder="Primary textarea"
+                      readOnly={true}
+                      value={props.description}
+                    />
+                    <br />
+                  </div>
+                  <div className="strategy-reference">
+                    <h3 className="reference-title">Reference</h3>
+                    <textarea
+                      className="textarea is-primary has-fixed-size"
+                      placeholder="Primary textarea"
+                      readOnly={true}
                     >
-                      <motion.div
-                        className="handle"
-                        layout
-                        transition={spring}
-                      />
-                    </div>
+                      {props.reference}
+                    </textarea>
+                  </div>
+                  <br />
+                  <div className="strategy-category">
+                    <h3 className="category-title">Apply to students</h3>
+                  </div>
 
-                    <time dateTime="2016-1-1">{props.createdAt}</time>
-                  </Content>
-                </Card.Content>
-
-                <Card.Footer>
-                  <Card.Footer.Item>
-
-                    <div className="column">
-                    <p> Was this helpful?</p>
-                    </div>
-                    <div className="column">
+                  <div
+                    className="switch"
+                    data-ison={isOn}
+                    onClick={() => toggleSwitch()}
+                  >
+                    <motion.div className="handle" layout transition={spring} />
+                  </div>
+                  <time dateTime="2016-1-1">{props.createdAt}</time>
+                </Content>
+              </Card.Content>
+              <Card.Footer>
+                <Card.Footer.Item>
+                  <Icon className="icon" color="primary">
                     <IoChatbubblesOutline />
-                    Comments
-                    </div>
-                    <div className="column">
-                    <IoThumbsUpOutline />
-                    </div>
-                    <div className="column">
+                  </Icon>
+                  <span>{props.comments}</span>
+                </Card.Footer.Item>
+                <Card.Footer.Item>
+                  <Icon className="icon" color="danger">
                     <IoThumbsDownOutline />
-                    </div>
-                    <div className="column">
+                  </Icon>
+                  <span>{props.dislikes}</span>
+                </Card.Footer.Item>
+                <Card.Footer.Item>
+                  <Icon className="icon" color="success">
+                    <IoThumbsUpOutline />
+                  </Icon>
+                  <span>{props.likes}</span>
+                </Card.Footer.Item>
+                <Card.Footer.Item>
+                  <Icon className="icon" color="info">
                     <IoHeartOutline />
-                    </div>
-                  </Card.Footer.Item>
-                </Card.Footer>
-              </Card>
-
-
-            </div>
+                  </Icon>
+                  <span>{props.favorites}</span>
+                </Card.Footer.Item>
+                <Card.Footer.Item>
+                  <Icon className="icon" color="info">
+                    <IoStarOutline />
+                  </Icon>
+                  <span>{props.stars}</span>
+                </Card.Footer.Item>
+              </Card.Footer>
+            </Card>
           </div>
-        </div>
-      </section>
-    </div>
-
-    
-  </motion.div>
-
-
+        </section>
+      </div>
+    </motion.div>
   );
 }
 
