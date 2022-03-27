@@ -1,10 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const initialState = {
-    strategies: [],
-  loading: false
-};
-
 export const getStrategies = createAsyncThunk(
   "strategies/getStrategies",
   async (thunkAPI) => {
@@ -61,7 +56,7 @@ const strategySlice = createSlice({
   },
 });
 
-export const { getAll } = strategySlice.actions;
+// export const { getAll , add } = strategySlice.actions;
 
 // export const selectStrategies = ({strategies}) => strategies
 

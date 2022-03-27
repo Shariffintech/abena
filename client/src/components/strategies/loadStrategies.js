@@ -22,9 +22,6 @@ const Strategies = () => {
     setWidth(carousel.current.scrollWidth+carousel.current.offsetWidth+1000);
   }, [dispatch]);
 
-
-
-  
   return (
  
     <motion.div

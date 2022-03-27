@@ -1,59 +1,71 @@
-import React, {useState} from "react";
-import {Button, Modal,Media, Content, Container, Card, Block} from "react-bulma-components";
+import React, { useState } from "react";
+import { StrategyForm } from "../strategies/strategyForm";
+import {
+  Button,
+  Modal,
+  Media,
+  Content,
+  Container,
+  Card,
+  Block,
+} from "react-bulma-components";
 import "bulma/css/bulma.min.css";
 
 const StrategyModal = () => {
-
-
   const [openModal, setOpenModal] = useState();
   return (
     <>
       <Button.Group renderAs={Block}>
         <Button
-          color="info"
+          className="abena-gradient"
           onClick={() => {
-            return setOpenModal('card');
+            return setOpenModal("card");
           }}
         >
-         Submit EBS Strategy
+          Submit EBS Strategy
         </Button>
       </Button.Group>
       <Modal
-
-        show={openModal === 'card'}
+        show={openModal === "card"}
         onClose={() => {
           return setOpenModal();
         }}
       >
         <Modal.Card>
           <Modal.Card.Header showClose>
-            <Modal.Card.Title>Title</Modal.Card.Title>
+            <Modal.Card.Title>Submit A Strategy For Review!</Modal.Card.Title>
           </Modal.Card.Header>
           <Modal.Card.Body>
             <Media>
               <Media.Item>
                 <Content>
                   <p>
-                    <strong>John Smith</strong> <small>@johnsmith</small>{' '}
-                    <small>31m</small>
+                    <strong>Abena Bot</strong> <small>@abena-dms</small>{" "}
+                    <small>(auto-generated)</small>
                     <br />
-                    If the children of the Modal is a card, the close button
-                    will be on the Card Head instead than the top-right corner
-                    You can also pass showClose = false to Card.Head to hide the
-                    close button
+                    <br />
+                    Thank you for your research and partaking in contributing a{" "}
+                    <strong>evidence based strategy.</strong> Thousands of kids
+                    that need support in the classroom are waiting for the results of your
+                    research. Please submit your strategy for review.
                   </p>
                 </Content>
               </Media.Item>
             </Media>
+
+            <br />
+            <br />
+
+            <StrategyForm />
           </Modal.Card.Body>
-          <Modal.Card.Footer renderAs={Button.Group} align="right" hasAddons>
+          {/* <Modal.Card.Footer renderAs={Button.Group} align="right" hasAddons>
             <Button color="success">Like</Button>
             <Button>Share</Button>
-          </Modal.Card.Footer>
+          </Modal.Card.Footer> */}
         </Modal.Card>
       </Modal>
     </>
   );
-}
+};
 
 export default StrategyModal;

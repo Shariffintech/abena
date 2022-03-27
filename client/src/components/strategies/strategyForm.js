@@ -1,17 +1,28 @@
-import React from "react";
-import { useForm, useDispatch } from "react-hook-form";
+import React, { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import "bulma/css/bulma.min.css";
+import { progressCircle } from "../utilityComponents/progressCircle";
+import { Form, Button } from "react-bulma-components";
 
-export default function strategyForm() {
+import { addStrategy } from "./strategySlice";
+
+export function StrategyForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    defaulValues: preLoadedValues,
-  });
+  } = useForm();
 
+  const { Label, Control, Input, Select, Textarea, Checkbox, Field } = {
+    ...Form,
+  };
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(addStrategy());
+  }, [dispatch]);
 
   // move strategy to "in review" status for each submitted strategy once the strategy is submitted
 
@@ -26,57 +37,104 @@ export default function strategyForm() {
 
   // add in a way to sort by status
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        ref={register}
-        type="text"
-        placeholder="Strategy Name"
+    <form className="simpleform" onSubmit={handleSubmit(onSubmit)}>
+      <Form.Field>
+        <Label size="medium"> Strategy Name</Label>
+        <Control>
+          <Input
+            type="text"
+            placeholder="Strategy Name"
+            id="strategy-name"
+            {...register("Name", {
+              required: "Required",
+            })}
+          />
+        </Control>
+      </Form.Field>
+      <Form.Field>
+        <Label size="medium"> Strategy Description</Label>
+        <Control>
+          <Textarea
+            type="text"
+            placeholder="Description"
+            id="strategy-description"
+            {...register("Description", {
+              required: "Required",
+            })}
+          />
+        </Control>
+      </Form.Field>
+      <Form.Field>
+        <Label size="medium"> Strategy Reference</Label>
+        <Control>
+          <Input
+            type="text"
+            placeholder="Reference"
+            id="strategy-reference"
+            {...register("Reference", {
+              required: "Required",
+            })}
+          />
+        </Control>
+      </Form.Field>
+      <Form.Field>
+        <Label size="medium"> Strategy Category</Label>
+        <Control>
+          <Select
+            type="number "
+            placeholder="Category"
+            id="strategy-category"
+            {...register("Category", {
+              required: "Required",
+            })}
+          >
+            <option value="1">Academic</option>
+            <option value="2">Social</option>
+            <option value="3">Emotional</option>
+            <option value="4">Developmental</option>
+          </Select>
+        </Control>
+      </Form.Field>
+      <Form.Field>
+        <Label size="medium"> Strategy Tier </Label>
+        <Control>
+          <Select
+            type="number"
+            placeholder="Tier"
+            id="strategy-tier"
+            {...register("Tier", {
+              required: "Required",
+            })}
+          >
+            <option>Tier 1</option>
+            <option>Tier 2</option>
+            <option>Tier 3</option>
+          </Select>
+        </Control>
 
-        id="strategy-name"
-      />
-
-      <input
-        ref={register}
-        type="text"
-        placeholder="Description"
-        {...register({
-          validate: (value) => value.length > 0 || "Please enter a description",
-        })}
-        id="strategy-description"
-      />
-
-      <input
-        ref={register}
-        type="text"
-        placeholder="Reference"
-        {...register({
-          validate: (value) =>
-            value.length > 0 || "Please enter a valid reference",
-        })}
-        id="strategy-reference"
-      />
-
-      <input
-        ref={register}
-        type="number "
-        placeholder="Category"
-        {...register({
-          validate: (value) => value > 0 || "Please enter a valid category",
-        })}
-        id="strategy-category"
-      />
-
-      <input
-        ref={register}
-        type="number"
-        placeholder="Tier"
-        {...register({
-          validate: (value) => value > 0 || "Please enter a tier",
-        })}
-        id="strategy-tier"
-      />
-
-      <input type="submit" value="Submit" />
+        {/* <Field>
+          <Control
+            type="number"
+            placeholder="Tier"
+            id="strategy-tier"
+            {...register("Tier", {
+              required: "Required",
+            })}
+          >
+            <Checkbox>Tier 1 </Checkbox>
+            <br />
+            <Checkbox>Tier 2 </Checkbox>
+            <br />
+            <Checkbox>Tier 3 </Checkbox>
+          </Control>
+        </Field> */}
+      </Form.Field>
+      <br />
+      <Form.Field>
+        <Button color="success" type="submit">
+          Submit
+        </Button>
+      </Form.Field>
     </form>
   );
 }

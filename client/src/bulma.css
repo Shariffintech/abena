@@ -1467,6 +1467,12 @@ fieldset[disabled] .button.is-link.is-inverted.is-outlined {
     color: #3850b7;
 }
 
+.button.abena-gradient{
+    background: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
 .button.is-info {
     background-color: #3e8ed0;
     border-color: transparent;
