@@ -11,6 +11,10 @@ import "../../style.css";
 
 const Mission = () => {
   // to do: add event listeners for scroll down to move lights with lighthouse
+  // to do: add nav bar with links to scroll to: team, mission, why abena dms, api documentation, pricing (coming soon) sections
+  // to do: link product hunt button to product hunt page
+  // to do: setup emailing list through sendgrid after users join beta
+  // to do: show (count) place in line for educators
 
   const { Input } = Form;
 
@@ -25,13 +29,11 @@ const Mission = () => {
   };
 
   // setup listener window.scrolly flash every 40 seconds
-  
 
   return (
     // to do: sort out styling of text, add link to product hunt page for PH button
     // to do: add chat bubble next to student icons
     // to do: add email validation for users signing up for beta release
-    
 
     <Container className="mission-container ml-auto" margin="auto">
       <div className="eclipse" />
@@ -91,7 +93,7 @@ const Mission = () => {
             size="two-thirds"
             margin="auto"
           >
-            <Columns.Column >
+            <Columns.Column>
               <Input
                 className="form-input"
                 type="email"

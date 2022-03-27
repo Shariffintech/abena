@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import StrategyModal from "../modals/strategyModal";
+import { Button } from "react-bulma-components";
 import { motion, Scroll } from "framer-motion";
 import "bulma/css/bulma.min.css";
 import "../../App.css";
@@ -40,12 +42,11 @@ function Strategy(props) {
   // const [disliked, setdisliked] = useState(false);
   // const [status, setstatus] = useState("Not Reviewed");
   // const [modal, setmodal] = useState(false);
-  console.log(props, " my props");
 
   return (
     <motion.div whileHover={{ scale: 0.95 }}>
-      <div key={props.id}>
-        <section className="section mt-6">
+
+        <section className="section mt-4">
           <div className="column" style={{ width: "140%" }} size={6}>
             <Card>
               <Icon>
@@ -89,9 +90,8 @@ function Strategy(props) {
                       className="textarea is-primary has-fixed-size"
                       placeholder="Primary textarea"
                       readOnly={true}
-                    >
-                      {props.reference}
-                    </textarea>
+                      value={props.reference}
+                    />
                   </div>
                   <br />
                   <div className="strategy-category">
@@ -105,7 +105,7 @@ function Strategy(props) {
                   >
                     <motion.div className="handle" layout transition={spring} />
                   </div>
-                  <time dateTime="2016-1-1">{props.createdAt}</time>
+                  <time dateTime="2016-1-1" value={props.createdAt} />
                 </Content>
               </Card.Content>
               <Card.Footer>
@@ -143,7 +143,7 @@ function Strategy(props) {
             </Card>
           </div>
         </section>
-      </div>
+    
     </motion.div>
   );
 }

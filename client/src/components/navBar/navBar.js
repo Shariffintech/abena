@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../../bulma.css";
 import "../../App.css";
 import { Navbar, Image } from "react-bulma-components";
+import StrategyModal from "../modals/strategyModal";
 
 // on click scroll to mission div 
 
@@ -55,6 +56,10 @@ const NavBar = () => {
 
               <Navbar.Item href="#">
                 <Link to="/intake">Create Intake</Link>
+              </Navbar.Item>
+
+              <Navbar.Item href="#">
+                <Link to="/strategies"><StrategyModal /></Link>
               </Navbar.Item>
             </Navbar.Container>
           </Navbar.Container>

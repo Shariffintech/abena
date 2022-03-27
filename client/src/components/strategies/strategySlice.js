@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-
 const initialState = {
     strategies: [],
   loading: false
@@ -25,7 +24,7 @@ export const addStrategy = createAsyncThunk(
   "strategies/addStrategy",
   async (thunkAPI) => {
     try {
-      return await fetch(`http://localhost:3001/api/v1/strategies`),{
+      return await fetch(`http://127.0.0.1:3000/api/v1/strategies`),{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,11 +46,6 @@ const strategySlice = createSlice({
     strategies: [], 
     status: null 
   },
-  // reducers: {
-  //   getAll: (state, action) => {
-  //     return { ...state, strategies: [...action.payload] };
-  //   }
-  // },
   extraReducers: {
     [getStrategies.pending]: (state) => {
       state.status = "loading";
