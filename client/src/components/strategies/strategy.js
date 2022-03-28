@@ -37,7 +37,7 @@ function Strategy(props) {
               <span className="rbc rbc-bars" />
             </Icon>
             <Card.Content>
-              <h1 className="strategy-tier">{props.tier} </h1>
+              <h1 className="strategy-tier" size={6}>{props.tier} </h1>
               <br />
               <Image
                 size={64}

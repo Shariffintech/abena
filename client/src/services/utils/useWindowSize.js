@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 export default function useWindowSize(){
     const isSSR = typeof window !== 'undefined';
@@ -14,7 +14,7 @@ export default function useWindowSize(){
         })
     }
 
-    React.useEffect(() => {
+   useEffect(() => {
         window.addEventListener('resize', changeWindowSize);
 
         return () => window.removeEventListener("resize", handleResize);

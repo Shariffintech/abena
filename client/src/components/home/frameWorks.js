@@ -1,8 +1,8 @@
 import React from "react";
-import {ButtonGroup, Button, Box} from 'react-bulma-components';
-import {motion} from "framer-motion";
+import { ButtonGroup, Button, Box } from "react-bulma-components";
+import { motion } from "framer-motion";
 
-function frameWorks(props) {
+const FrameWorks = () => {
   // to do: load frameworks like a carousel
 
   return (
@@ -24,28 +24,35 @@ function frameWorks(props) {
         alt="frameworks"
       />
 
-      <Box style={{ width: 650, height: 100, margin: 'auto',alignContent:'space-evenly', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+      <Box
+        style={{
+          width: 650,
+          height: 100,
+          margin: "auto",
+          alignContent: "space-evenly",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
         <Button.Group className="frameworks-buttons">
           <Button color="abena-purple" renderAs="span" size="large">
             SEL
           </Button>
           <Button color="abena-purple" renderAs="span" size="large">
-          PBIS
+            PBIS
           </Button>
-          <Button color="abena-purple" renderAs="span"size="large">
+          <Button color="abena-purple" renderAs="span" size="large">
             RTI
           </Button>
           <Button color="abena-purple" renderAs="span" size="large">
             MTSS
           </Button>
-
         </Button.Group>
       </Box>
-
-
-    
     </div>
   );
-}
+};
 
-export default frameWorks;
+export default FrameWorks;

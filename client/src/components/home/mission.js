@@ -6,7 +6,7 @@ import {
   Block,
   Columns,
 } from "react-bulma-components";
-
+import { motion } from "framer-motion";
 import "../../style.css";
 
 const Mission = () => {
@@ -15,6 +15,7 @@ const Mission = () => {
   // to do: link product hunt button to product hunt page
   // to do: setup emailing list through sendgrid after users join beta
   // to do: show (count) place in line for educators
+  // as you scroll kids will reposition into the mtss pyramid
 
   const { Input } = Form;
 
@@ -113,13 +114,12 @@ const Mission = () => {
           </Columns.Column>
         </Columns.Column>
 
-        {/* <Container align="center" className="ml-5"> */}
         <Columns.Column size={4} multiline="false">
           <Block className="tier-block" size={6}>
             <div className="group-313" align="right">
-              <p className="tier-1">Tier 1 </p>
+              <p className="tier-1">Tier 3 </p>
               <p className="tier-2">Tier 2 </p>
-              <p className="tier-3">Tier 3 </p>
+              <p className="tier-3">Tier 1 </p>
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/2aRhaU5AJgN2L6tA3rcWuk-410%3A315?alt=media&token=f65e54d1-6cff-4157-88b6-95f900ff93fa"
                 alt=" not found"
@@ -142,15 +142,21 @@ const Mission = () => {
               />
             </div>
           </Block>
-          <Block align="center" size="4">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/2aRhaU5AJgN2L6tA3rcWuk-404%3A217?alt=media&token=34948bc6-8e45-41c3-bbc0-37213fcb414c"
-              alt=" not found"
-              className="mtss-pyramid"
-            />
-          </Block>
+          <motion.div
+            className="mission-image"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Block align="center" size="4">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/2aRhaU5AJgN2L6tA3rcWuk-404%3A217?alt=media&token=34948bc6-8e45-41c3-bbc0-37213fcb414c"
+                alt=" not found"
+                className="mtss-pyramid"
+              />
+            </Block>
+          </motion.div>
         </Columns.Column>
-        {/* </Container> */}
       </Columns>
     </Container>
   );

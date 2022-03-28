@@ -1,19 +1,16 @@
 import React from "react";
-import Mission from './mission';
-import Team from './team';
-import FrameWorks from './frameWorks';
+import Mission from "./mission";
+import Team from "./team";
+import FrameWorks from "./frameWorks";
 import WhyAbena from "./whyAbena";
 
 export default function Home() {
-  
-    return (
-      <>
+  return (
+    <>
       <Mission />
       <FrameWorks />
       <WhyAbena />
       <Team />
-      </>
-    );
-  }
-
-
+    </>
+  );
+}

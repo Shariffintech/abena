@@ -11,7 +11,7 @@ import "bulma/css/bulma.min.css";
 
 const Strategies = () => {
   // // pull strategies from the backend api
-  const [width, setWidth] = useState(0);
+  // const [width, setWidth] = useState(0);
   const carousel = useRef();
   const dispatch = useDispatch();
   const strategy = useSelector((state) => state.strategy.strategies);
@@ -19,7 +19,7 @@ const Strategies = () => {
   useEffect(() => {
     dispatch(getStrategies());
     // console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
-    setWidth(carousel.current.scrollWidth+carousel.current.offsetWidth+1000);
+    // setWidth(carousel.current.scrollWidth+carousel.current.offsetWidth+1000);
   }, [dispatch]);
 
   return (

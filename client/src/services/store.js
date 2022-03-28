@@ -8,11 +8,18 @@ import notesReducer from '../components/notes/notesSlice';
 const rootReducer = combineReducers({
     strategy: strategyReducer,
     student: studentReducer,
-    notes: notesReducer
-});
+    notes: notesReducer,
+    
+}
+
+);
 
 
 export const store = configureStore({
-    reducer: rootReducer
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: false
+})
+
 })
 

@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import "bulma/css/bulma.min.css";
 import { progressCircle } from "../utilityComponents/progressCircle";
 import { Form, Button } from "react-bulma-components";
-
-import { addStrategy } from "./strategySlice";
-
-export function StrategyForm() {
+import { addStrategy } from "../strategies/strategySlice"
+export function StrategyForm({}) {
   const {
     register,
     handleSubmit,
@@ -17,27 +15,54 @@ export function StrategyForm() {
   const { Label, Control, Input, Select, Textarea, Checkbox, Field } = {
     ...Form,
   };
-
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(addStrategy());
-  }, [dispatch]);
+  // to do: move strategy to "in review" status for each submitted strategy once the strategy is submitted
 
-  // move strategy to "in review" status for each submitted strategy once the strategy is submitted
+  const [name, setName] = useState("");
+  const [tier, setTier] = useState("");
+  const [description, setDescription] = useState("");
+  const [strategyId, setStrategyId] = useState("");
+  const [reference, setReference] = useState("");
+  const [category, setCategory] = useState("");
+  const [addRequestStatus, setAddRequestStatus] = useState("idle");
 
-  const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+  // const canSave =
+  //   [name, category, tier, description, strategyId].every(Boolean) &&
+  //   addRequestStatus === "idle";
+
+  const onSaveStrategyClick = (e) => {
+    console.log("strategyData should show")
+    e.preventDefault();
+    const strategyData = {
+      name,
+      tier,
+      description,
+      reference,
+      category,
+    };
+    
+    dispatch(addStrategy(strategyData));
+  
   };
 
-  const handleNewInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewInput({ ...newInput, [name]: value });
-  };
+  // try {
+  //   setAddRequestStatus("pending");
+  //   await dispatch(addStrategy({ name, category, tier, description, strategy: strategyId })).unwrap();
+  //   setName("");
+  //   setCategory("");
+  //   setTier("");
+  //   setDescription("");
+  //   setStrategyId("");
+  // } catch (error) {
+  //   setAddRequestStatus("failed");
+  // } finally {
+  //   setAddRequestStatus("idle");
+  // }
 
   // add in a way to sort by status
   return (
-    <form className="simpleform" onSubmit={handleSubmit(onSubmit)}>
+    <div>
       <Form.Field>
         <Label size="medium"> Strategy Name</Label>
         <Control>
@@ -45,9 +70,8 @@ export function StrategyForm() {
             type="text"
             placeholder="Strategy Name"
             id="strategy-name"
-            {...register("Name", {
-              required: "Required",
-            })}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
         </Control>
       </Form.Field>
@@ -57,10 +81,9 @@ export function StrategyForm() {
           <Textarea
             type="text"
             placeholder="Description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
             id="strategy-description"
-            {...register("Description", {
-              required: "Required",
-            })}
           />
         </Control>
       </Form.Field>
@@ -70,10 +93,9 @@ export function StrategyForm() {
           <Input
             type="text"
             placeholder="Reference"
+            value={reference}
+            onChange={(e) => setReference(e.target.value)}
             id="strategy-reference"
-            {...register("Reference", {
-              required: "Required",
-            })}
           />
         </Control>
       </Form.Field>
@@ -83,10 +105,9 @@ export function StrategyForm() {
           <Select
             type="number "
             placeholder="Category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
             id="strategy-category"
-            {...register("Category", {
-              required: "Required",
-            })}
           >
             <option value="1">Academic</option>
             <option value="2">Social</option>
@@ -101,14 +122,13 @@ export function StrategyForm() {
           <Select
             type="number"
             placeholder="Tier"
+            value={tier}
+            onChange={(e) => setTier(e.target.value)}
             id="strategy-tier"
-            {...register("Tier", {
-              required: "Required",
-            })}
           >
-            <option>Tier 1</option>
-            <option>Tier 2</option>
-            <option>Tier 3</option>
+            <option>Tier1</option>
+            <option>Tier2</option>
+            <option>Tier3</option>
           </Select>
         </Control>
 
@@ -131,10 +151,45 @@ export function StrategyForm() {
       </Form.Field>
       <br />
       <Form.Field>
-        <Button color="success" type="submit">
+        <Button color="primary" onClick={onSaveStrategyClick}>
           Submit
         </Button>
       </Form.Field>
-    </form>
+    </div>
   );
 }
+
+// {...register("Name", {
+//   required:{
+//     value: true,
+//     message: "Please enter a strategy name"
+//     }
+//   })}
+
+// register("Tier", {
+//   required: {
+//     value: true,
+//     message: "Please select a tier",
+//   },
+// });
+
+// register("Description", {
+//   required: {
+//     value: true,
+//     message: "Please enter a description",
+//   },
+// });
+
+// register("Category", {
+//   required: {
+//     value: true,
+//     message: "Please select a category",
+//   },
+// });
+
+// register("Reference", {
+//   required: {
+//     value: true,
+//     message: "Please enter a reference",
+//   },
+// });

@@ -4,10 +4,10 @@ export const getStrategies = createAsyncThunk(
   "strategies/getStrategies",
   async (thunkAPI) => {
     try {
-      const strategies = await fetch(`http://127.0.0.1:3000/api/v1/strategies`)
-        .then((res) => res.json())
-        .then((data) => data);
-      return strategies;
+      const res = await fetch(`http://127.0.0.1:3000/api/v1/strategies`)
+        const strategies = await res.json()
+       
+      return strategies
      
     } catch (error) {
       return thunkAPI.rejectWithValue({ error: error.message });
@@ -17,16 +17,17 @@ export const getStrategies = createAsyncThunk(
 
 export const addStrategy = createAsyncThunk(
   "strategies/addStrategy",
-  async (thunkAPI) => {
+  async (strategyData, thunkAPI) => {
     try {
-      return await fetch(`http://127.0.0.1:3000/api/v1/strategies`),{
+      const res = await fetch(`http://127.0.0.1:3000/api/v1/strategies`,{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
-      }
-        .then((res) => res.json());
+        body: JSON.stringify(strategyData),
+      })
+      const strategy = await res.json()
+      return strategy
     } catch (error) {
       return thunkAPI.rejectWithValue({ error: error.message });
     }
@@ -41,22 +42,42 @@ const strategySlice = createSlice({
     strategies: [], 
     status: null 
   },
-  extraReducers: {
-    [getStrategies.pending]: (state) => {
-      state.status = "loading";
-    },
-    [getStrategies.fulfilled]: (state, action) => {
+  extraReducers(builder) {
+    builder
+    .addCase(getStrategies.fulfilled, (state,action) => {
       state.strategies = action.payload;
-      state.status = "succeess";
-
-    },
-    [getStrategies.rejected]: (state) => {
+      state.status = "success";
+    })
+    .addCase(getStrategies.pending, (state,action) => {
+      state.status = "loading";
+    })
+    .addCase(getStrategies.rejected, (state,action) => {
       state.status = "failed";
-    },
-  },
-});
+    })
+    .addCase(addStrategy.fulfilled, (state, action) => {
+      state.strategies.push(action.payload);
+      state.status = "success";
+    })
 
-// export const { getAll , add } = strategySlice.actions;
+
+    // [getStrategies.pending]: (state) => {
+    //   state.status = "loading";
+    // },
+    // [getStrategies.fulfilled]: (state, action) => {
+    //   state.strategies = action.payload;
+    //   state.status = "success";
+
+    // },
+    // [getStrategies.rejected]: (state) => {
+    //   state.status = "failed";
+    // },
+  }
+
+
+  });
+
+
+
 
 // export const selectStrategies = ({strategies}) => strategies
 

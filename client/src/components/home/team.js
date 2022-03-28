@@ -11,7 +11,6 @@ import { Box, Block, Columns, Container } from "react-bulma-components";
 export default function Team(props) {
   const [isHovered, setIsHovered] = useState(false);
 
-
   return (
     <Container className="team">
       <h1 className="why-abena-title" align="center">
@@ -74,8 +73,10 @@ export default function Team(props) {
                 src="https://user-images.githubusercontent.com/22308837/158213026-7bf9d381-26be-4f06-bb23-fbffedac83a1.png"
               /> */}
 
-            <Block className="team-title ml-6" >
-              <strong color="abena-purple">Co-Founder, Software Engineer</strong>
+            <Block className="team-title ml-6">
+              <strong color="abena-purple">
+                Co-Founder, Software Engineer
+              </strong>
 
               <h2 className="team-name">Sharif Tarver</h2>
             </Block>

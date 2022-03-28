@@ -17,9 +17,9 @@ const WhyAbena = () => {
           Why Abena?
         </h1>
       </Block>
-      <Container >
+      <Container>
         <Columns multiline="true">
-          <Columns.Column size={6} className="ml-auto" >
+          <Columns.Column size={6} className="ml-auto">
             <Block align="left">
               <img
                 src="https://user-images.githubusercontent.com/22308837/158078650-c5a4e608-4355-4392-89fa-9e9e2682284a.jpg"
