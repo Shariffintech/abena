@@ -28,6 +28,7 @@ export const addStrategy = createAsyncThunk(
       })
       const strategy = await res.json()
       return strategy
+      
     } catch (error) {
       return thunkAPI.rejectWithValue({ error: error.message });
     }

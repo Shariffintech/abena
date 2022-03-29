@@ -20,11 +20,10 @@ export function StrategyForm({}) {
   // to do: move strategy to "in review" status for each submitted strategy once the strategy is submitted
 
   const [name, setName] = useState("");
-  const [tier, setTier] = useState("");
+  const [tier, setTier] = useState("Tier1");
   const [description, setDescription] = useState("");
-  const [strategyId, setStrategyId] = useState("");
   const [reference, setReference] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Academic");
   const [addRequestStatus, setAddRequestStatus] = useState("idle");
 
   // const canSave =
@@ -109,10 +108,10 @@ export function StrategyForm({}) {
             onChange={(e) => setCategory(e.target.value)}
             id="strategy-category"
           >
-            <option value="1">Academic</option>
-            <option value="2">Social</option>
-            <option value="3">Emotional</option>
-            <option value="4">Developmental</option>
+            <option value={"Academic"}>Academic</option>
+            <option value={"Social"}>Social</option>
+            <option value={"Emotional"}>Emotional</option>
+            <option value={"Developmental"}>Developmental</option>
           </Select>
         </Control>
       </Form.Field>
@@ -126,9 +125,9 @@ export function StrategyForm({}) {
             onChange={(e) => setTier(e.target.value)}
             id="strategy-tier"
           >
-            <option>Tier1</option>
-            <option>Tier2</option>
-            <option>Tier3</option>
+            <option value={"Tier1"}>Tier1</option>
+            <option value={"Tier2"}>Tier2</option>
+            <option value={"Tier3"}>Tier3</option>
           </Select>
         </Control>
 
