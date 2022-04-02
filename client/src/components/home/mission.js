@@ -5,8 +5,10 @@ import {
   Form,
   Block,
   Columns,
+  Notification
 } from "react-bulma-components";
 import { motion } from "framer-motion";
+import JoinBetaButton from "./joinBetaButton/joinBetaButton";
 import "../../style.css";
 
 const Mission = () => {
@@ -19,15 +21,15 @@ const Mission = () => {
 
   const { Input } = Form;
 
-  const handleScroll = (e) => {
-    const scrollTop = e.target.scrollTop;
-    const scrollHeight = e.target.scrollHeight;
-    const clientHeight = e.target.clientHeight;
+  // const handleScroll = (e) => {
+  //   const scrollTop = e.target.scrollTop;
+  //   const scrollHeight = e.target.scrollHeight;
+  //   const clientHeight = e.target.clientHeight;
 
-    if (scrollTop + clientHeight === scrollHeight) {
-      console.log("scroll to bottom");
-    }
-  };
+  //   if (scrollTop + clientHeight === scrollHeight) {
+  //     console.log("scroll to bottom");
+  //   }
+  // };
 
   // setup listener window.scrolly flash every 40 seconds
 
@@ -87,31 +89,26 @@ const Mission = () => {
             </strong>
           </p>
 
-          <Columns.Column
-            className="join-beta-text mt-5"
-            multiline="true"
-            centered="true"
-            size="two-thirds"
-            margin="auto"
-          >
+          <br />
+
+          <Columns>
             <Columns.Column>
-              <Input
+              <Columns>
+                <Columns.Column>
+                <Input
                 className="form-input"
                 type="email"
                 placeholder="Enter email here..."
               />
-
-              <Columns.Column>
-                <Button className="form-button m-1" color="primary">
-                  Join Beta
-                </Button>
-
-                <Button className="form-button m-1" color="primary">
-                  Upvote
-                </Button>
-              </Columns.Column>
+                </Columns.Column>
+                <Columns.Column>
+                <JoinBetaButton />
+                </Columns.Column>
+              </Columns>
             </Columns.Column>
-          </Columns.Column>
+          </Columns>
+
+
         </Columns.Column>
 
         <Columns.Column size={4} multiline="false">

@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 // import thunk from 'redux-thunk';
 
 // const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk));
-
+console.log("index.css");
 ReactDOM.render(
   <Provider store={store}>
   

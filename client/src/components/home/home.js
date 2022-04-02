@@ -9,8 +9,9 @@ export default function Home() {
     <>
       <Mission />
       <FrameWorks />
-      <WhyAbena />
       <Team />
+      <WhyAbena />
+     
     </>
   );
 }

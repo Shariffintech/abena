@@ -5,8 +5,6 @@ import {
   Modal,
   Media,
   Content,
-  Container,
-  Card,
   Block,
 } from "react-bulma-components";
 import "bulma/css/bulma.min.css";
@@ -58,10 +56,6 @@ const StrategyModal = () => {
 
             <StrategyForm />
           </Modal.Card.Body>
-          {/* <Modal.Card.Footer renderAs={Button.Group} align="right" hasAddons>
-            <Button color="success">Like</Button>
-            <Button>Share</Button>
-          </Modal.Card.Footer> */}
         </Modal.Card>
       </Modal>
     </>

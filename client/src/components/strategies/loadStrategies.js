@@ -1,13 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Strategy from "./strategy";
 import { useSelector, useDispatch } from "react-redux";
 import { getStrategies } from "./strategySlice.js";
-import {motion, useAnimation} from 'framer-motion';
-
-
+import { motion} from "framer-motion";
 
 import "bulma/css/bulma.min.css";
-
 
 const Strategies = () => {
   // // pull strategies from the backend api
@@ -23,37 +20,35 @@ const Strategies = () => {
   }, [dispatch]);
 
   return (
- 
-    <motion.div
-      className="columns carousel"
-    >
-    <motion.div drag="x" dragConstraints={{ left: -1000, right: 1000 }}  ref={carousel} className="inner-carousel" whileTap={{cursor:"grabbing"}}>
+    <motion.div className="columns carousel">
+      <motion.div
+        drag="x"
+        dragConstraints={{ left: -1000, right: 2000 }}
+        ref={carousel}
+        className="inner-carousel"
+        whileTap={{ cursor: "grabbing" }}
+      >
         <div className="strategies-container">
           <div className="columns ">
             {strategy.map((strategy) => {
-              <motion.div
-              className="card"
            
-           
-              />
               return (
-              <motion.div className="item">
-                <Strategy
-                  key={strategy.id}
-                  name={strategy.name}
-                  description={strategy.description}
-                  reference={strategy.reference}
-                  category={strategy.category}
-                  tier={strategy.tier}
-                />
-              </motion.div>
-            )
-})}
+                <motion.div className="item">
+                  <Strategy
+                    key={strategy.id}
+                    name={strategy.name}
+                    description={strategy.description}
+                    reference={strategy.reference}
+                    category={strategy.category}
+                    tier={strategy.tier}
+                  />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </motion.div>
     </motion.div>
-
   );
 };
 

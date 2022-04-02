@@ -1,6 +1,6 @@
 import React from "react";
-import { ButtonGroup, Button, Box } from "react-bulma-components";
-import { motion } from "framer-motion";
+import { Button, Box } from "react-bulma-components";
+
 
 const FrameWorks = () => {
   // to do: load frameworks like a carousel

@@ -1,6 +1,6 @@
 import React from "react";
 import IntakeForm from "./intakeForm";
-import { CircleIndicator } from "../utilityComponents/progressCircle";
+// import { CircleIndicator } from "../utilityComponents/progressCircle";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Intake() {

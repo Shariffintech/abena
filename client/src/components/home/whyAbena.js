@@ -7,11 +7,11 @@ import {
   IoBarChart,
   IoLayers,
 } from "react-icons/io5";
-import { Column, Columns, Block, Box, Container } from "react-bulma-components";
+import {Columns, Block, Container } from "react-bulma-components";
 
 const WhyAbena = () => {
   return (
-    <Container className="why-abena" width="full">
+    <Container className="why-abena">
       <Block>
         <h1 align="center" className="why-abena-title">
           Why Abena?

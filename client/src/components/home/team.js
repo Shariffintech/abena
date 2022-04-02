@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  LayoutGroup,
+  motion
 } from "framer-motion";
-import { Box, Block, Columns, Container } from "react-bulma-components";
+import {Block, Columns, Container } from "react-bulma-components";
 // import { } from "react-bulma-components"
 
 export default function Team(props) {
@@ -30,10 +27,7 @@ export default function Team(props) {
                 className="shawna-team-image ml-6"
                 src="https://user-images.githubusercontent.com/22308837/158008241-31da65bc-e53b-4822-b520-6566a0fe4b25.png"
               />
-              {/* <img
-                className="profile-container-image"
-                src="https://user-images.githubusercontent.com/22308837/158213026-7bf9d381-26be-4f06-bb23-fbffedac83a1.png"
-              /> */}
+  
 
               <Block className="team-title ml-6">
                 <strong>Founder, EdD Candidate </strong>

@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useViewportScroll } from "framer-motion";
 
 // add progress bar for form

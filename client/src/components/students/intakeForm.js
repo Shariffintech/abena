@@ -1,9 +1,9 @@
 import React from "react";
 import "bulma/css/bulma.min.css";
 import { useForm } from "react-hook-form";
-import { progressCircle } from "../utilityComponents/progressCircle";
-import { Form, Button, Progress, Field } from "react-bulma-components";
-import { useDispatch, useSelector } from "react-redux";
+// import { progressCircle } from "../utilityComponents/progressCircle";
+import { Form, Button} from "react-bulma-components";
+// import { useDispatch, useSelector } from "react-redux";
 
 // to do: add chat function with twilio record parent, teacher convo when completing this form
 
@@ -13,7 +13,6 @@ function IntakeForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => console.log(data);

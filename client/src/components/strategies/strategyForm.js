@@ -1,18 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, {useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import "bulma/css/bulma.min.css";
-import { progressCircle } from "../utilityComponents/progressCircle";
+// import { progressCircle } from "../utilityComponents/progressCircle";
 import { Form, Button } from "react-bulma-components";
 import { addStrategy } from "../strategies/strategySlice"
-export function StrategyForm({}) {
+export function StrategyForm() {
   const {
-    register,
-    handleSubmit,
-    formState: { errors },
   } = useForm();
 
-  const { Label, Control, Input, Select, Textarea, Checkbox, Field } = {
+  const { Label, Control, Input, Select, Textarea } = {
     ...Form,
   };
   const dispatch = useDispatch();
@@ -24,7 +21,7 @@ export function StrategyForm({}) {
   const [description, setDescription] = useState("");
   const [reference, setReference] = useState("");
   const [category, setCategory] = useState("Academic");
-  const [addRequestStatus, setAddRequestStatus] = useState("idle");
+  // const [addRequestStatus, setAddRequestStatus] = useState("idle");
 
   // const canSave =
   //   [name, category, tier, description, strategyId].every(Boolean) &&
@@ -44,20 +41,6 @@ export function StrategyForm({}) {
     dispatch(addStrategy(strategyData));
   
   };
-
-  // try {
-  //   setAddRequestStatus("pending");
-  //   await dispatch(addStrategy({ name, category, tier, description, strategy: strategyId })).unwrap();
-  //   setName("");
-  //   setCategory("");
-  //   setTier("");
-  //   setDescription("");
-  //   setStrategyId("");
-  // } catch (error) {
-  //   setAddRequestStatus("failed");
-  // } finally {
-  //   setAddRequestStatus("idle");
-  // }
 
   // add in a way to sort by status
   return (
