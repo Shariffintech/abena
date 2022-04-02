@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
     # include ActionController::RequestForgeryProtection
     # protect_from_forgery with: :null_session
+    include ActionController::Cookies
     
     before_action :authenticate_user!, :configure_permitted_parameters, if: :devise_controller?
 
