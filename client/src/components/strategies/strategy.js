@@ -79,7 +79,7 @@ function Strategy(props) {
                 </div>
                 <br />
                 <div className="strategy-category">
-                  <h3 className="category-title">Apply to student</h3>
+                  <h3 className="category-title">Apply</h3>
                 </div>
 
                 <div
