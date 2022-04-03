@@ -11,7 +11,6 @@ export default function Home() {
       <FrameWorks />
       <Team />
       <WhyAbena />
-     
     </>
   );
 }

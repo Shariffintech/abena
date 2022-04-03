@@ -61,7 +61,7 @@ const NavBar = () => {
           <Navbar.Item href="#">
             <Link to="/students">My Classroom</Link>
           </Navbar.Item>
-          
+
         <Navbar.Container position="end">
           <Navbar.Item href="#">
             <Link to="/strategies">Strategy Portal</Link>
@@ -69,6 +69,10 @@ const NavBar = () => {
 
           <Navbar.Item href="#">
             <Link to="/intake">Create Intake</Link>
+          </Navbar.Item>
+
+          <Navbar.Item href="#">
+            <Link to="/teacherqna">Teacher Q&A</Link>
           </Navbar.Item>
 
           <Navbar.Item href="#">
