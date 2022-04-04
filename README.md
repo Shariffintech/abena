@@ -27,11 +27,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the client directory, you can run:
+In the backend/api directory, you can run:
 
-### `npm start`
-
-To start the react server, and run the `rails s` to run the rails server.
+### `$ foreman start -f Procfile.dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
