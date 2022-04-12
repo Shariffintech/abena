@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "bulma/css/bulma.min.css";
 import "../../App.css";
+import LikeButton from "./likeButton";
 
 import { Card, Content, Image, Icon } from "react-bulma-components";
 import {
@@ -21,6 +22,7 @@ function Strategy(props) {
     damping: 30,
   };
 
+  
   // const [count, setCount] = useState(0);
   // const [favorite, setfavorite] = useState(false);
   // const [loved, setloved] = useState(false);
@@ -36,8 +38,12 @@ function Strategy(props) {
             <Icon>
               <span className="rbc rbc-bars" />
             </Icon>
+            
             <Card.Content>
-              <h1 className="strategy-tier" size={6}>{props.tier} </h1>
+              <h1 className="strategy-tier" size={6}>
+                {props.tier}{" "}
+              </h1>
+              <LikeButton />
               <br />
               <Image
                 size={64}
@@ -58,6 +64,7 @@ function Strategy(props) {
                   />
                   <br />
                 </div>
+
                 <div className="strategy-description" position="center">
                   <h3 className="description-title">Description</h3>
                   <textarea

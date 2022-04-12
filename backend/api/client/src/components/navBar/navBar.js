@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState} from "react";
 import { Link } from "react-router-dom";
 import "../../bulma.css";
 import "../../App.css";
 import { Navbar, Image } from "react-bulma-components";
 import StrategyModal from "../modals/strategyModal";
 
-// on click scroll to mission div
 
+// on click scroll to mission div
 // on click scroll to team div
 // on click scroll to why div
 
@@ -18,15 +18,20 @@ function scrollToElement(element) {
   });
 }
 
+
+
 const NavBar = () => {
+
+  const [count , setCount] = useState(0);
   return (
+
     <div className="navbar is-fixed-top is-transparent ">
     
-        <Navbar.Item className="homepage" href="#" to="/home">
-          <Image
+        <Navbar.Item className="homepage">
+          <Link to={`/home`}><Image
             src="https://user-images.githubusercontent.com/22308837/157813235-24e05afb-589d-4452-a858-f1fca1e782c7.png"
             alt="Strengthing early childhood education classrooms."
-          />
+          /></Link>
         </Navbar.Item>
       
 
@@ -75,10 +80,13 @@ const NavBar = () => {
             <Link to="/teacherqna">Teacher Q&A</Link>
           </Navbar.Item>
 
+
+
           <Navbar.Item href="#">
             <Link to="/strategies">
               <StrategyModal />
             </Link>
+     
           </Navbar.Item>
           </Navbar.Container>
         </Navbar.Container>

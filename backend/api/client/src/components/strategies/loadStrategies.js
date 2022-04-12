@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef , useState } from "react";
 import Strategy from "./strategy";
 import { useSelector, useDispatch } from "react-redux";
 import { getStrategies } from "./strategySlice.js";
-import { motion} from "framer-motion";
-
+import { motion } from "framer-motion";
 import "bulma/css/bulma.min.css";
 
 const Strategies = () => {
   // // pull strategies from the backend api
   // const [width, setWidth] = useState(0);
+  const [count, setCount] = useState(0);
   const carousel = useRef();
   const dispatch = useDispatch();
   const strategy = useSelector((state) => state.strategy.strategies);
@@ -31,7 +31,6 @@ const Strategies = () => {
         <div className="strategies-container">
           <div className="columns ">
             {strategy.map((strategy) => {
-           
               return (
                 <motion.div className="item">
                   <Strategy
@@ -41,6 +40,13 @@ const Strategies = () => {
                     reference={strategy.reference}
                     category={strategy.category}
                     tier={strategy.tier}
+                    count={count}
+                  />
+
+                  <input
+                    type="integer"
+                    placeholder="Add a count value"
+                    onChange={(e) => setCount(e.target.value)}
                   />
                 </motion.div>
               );

@@ -20,9 +20,13 @@ function Student(props) {
 
   return (
     <div className="students-container">
-      <Card>
+      
+      
+      <div><strong>Coming Soon!</strong></div>
+      {/* <Card>
         <Card.Image>
           <img src="https://bulma.io/images/placeholders/128x128.png" />
+          
         </Card.Image>
         <Card.Content>  
           <Card.Header>
@@ -44,7 +48,7 @@ function Student(props) {
             <span>{props.team}</span>
           </Card.Header>
         </Card.Content>
-      </Card>
+      </Card> */}
     </div>
   );
 }
