@@ -7,15 +7,14 @@ import Intake from "./components/students/intakeContainer";
 import NavBar from "./components/navBar/navBar";
 import Home from "./components/home/home";
 import TeacherQna from "./components/qna/teacherQna";
-import { Whoops404 } from "./components/error";
-import Loader from "react-loaders";
+
 
 
 // to do: add a profiler in prod to see where I can improve performance
 
 export default function App() {
   return (
-    <div className="App">
+    <>
       {/* <Loader type="ball-triangle" onLoad={true} /> */}
       <NavBar />
       <Routes>
@@ -26,8 +25,8 @@ export default function App() {
         <Route path="/mission" element={<Mission />} />
         <Route path="/intake" element={<Intake />} />
         <Route path="/teacherqna" element={<TeacherQna />} />
-        <Route path="*" element={<Whoops404 />} />
+     
       </Routes>
-    </div>
+    </>
   );
 }

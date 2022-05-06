@@ -3,14 +3,14 @@ import {
   motion
 } from "framer-motion";
 import {Block, Columns, Container } from "react-bulma-components";
-// import { } from "react-bulma-components"
+
 
 export default function Team(props) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Container className="team">
-      <h1 className="why-abena-title" align="center">
+      <h1 className="team-title" align="center">
         Team
       </h1>
       <Columns multiline="false" centered="true">

@@ -54,7 +54,7 @@ function StepOneIntake() {
     <Columns multiline style={{ background: "#37C6F7", width: "100%" }}>
       <Columns.Column size={6}>
         <form
-          className="simpleform"
+    
           onSubmit={handleSubmit(onSubmit)}
           className="mt-6 pt-6"
         >

@@ -28,7 +28,7 @@ const NavBar = () => {
     <div className="navbar is-fixed-top is-transparent ">
     
         <Navbar.Item className="homepage">
-          <Link to={`/home`}><Image
+          <Link to="/home"><Image
             src="https://user-images.githubusercontent.com/22308837/157813235-24e05afb-589d-4452-a858-f1fca1e782c7.png"
             alt="Strengthing early childhood education classrooms."
           /></Link>
@@ -39,7 +39,7 @@ const NavBar = () => {
         <Navbar.Container>
           <Navbar.Item hoverable href="#">
             <Navbar.Item href="#">
-              <Link to={`/home`}>Home</Link>
+              <Link to="/home">Home</Link>
             </Navbar.Item>
 
             <Navbar.Dropdown>

@@ -11,7 +11,7 @@ import {Columns, Block, Container } from "react-bulma-components";
 
 const WhyAbena = () => {
   return (
-    <Container className="why-abena">
+    <Container className="why-abena full-height">
       <Block>
         <h1 align="center" className="why-abena-title">
           Why Abena?
