@@ -11,7 +11,8 @@ import {Columns, Block, Container } from "react-bulma-components";
 
 const WhyAbena = () => {
   return (
-    <Container className="why-abena full-height">
+    <Container className="why-abena">
+    <Container className="full-height">
       <Block>
         <h1 align="center" className="why-abena-title">
           Why Abena?
@@ -56,7 +57,7 @@ const WhyAbena = () => {
             </Columns.Column>
           </Columns.Column>
 
-          <Columns.Column size={5} className="ml-6" margin="auto">
+          <Columns.Column size={5} className="ml-6 mr-6" margin="auto">
             <Block>
               <h3 className="abena-offering-subtitle">
                 Reduced Lead Time <IoFlash />
@@ -100,6 +101,7 @@ const WhyAbena = () => {
           </Columns.Column>
         </Columns>
       </Container>
+    </Container>
     </Container>
   );
 };

@@ -29,7 +29,7 @@ export default function Team(props) {
               />
   
 
-              <Block className="team-title ml-6">
+              <Block className="team-names ml-6">
                 <strong>Founder, EdD Candidate </strong>
                 <h2 className="team-name">Shawna Starling </h2>
               </Block>
@@ -67,7 +67,7 @@ export default function Team(props) {
                 src="https://user-images.githubusercontent.com/22308837/158213026-7bf9d381-26be-4f06-bb23-fbffedac83a1.png"
               /> */}
 
-            <Block className="team-title ml-6">
+            <Block className="team-names ml-6">
               <strong color="abena-purple">
                 Co-Founder, Software Engineer
               </strong>

@@ -177,7 +177,7 @@ fieldset[disabled] .pagination-ellipsis {
 }
 /* quick fix for getting the entire page to be scrolable */
 .full-height {
-    height: 175vh;
+    height: 105vh;
 }
 
 .delete::before,
@@ -2242,7 +2242,7 @@ fieldset[disabled] .button {
 
 @media screen and (min-width: 1408px) {
     .container:not(.is-max-desktop):not(.is-max-widescreen) {
-        max-width: 1600px;
+        max-width: 100%;
     }
 }
 
@@ -2772,7 +2772,7 @@ div.icon-text {
 
 
 .team {
-    top: 575px;
+    top: 250px;
     border-radius: 6px;
     background-color: rgba(255, 255, 255, 1);
     
@@ -2892,7 +2892,7 @@ div.icon-text {
 
 }
 
-.team-title{
+.team-names{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -2933,11 +2933,16 @@ div.icon-text {
     
 
     background-color: #F0FBFF;
-    top: 615px;
+    top: 300px;
 
    
  
 
+}
+
+.container.why-abena.full-height{
+    top: 200px;
+    width: 100%;
 }
 
 .bold-blu{

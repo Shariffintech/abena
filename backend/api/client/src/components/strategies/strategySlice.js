@@ -58,20 +58,10 @@ const strategySlice = createSlice({
         state.status = "success";
       });
 
-    // [getStrategies.pending]: (state) => {
-    //   state.status = "loading";
-    // },
-    // [getStrategies.fulfilled]: (state, action) => {
-    //   state.strategies = action.payload;
-    //   state.status = "success";
-
-    // },
-    // [getStrategies.rejected]: (state) => {
-    //   state.status = "failed";
-    // },
+  
   },
 });
 
-// export const selectStrategies = ({strategies}) => strategies
+
 
 export default strategySlice.reducer;

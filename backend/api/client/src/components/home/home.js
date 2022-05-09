@@ -1,5 +1,5 @@
 import React from "react";
-import Mission from "./mission";
+import Mission from "./mission/mission";
 import Team from "./team";
 import FrameWorks from "./frameWorks";
 import WhyAbena from "./whyAbena";

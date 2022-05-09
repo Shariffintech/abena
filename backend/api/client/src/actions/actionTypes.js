@@ -23,3 +23,5 @@ export const SET_COMMENTS = "SET_COMMENTS"
 export const ADD_COMMENT = "ADD_COMMENT"
 export const DELETE_COMMENT = "DELETE_COMMENT"
 export const EDIT_COMMENT = "EDIT_COMMENT"
+
+export const ADD_BETA_USER = "ADD_BETA_USER"

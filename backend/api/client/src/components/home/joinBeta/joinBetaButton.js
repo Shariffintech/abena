@@ -5,7 +5,7 @@ import { Shapes } from "./Shapes";
 import { transition } from "./settings";
 import useMeasure from "react-use-measure";
 
-export default function JoinBetaButton() {
+export default function JoinBetaButton(props) {
 
 
   const [ref, bounds] = useMeasure({ scroll: false });
@@ -71,7 +71,6 @@ export default function JoinBetaButton() {
         <motion.div
           variants={{ hover: { scale: 0.85 }, press: { scale: 1.1 } }}
           className="label"
-          
         >
         Join Beta
         </motion.div>

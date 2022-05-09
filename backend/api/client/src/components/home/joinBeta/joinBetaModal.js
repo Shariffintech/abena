@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { StrategyForm } from "../strategies/strategyForm";
 import { Button, Modal, Media, Content, Block } from "react-bulma-components";
+import { JoinBetaForm } from "./joinBetaForm";
 import "bulma/css/bulma.min.css";
 
-const StrategyModal = () => {
+const joinBetaModal = () => {
   const [openModal, setOpenModal] = useState();
   return (
     <>
@@ -14,7 +14,7 @@ const StrategyModal = () => {
             return setOpenModal("card");
           }}
         >
-          Submit EBS Strategy
+          Join Beta
         </Button>
       </Button.Group>
       <Modal
@@ -32,15 +32,13 @@ const StrategyModal = () => {
               <Media.Item>
                 <Content>
                   <p>
-                    <strong>Abena Bot</strong> <small>@abena-dms</small>{" "}
+                    <strong>Abena Bot</strong> <small>@abena-dms</small>
                     <small>(auto-generated)</small>
                     <br />
                     <br />
-                    Thank you for your research and partaking in contributing a{" "}
-                    <strong>evidence based strategy.</strong> Thousands of kids
-                    that need support in the classroom are waiting for the
-                    results of your research. Please submit your strategy for
-                    review.
+                    We are excited to include you in the beta phase of Abena
+                    DMS. While we are hard at work building the core features of
+                    the app we will keep you in the loop throughout the process.
                   </p>
                 </Content>
               </Media.Item>
@@ -49,12 +47,10 @@ const StrategyModal = () => {
             <br />
             <br />
 
-            <StrategyForm />
+            <JoinBetaForm />
           </Modal.Card.Body>
         </Modal.Card>
       </Modal>
     </>
   );
 };
-
-export default StrategyModal;

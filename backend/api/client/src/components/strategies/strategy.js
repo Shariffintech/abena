@@ -22,6 +22,8 @@ function Strategy(props) {
     damping: 30,
   };
 
+  // event handler for if a strategy is toggled on or off to open a modal with students
+
   
   // const [count, setCount] = useState(0);
   // const [favorite, setfavorite] = useState(false);

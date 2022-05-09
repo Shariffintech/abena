@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Mission from "./components/home/mission";
+import Mission from "./components/home/mission/mission";
 import Strategy from "./components/strategies/loadStrategies";
 import Student from "./components/students/student";
 import Intake from "./components/students/intakeContainer";
