@@ -147,13 +147,13 @@ const Mission = () => {
           </motion.div>
         </Columns.Column>
 
-        <svg
+        {/* <svg
+          className="ambient-light"
           width="958"
           height="315"
           viewBox="0 0 958 315"
           fill="none"
-          // xmlns="http://www.w3.org/2000/svg"
-          // xmlns:xlink="http://www.w3.org/1999/xlink"
+          
         >
           <rect x="323" y="23" width="313" height="292" fill="url(#pattern0)" />
           <g filter="url(#filter0_f_706_92)">
@@ -323,7 +323,7 @@ const Mission = () => {
               
             />
           </defs>
-        </svg>
+        </svg> */}
       </Columns>
     </Container>
   );

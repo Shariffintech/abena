@@ -2828,6 +2828,11 @@ div.icon-text {
     drop-shadow: none;
 }
 
+.ambient-light{
+  position: relative;
+    
+}
+
 .reduced-abena-subtitle{
     font-weight: bold;
     font-size: 24px;
