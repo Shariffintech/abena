@@ -37,9 +37,8 @@ function StepTwoIntake() {
       <Columns multiline style={{  background: "#37C6F7", width: "100%"}}>
         <Columns.Column size={6}>
           <form
-            className="simpleform"
+            className="simpleform mt-6 pt-6"
             onSubmit={handleSubmit(onSubmit)}
-            className="mt-6 pt-6"
           >
             <Form.Field>
               <h3>

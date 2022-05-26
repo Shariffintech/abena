@@ -37,7 +37,7 @@ const Mission = () => {
     // to do: add email validation for users signing up for beta release
 
     <Container className="mission-container ml-auto" margin="auto">
-      <div className="eclipse" />
+      
       <Columns multiline="true" className="mt-6 pt-auto" margin="auto">
         <Columns.Column
           className="mission-statement ml-6 pt-6"
@@ -103,6 +103,8 @@ const Mission = () => {
           </Columns>
         </Columns.Column>
 
+        <div className="eclipse" />
+
         <Columns.Column size={4} multiline="false">
           <Block className="tier-block" size={6}>
             <div className="group-313" align="right">
@@ -146,8 +148,9 @@ const Mission = () => {
             </Block>
           </motion.div>
         </Columns.Column>
-
-        {/* <svg
+      <Columns.Column size={4} multiline="false">
+        <Block className="tier-block" size={6}>
+        <svg
           className="ambient-light"
           width="958"
           height="315"
@@ -323,7 +326,10 @@ const Mission = () => {
               
             />
           </defs>
-        </svg> */}
+        </svg> 
+        </Block>
+
+        </Columns.Column>
       </Columns>
     </Container>
   );
