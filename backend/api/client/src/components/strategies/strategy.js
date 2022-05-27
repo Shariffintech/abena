@@ -14,13 +14,26 @@ import {
 } from "react-icons/io5";
 
 function Strategy(props) {
+
   const [isOn, setIsOn] = useState(false);
+
+  // if toggle switch is enabled pop modal with students to turn them on for then assign strategy to student
+ 
+
+
+  // if toggle switch is disabled pop modal with students to turn them off for then remove strategy from student
+
+
   const toggleSwitch = () => setIsOn(!isOn);
   const spring = {
     type: "spring",
     stiffness: 700,
     damping: 30,
   };
+
+
+  
+
 
   // event handler for if a strategy is toggled on or off to open a modal with students
 

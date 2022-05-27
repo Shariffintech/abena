@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   Button,
   Container,
+  Image,
   Form,
   Block,
   Columns,
@@ -148,8 +149,16 @@ const Mission = () => {
             </Block>
           </motion.div>
         </Columns.Column>
+
+
+
       <Columns.Column size={4} multiline="false">
         <Block className="tier-block" size={6}>
+        
+        {/* <Image src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/2aRhaU5AJgN2L6tA3rcWuk-410%3A315?alt=media&token=f65e54d1-6cff-4157-88b6-95f900ff93fa"/> */}
+
+
+
         <svg
           className="ambient-light"
           width="958"

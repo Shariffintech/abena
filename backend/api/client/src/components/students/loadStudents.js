@@ -4,15 +4,17 @@ import Student from "./student";
 // import { getStudents } from "../../actions/actions";
 
 export default function loadStudent(props) {
+
+  // load all students belonging to user
+  // pass those students to the student component
+
   // show students as a pool of moving cards
 
   // to do map all students to a student card
 
 
   // const dispatch = useDispatch();
-
   // const students = useSelector(state => state.students);
-
   // const [students, setStudents] = useState([]);
 
   //   useEffect(() => {

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Card } from "react-bulma-components";
+import "bulma/css/bulma.min.css";
 // import { useEffect, useState } from "react";
 // import { useDispatch, useSelector } from "react-redux";
-import { Card } from "react-bulma-components";
 // import {loadStrategies} from "./loadStudents";
 // import {getStudents} from "./studentSlice.js";
-import "bulma/css/bulma.min.css";
 // import Intake from "./intakeContainer";
 // import { motion, Variants } from "framer-motion";
 
@@ -13,7 +13,7 @@ import "bulma/css/bulma.min.css";
 // show students as animated carousels with framer
 // const [intakes, setIntakes] = useState([]);
 
-// // fetch intakes every time the component loads
+
 
 function Student(props) {
   
