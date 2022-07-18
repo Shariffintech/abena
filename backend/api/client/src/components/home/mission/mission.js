@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { Container, Block, Columns } from "react-bulma-components";
-=======
 import React, { useState } from "react";
 import {
   Button,
@@ -12,7 +8,7 @@ import {
   Columns,
   Notification,
 } from "react-bulma-components";
->>>>>>> e957c0786dabacbdefb4b9966dc8b359b1a760e1
+
 import { motion } from "framer-motion";
 import JoinBetaButton from "../joinBeta/joinBetaButton";
 import "../../../style.css";
@@ -336,9 +332,6 @@ const Mission = () => {
             </Block>
           </motion.div>
         </Columns.Column>
-<<<<<<< HEAD
-=======
-
 
 
       <Columns.Column size={4} multiline="false">
@@ -526,7 +519,7 @@ const Mission = () => {
           </defs>
         </svg> 
         </Block>
->>>>>>> e957c0786dabacbdefb4b9966dc8b359b1a760e1
+
 
         <Columns.Column size={4} multiline="false">
           <Block className="tier-block" size={6}>
@@ -536,6 +529,7 @@ const Mission = () => {
           
             
           </Block>
+        </Columns.Column>
         </Columns.Column>
       </Columns>
     </Container>
