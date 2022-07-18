@@ -17,7 +17,10 @@ import {
 function Strategy(props) {
 
   const [isOn, setIsOn] = useState(false);
+<<<<<<< HEAD
   const [openModal, setOpenModal] = useState();
+=======
+>>>>>>> e957c0786dabacbdefb4b9966dc8b359b1a760e1
 
   // if toggle switch is enabled pop modal with students to turn them on for then assign strategy to student
  
@@ -26,6 +29,7 @@ function Strategy(props) {
   // if toggle switch is disabled pop modal with students to turn them off for then remove strategy from student
 
 
+<<<<<<< HEAD
   const studentModal = () => {
     // open modal 
 
@@ -38,12 +42,18 @@ function Strategy(props) {
     // close modal
   };
 
+=======
+>>>>>>> e957c0786dabacbdefb4b9966dc8b359b1a760e1
   const toggleSwitch = () => setIsOn(!isOn);
   const spring = {
     type: "spring",
     stiffness: 700,
     damping: 30,
   };
+
+
+  
+
 
   // event handler for if a strategy is toggled on or off to open a modal with students
 
