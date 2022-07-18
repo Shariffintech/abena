@@ -14,6 +14,8 @@ import "./studentList.css";
  */
 
 export default function StudentList() {
+
+ 
   return (
     <AnimateSharedLayout>
       <motion.ul layout initial={{ borderRadius: 25 }}>

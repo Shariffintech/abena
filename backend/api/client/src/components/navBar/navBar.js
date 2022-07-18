@@ -1,14 +1,10 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../bulma.css";
 import "../../App.css";
 import { Navbar, Image } from "react-bulma-components";
 import StrategyModal from "../modals/strategyModal";
 
-
-// on click scroll to mission div
-// on click scroll to team div
-// on click scroll to why div
 
 function scrollToElement(element) {
   document.querySelector(element).scrollIntoView({
@@ -18,22 +14,20 @@ function scrollToElement(element) {
   });
 }
 
-
-
 const NavBar = () => {
-
-  const [count , setCount] = useState(0);
+  const [count, setCount] = useState(0);
   return (
-
     <div className="navbar is-fixed-top is-transparent ">
-    
-        <Navbar.Item className="homepage">
-          <Link to="/home"><Image
+      <Navbar.Item className="homepage">
+        <Link to="/home">
+          <Image
+            className="abena-logo"
             src="https://user-images.githubusercontent.com/22308837/157813235-24e05afb-589d-4452-a858-f1fca1e782c7.png"
             alt="Strengthing early childhood education classrooms."
-          /></Link>
-        </Navbar.Item>
-      
+            size="small"
+          />
+        </Link>
+      </Navbar.Item>
 
       <Navbar.Menu alignContent="right">
         <Navbar.Container>
@@ -67,27 +61,24 @@ const NavBar = () => {
             <Link to="/students">My Classroom</Link>
           </Navbar.Item>
 
-        <Navbar.Container position="end">
-          <Navbar.Item href="#">
-            <Link to="/strategies">Strategy Portal</Link>
-          </Navbar.Item>
+          <Navbar.Container position="end">
+            <Navbar.Item href="#">
+              <Link to="/strategies">Strategy Portal</Link>
+            </Navbar.Item>
 
-          <Navbar.Item href="#">
-            <Link to="/intake">Create Intake</Link>
-          </Navbar.Item>
+            <Navbar.Item href="#">
+              <Link to="/intake">Create Intake</Link>
+            </Navbar.Item>
 
-          <Navbar.Item href="#">
-            <Link to="/teacherqna">Teacher Q&A</Link>
-          </Navbar.Item>
+            <Navbar.Item href="#">
+              <Link to="/teacherqna">Teacher Q&A</Link>
+            </Navbar.Item>
 
-
-
-          <Navbar.Item href="#">
-            <Link to="/strategies">
-              <StrategyModal />
-            </Link>
-     
-          </Navbar.Item>
+            <Navbar.Item href="#">
+              <Link to="/strategies">
+                <StrategyModal />
+              </Link>
+            </Navbar.Item>
           </Navbar.Container>
         </Navbar.Container>
       </Navbar.Menu>

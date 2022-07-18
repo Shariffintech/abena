@@ -23,7 +23,7 @@ const Strategies = () => {
     <motion.div className="columns carousel">
       <motion.div
         drag="x"
-        dragConstraints={{ left: -1000, right: 2000 }}
+        dragConstraints={{ left: -100, right: 200 }}
         ref={carousel}
         className="inner-carousel"
         whileTap={{ cursor: "grabbing" }}
@@ -43,11 +43,11 @@ const Strategies = () => {
                     count={count}
                   />
 
-                  <input
+                  {/* <input
                     type="integer"
                     placeholder="Add a count value"
                     onChange={(e) => setCount(e.target.value)}
-                  />
+                  /> */}
                 </motion.div>
               );
             })}

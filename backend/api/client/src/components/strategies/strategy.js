@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "bulma/css/bulma.min.css";
 import "../../App.css";
-import LikeButton from "./likeButton";
+import { BallTriangle } from "react-loader-spinner";
+// import LikeButton from "./likeButton";
 
 import { Card, Content, Image, Icon } from "react-bulma-components";
 import {
@@ -14,7 +15,29 @@ import {
 } from "react-icons/io5";
 
 function Strategy(props) {
+
   const [isOn, setIsOn] = useState(false);
+  const [openModal, setOpenModal] = useState();
+
+  // if toggle switch is enabled pop modal with students to turn them on for then assign strategy to student
+ 
+
+
+  // if toggle switch is disabled pop modal with students to turn them off for then remove strategy from student
+
+
+  const studentModal = () => {
+    // open modal 
+
+    // show list of students in the classroom under the current users
+
+    // show a toggle switch next to each student to turn them on or off for the strategy
+
+    // update the students profile to show the strategy is turned on or off
+
+    // close modal
+  };
+
   const toggleSwitch = () => setIsOn(!isOn);
   const spring = {
     type: "spring",
@@ -32,10 +55,12 @@ function Strategy(props) {
   // const [status, setstatus] = useState("Not Reviewed");
   // const [modal, setmodal] = useState(false);
 
+
+
   return (
     <motion.div whileHover={{ scale: 0.95 }}>
       <section className="section mt-4">
-        <div className="column" style={{ width: "140%" }} size={6}>
+        <div className="column" style={{height: "50%",width: "200%" }} size={4}>
           <Card>
             <Icon>
               <span className="rbc rbc-bars" />
@@ -45,7 +70,9 @@ function Strategy(props) {
               <h1 className="strategy-tier" size={6}>
                 {props.tier}{" "}
               </h1>
-              <LikeButton />
+
+              {/* <LikeButton /> */}
+
               <br />
               <Image
                 size={64}

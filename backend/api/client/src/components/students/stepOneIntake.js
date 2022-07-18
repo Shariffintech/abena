@@ -43,21 +43,19 @@ function StepOneIntake() {
   const [tier, setTier] = useState("");
   const [nessesaryNextSteps, setNessesaryNextSteps] = useState("");
 
-  const {Textarea} = {
+  const { Textarea } = {
     ...Form,
   };
   const { register, handleSubmit } = useForm();
   const { onChange, onBlur } = register("Student Name");
   const onSubmit = (data) => console.log(data);
 
+
+
   return (
     <Columns multiline style={{ background: "#37C6F7", width: "100%" }}>
       <Columns.Column size={6}>
-        <form
-    
-          onSubmit={handleSubmit(onSubmit)}
-          className="mt-6 pt-6"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="ml-6 mt-6 pt-6">
           <Form.Field>
             <h3>
               <strong>Student Name </strong>
@@ -300,8 +298,11 @@ function StepOneIntake() {
             <h3>
               <strong> Prior School Attended</strong>
             </h3>
-            <Textarea type="text" placeholder="Prior School" value={priorSchool}
-            onChange={(e) => setPriorSchool(e.target.value)}
+            <Textarea
+              type="text"
+              placeholder="Prior School"
+              value={priorSchool}
+              onChange={(e) => setPriorSchool(e.target.value)}
             />
           </Form.Field>
 
@@ -409,7 +410,6 @@ function StepOneIntake() {
                     name="is_active"
                     onChange={(e) => setIsActive(e.target.value)}
                     onBlur={onBlur}
-
                   >
                     Add Developmental Screening
                   </Checkbox>
