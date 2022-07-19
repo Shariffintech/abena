@@ -3055,10 +3055,13 @@ div.icon-text {
     left: 17%;
     top: 5%;
 }
+
+
 .abena-logo{
-    width: auto;
-    height: auto;
-}
+    background: no-repeat center center;
+    background-size: cover;
+    width: 152px
+  }
 .frameworks-img-2 {
     position: absolute;
     left: 73%;
