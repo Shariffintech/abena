@@ -3060,7 +3060,8 @@ div.icon-text {
 .abena-logo{
     background: no-repeat center center;
     background-size: cover;
-    width: 152px
+    width: 152px;
+    left: 30px;
   }
 .frameworks-img-2 {
     position: absolute;
@@ -6450,7 +6451,7 @@ print {
 }
 
 .navbar {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.2);
     min-height: 4.25rem;
     position: relative;
     z-index: 30;
