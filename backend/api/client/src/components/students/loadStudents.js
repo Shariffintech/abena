@@ -4,10 +4,7 @@ import Student from "./student";
 // import { getStudents } from "../../actions/actions";
 
 export default function loadStudent(props) {
-<<<<<<< HEAD
-=======
 
->>>>>>> e957c0786dabacbdefb4b9966dc8b359b1a760e1
   // load all students belonging to user
   // pass those students to the student component
 

@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import {
-  Button,
   Container,
-  Image,
-  Form,
   Block,
   Columns,
-  Notification,
 } from "react-bulma-components";
 
 import { motion } from "framer-motion";
@@ -222,6 +218,10 @@ const Mission = () => {
                 <image id="image0_706_92" width="500" height="500" />
               </defs>
             </svg>
+
+        
+
+
           <div className="mission-statement-text">
             <h1 className="mission-title pb-6" align="center">
               Mission
@@ -519,6 +519,13 @@ const Mission = () => {
           </defs>
         </svg> 
         </Block>
+
+        < svg
+      className="lifehouse"
+      src="https://user-images.githubusercontent.com/22308837/179900938-b5304222-ed48-46b6-bb28-a6a7ce0dfa29.png"
+      alt="Strengthing early childhood education classrooms."
+      size="small"
+      />
 
 
         <Columns.Column size={4} multiline="false">

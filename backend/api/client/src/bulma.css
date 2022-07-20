@@ -6450,10 +6450,15 @@ print {
 }
 
 .navbar {
-    background-color: white;
+    background: rgba(255,255,255,0.9);
     min-height: 4.25rem;
     position: relative;
     z-index: 30;
+}
+
+.lighthouse{
+
+    top:auto;
 }
 
 .navbar.is-white {
