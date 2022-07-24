@@ -32,9 +32,9 @@ function IntakeForm() {
   //   });
   // }
 
-  handleChange = input => e => {
-    setPrimaryDiagnosis(e.target.value);
-  };
+  // handleChange = input => e => {
+  //   setPrimaryDiagnosis(e.target.value);
+  // };
   
   return (
    
