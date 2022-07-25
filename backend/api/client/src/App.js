@@ -7,6 +7,7 @@ import Intake from "./components/students/intakeContainer";
 import NavBar from "./components/navBar/navBar";
 import Home from "./components/home/home";
 import TeacherQna from "./components/qna/teacherQna";
+import Blog from "./components/blog/blog";
 
 
 

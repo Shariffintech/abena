@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useStyles} from "react";
+import React, { useState, useEffect, useRef, useStyles } from "react";
 import { Link } from "react-router-dom";
 import "../../bulma.css";
 import "../../App.css";
@@ -14,7 +14,6 @@ function scrollToElement(element) {
 }
 
 export default function NavBar() {
-
   const [navBackground, setBackground] = useState("appBarTransparent");
   const navRef = useRef(null);
   navRef.current = navBackground;
@@ -33,11 +32,11 @@ export default function NavBar() {
         document.removeEventListener("scroll", handleScroll);
       };
     };
-  },[]);
+  }, []);
 
   return (
     <div className="navbar is-fixed-top is-transparent ">
-      <Navbar aria-label="main navigation" >
+      <Navbar aria-label="main navigation">
         <Image
           className="abena-logo"
           src="https://user-images.githubusercontent.com/22308837/157813235-24e05afb-589d-4452-a858-f1fca1e782c7.png"
@@ -45,7 +44,6 @@ export default function NavBar() {
           size="small"
         />
 
-       
         <Section position="start" tabs>
           <Navbar.Menu alignContent="right">
             <Navbar.Container>
@@ -85,6 +83,10 @@ export default function NavBar() {
               <Navbar.Container position="end">
                 <Navbar.Item href="#">
                   <Link to="/strategies">Strategy Portal</Link>
+                </Navbar.Item>
+
+                <Navbar.Item href="#">
+                  <Link to="/blog">Blog</Link>
                 </Navbar.Item>
 
                 <Navbar.Item href="#">
