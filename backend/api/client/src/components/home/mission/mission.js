@@ -493,7 +493,7 @@ const Mission = () => {
             </svg>
           </Block>
 
-          {/* <Columns.Column size={4} multiline="false">
+          <Columns.Column size={4} multiline="false">
             
               <svg
                 className="lighthouse"
@@ -501,7 +501,7 @@ const Mission = () => {
                 alt="Light house for ambient light"
                 size="small"
               />
-          </Columns.Column> */}
+          </Columns.Column>
 
         </Columns.Column>
       </Columns>
