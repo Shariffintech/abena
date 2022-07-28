@@ -313,187 +313,193 @@ const Mission = () => {
         </Columns.Column>
 
         <Columns.Column size={4} multiline="false">
-          <Block className="tier-block" size={6}>
-            <svg
-              className="ambient-light"
-              width="958"
-              height="315"
-              viewBox="0 0 958 315"
-              fill="none"
-            >
-              <rect
-                x="323"
-                y="23"
-                width="313"
-                height="292"
-                fill="url(#pattern0)"
-              />
-              <g filter="url(#filter0_f_706_92)">
-                <path
-                  d="M504 119L844.5 30.6654L844.5 207.335L504 119Z"
-                  fill="white"
+          <motion.div
+            className="mission-image"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Block className="tier-block" size={6}>
+              <svg
+                className="ambient-light"
+                width="958"
+                height="315"
+                viewBox="0 0 958 315"
+                fill="none"
+              >
+                <rect
+                  x="323"
+                  y="23"
+                  width="313"
+                  height="292"
+                  fill="url(#pattern0)"
                 />
-              </g>
-              <g filter="url(#filter1_f_706_92)">
-                <path
-                  d="M454 119L113.5 207.335L113.5 30.6654L454 119Z"
-                  fill="white"
-                />
-              </g>
-              <g opacity="0.5" filter="url(#filter2_f_706_92)">
-                <path
-                  d="M504 119L844.5 30.6654L844.5 207.335L504 119Z"
-                  fill="url(#paint0_linear_706_92)"
-                />
-              </g>
-              <g opacity="0.5" filter="url(#filter3_f_706_92)">
-                <path
-                  d="M454 119L113.5 207.335L113.5 30.6654L454 119Z"
-                  fill="url(#paint1_linear_706_92)"
-                />
-              </g>
-              <defs>
-                <pattern
-                  id="pattern0"
-                  patternContentUnits="objectBoundingBox"
-                  width="1"
-                  height="1"
-                >
-                  <use
-                    // xlink:href="#image0_706_92"
-                    transform="translate(0 -0.0359589) scale(0.002 0.00214384)"
+                <g filter="url(#filter0_f_706_92)">
+                  <path
+                    d="M504 119L844.5 30.6654L844.5 207.335L504 119Z"
+                    fill="white"
                   />
-                </pattern>
-                <filter
-                  id="filter0_f_706_92"
-                  x="492"
-                  y="18.6654"
-                  width="364.5"
-                  height="200.669"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="BackgroundImageFix"
-                    result="shape"
+                </g>
+                <g filter="url(#filter1_f_706_92)">
+                  <path
+                    d="M454 119L113.5 207.335L113.5 30.6654L454 119Z"
+                    fill="white"
                   />
-                  <feGaussianBlur
-                    stdDeviation="6"
-                    result="effect1_foregroundBlur_706_92"
+                </g>
+                <g opacity="0.5" filter="url(#filter2_f_706_92)">
+                  <path
+                    d="M504 119L844.5 30.6654L844.5 207.335L504 119Z"
+                    fill="url(#paint0_linear_706_92)"
                   />
-                </filter>
-                <filter
-                  id="filter1_f_706_92"
-                  x="98.5"
-                  y="15.6654"
-                  width="370.5"
-                  height="206.669"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="BackgroundImageFix"
-                    result="shape"
+                </g>
+                <g opacity="0.5" filter="url(#filter3_f_706_92)">
+                  <path
+                    d="M454 119L113.5 207.335L113.5 30.6654L454 119Z"
+                    fill="url(#paint1_linear_706_92)"
                   />
-                  <feGaussianBlur
-                    stdDeviation="7.5"
-                    result="effect1_foregroundBlur_706_92"
-                  />
-                </filter>
-                <filter
-                  id="filter2_f_706_92"
-                  x="474"
-                  y="0.665421"
-                  width="400.5"
-                  height="236.669"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="BackgroundImageFix"
-                    result="shape"
-                  />
-                  <feGaussianBlur
-                    stdDeviation="15"
-                    result="effect1_foregroundBlur_706_92"
-                  />
-                </filter>
-                <filter
-                  id="filter3_f_706_92"
-                  x="83.5"
-                  y="0.665405"
-                  width="400.5"
-                  height="236.669"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="BackgroundImageFix"
-                    result="shape"
-                  />
-                  <feGaussianBlur
-                    stdDeviation="15"
-                    result="effect1_foregroundBlur_706_92"
-                  />
-                </filter>
-                <linearGradient
-                  id="paint0_linear_706_92"
-                  x1="504"
-                  y1="119"
-                  x2="958"
-                  y2="119"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop
-                    offset="0.125"
-                    stop-color="#E9EC49"
-                    stop-opacity="0.84011"
-                  />
-                  <stop
-                    offset="0.708333"
-                    stop-color="#EFCFFA"
-                    stop-opacity="0.954627"
-                  />
-                  <stop offset="1" stop-color="#E99DEF" stop-opacity="0.69" />
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear_706_92"
-                  x1="454"
-                  y1="119"
-                  x2="-4.45856e-06"
-                  y2="119"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop
-                    offset="0.125"
-                    stop-color="#E9EC49"
-                    stop-opacity="0.84011"
-                  />
-                  <stop
-                    offset="0.708333"
-                    stop-color="#EFCFFA"
-                    stop-opacity="0.954627"
-                  />
-                  <stop offset="1" stop-color="#E99DEF" stop-opacity="0.69" />
-                </linearGradient>
-                <image id="image0_706_92" width="500" height="500" />
-              </defs>
-            </svg>
-          </Block>
+                </g>
+                <defs>
+                  <pattern
+                    id="pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      // xlink:href="#image0_706_92"
+                      transform="translate(0 -0.0359589) scale(0.002 0.00214384)"
+                    />
+                  </pattern>
+                  <filter
+                    id="filter0_f_706_92"
+                    x="492"
+                    y="18.6654"
+                    width="364.5"
+                    height="200.669"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feGaussianBlur
+                      stdDeviation="6"
+                      result="effect1_foregroundBlur_706_92"
+                    />
+                  </filter>
+                  <filter
+                    id="filter1_f_706_92"
+                    x="98.5"
+                    y="15.6654"
+                    width="370.5"
+                    height="206.669"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feGaussianBlur
+                      stdDeviation="7.5"
+                      result="effect1_foregroundBlur_706_92"
+                    />
+                  </filter>
+                  <filter
+                    id="filter2_f_706_92"
+                    x="474"
+                    y="0.665421"
+                    width="400.5"
+                    height="236.669"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feGaussianBlur
+                      stdDeviation="15"
+                      result="effect1_foregroundBlur_706_92"
+                    />
+                  </filter>
+                  <filter
+                    id="filter3_f_706_92"
+                    x="83.5"
+                    y="0.665405"
+                    width="400.5"
+                    height="236.669"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feGaussianBlur
+                      stdDeviation="15"
+                      result="effect1_foregroundBlur_706_92"
+                    />
+                  </filter>
+                  <linearGradient
+                    id="paint0_linear_706_92"
+                    x1="504"
+                    y1="119"
+                    x2="958"
+                    y2="119"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop
+                      offset="0.125"
+                      stop-color="#E9EC49"
+                      stop-opacity="0.84011"
+                    />
+                    <stop
+                      offset="0.708333"
+                      stop-color="#EFCFFA"
+                      stop-opacity="0.954627"
+                    />
+                    <stop offset="1" stop-color="#E99DEF" stop-opacity="0.69" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_706_92"
+                    x1="454"
+                    y1="119"
+                    x2="-4.45856e-06"
+                    y2="119"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop
+                      offset="0.125"
+                      stop-color="#E9EC49"
+                      stop-opacity="0.84011"
+                    />
+                    <stop
+                      offset="0.708333"
+                      stop-color="#EFCFFA"
+                      stop-opacity="0.954627"
+                    />
+                    <stop offset="1" stop-color="#E99DEF" stop-opacity="0.69" />
+                  </linearGradient>
+                  <image id="image0_706_92" width="500" height="500" />
+                </defs>
+              </svg>
+            </Block>
 
-          {/* <Columns.Column size={4} multiline="false">
+            {/* <Columns.Column size={4} multiline="false">
             
               <svg
                 className="lighthouse"
@@ -502,7 +508,7 @@ const Mission = () => {
                 size="small"
               />
           </Columns.Column> */}
-
+          </motion.div>
         </Columns.Column>
       </Columns>
     </Container>
