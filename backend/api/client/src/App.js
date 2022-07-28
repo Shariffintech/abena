@@ -6,10 +6,8 @@ import Student from "./components/students/student";
 import Intake from "./components/students/intakeContainer";
 import NavBar from "./components/navBar/navBar";
 import Home from "./components/home/home";
-import TeacherQna from "./components/qna/teacherQna";
 import Blog from "./components/blog/blog";
-
-
+// import TeacherQna from "./components/qna/teacherQna";
 
 // to do: add a profiler in prod to see where I can improve performance
 
@@ -25,7 +23,10 @@ export default function App() {
         <Route path="/students" element={<Student />} />
         <Route path="/mission" element={<Mission />} />
         <Route path="/intake" element={<Intake />} />
-        <Route path="/teacherqna" element={<TeacherQna />} />
+        <Route path="/blog" element={<Blog />} />
+        {/* teacherQna is a generic model that will be a tool to 
+        find the source of academic articles in the future */}
+        {/* <Route path="/teacherqna" element={<TeacherQna />} /> */}
      
       </Routes>
     </>
