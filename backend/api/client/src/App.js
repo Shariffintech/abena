@@ -1,33 +1,44 @@
 import React from "react";
+import "/Users/shariftarver/Desktop/Founder/Abena Dms/abena-dms/backend/api/client/src/maintenance.css";
 import { Routes, Route } from "react-router-dom";
-import Mission from "./components/home/mission/mission";
-import Strategy from "./components/strategies/loadStrategies";
-import Student from "./components/students/student";
-import Intake from "./components/students/intakeContainer";
-import NavBar from "./components/navBar/navBar";
-import Home from "./components/home/home";
-import TeacherQna from "./components/qna/teacherQna";
-import Blog from "./components/blog/blog";
-
-
 
 // to do: add a profiler in prod to see where I can improve performance
 
 export default function App() {
   return (
     <>
-      {/* <Loader type="ball-triangle" onLoad={true} /> */}
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/strategies" element={<Strategy />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/students" element={<Student />} />
-        <Route path="/mission" element={<Mission />} />
-        <Route path="/intake" element={<Intake />} />
-        <Route path="/teacherqna" element={<TeacherQna />} />
-     
-      </Routes>
+      <head>
+        <title>Performing Maintenance</title>
+
+      </head>
+
+      <body>
+        <div id="article">
+          <h1>Abena Dms is currently under maintenance</h1>
+          <h1>Our site is getting a little tune up and some love.</h1>
+          <div>
+            <p>
+              We apologize for the inconvenience, but we're performing some
+              maintenance. You can still contact us at{" "}
+              <a href="mailto:info@abena-dms.com">info@abena-dms.com</a>. We'll
+              be back up soon!
+            </p>
+            <br />
+            <p>— Abena DMS Team</p>
+
+            <br />
+
+            <img
+              src="https://user-images.githubusercontent.com/22308837/157813235-24e05afb-589d-4452-a858-f1fca1e782c7.png"
+              width="200"
+            />
+          </div>
+        </div>
+      </body>
+
+      <div />
+      <div />
+      <div />
     </>
   );
 }

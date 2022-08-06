@@ -6,10 +6,10 @@
   base = "backend/api/"
   publish = " "
   command = "foreman start -f Procfile.dev"
-   environment = { RUBY_VERSION = "2.6.8" }
+  environment = { RUBY_VERSION = "2.6.8" }
 
 [[redirects]]
 
-  from = "/*"
+  from = "/"
   to = "/index.html"
   status = 200
