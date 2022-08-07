@@ -7,9 +7,10 @@
   publish = " "
   command = "foreman start -f Procfile.dev"
   environment = { RUBY_VERSION = "2.6.8" }
+  targetPort = 3000
 
 [[redirects]]
 
-  from = "/"
+  from = "/*"
   to = "/index.html"
   status = 200

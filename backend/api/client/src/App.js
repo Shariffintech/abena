@@ -32,13 +32,13 @@ export default function App() {
               src="https://user-images.githubusercontent.com/22308837/157813235-24e05afb-589d-4452-a858-f1fca1e782c7.png"
               width="200"
             />
-          </div>
-        </div>
-      </body>
+              </div>
+            </div>
+          </body>
 
+         <div />
       <div />
-      <div />
-      <div />
+     <div />
     </>
   );
 }
