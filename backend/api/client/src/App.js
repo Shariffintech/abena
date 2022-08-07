@@ -15,7 +15,7 @@ export default function App() {
       <body>
         <div id="article">
           <h1>Abena Dms is currently under maintenance</h1>
-          <h1>Our site is getting a little tune up and some love.</h1>
+          <p>Our site is getting a little tune up and some love.</p>
           <div>
             <p>
               We apologize for the inconvenience, but we're performing some
