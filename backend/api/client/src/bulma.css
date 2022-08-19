@@ -2676,7 +2676,7 @@ div.icon-text {
     line-height: 33px;
     left: 10%;
     
-    color: #22215B;
+    color: #0a0a0a;
 
 }
 
@@ -2692,13 +2692,13 @@ div.icon-text {
 }
 
 .mission-title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Helvetica', helvetica, sans-serif;
     left: 200px;
     font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 900;
+    font-size: 65px;
     line-height: 33px;
-    color: #22215B;
+    color: #0a0a0a;
     top: -20px;
 }
 
