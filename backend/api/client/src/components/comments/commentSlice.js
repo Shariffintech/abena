@@ -5,7 +5,7 @@ export const getComments = createAsyncThunk(
   async (strategies, thunkAPI) => {
     try {
       return fetch(
-        `http://localhost:3000/api/v1/strategies/${strategies.id}/comments`
+        `/api/v1/strategies/${strategies.id}/comments`
       ).then((res) => res.json());
     } catch (error) {
       return thunkAPI.rejectWithValue({ error: error.message });
@@ -18,7 +18,7 @@ export const createComment = createAsyncThunk(
   async (comment, thunkAPI) => {
     try {
       return await fetch(
-        `http://localhost:3000/api/v1/strategies/${comment.strategies_id}/comments/${comment.id}`,
+        `/api/v1/strategies/${comment.strategies_id}/comments/${comment.id}`,
         {
           method: "POST",
           headers: {

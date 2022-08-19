@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Container, Block, Columns } from "react-bulma-components";
+import { Container, Block, Columns, Image } from "react-bulma-components";
 
 import { motion } from "framer-motion";
 import JoinBetaButton from "../joinBeta/joinBetaButton";
 import "../../../style.css";
+import Lighthouse from "../../../assets/lighthouse.png";
 
 const Mission = () => {
   // to do: add event listeners for scroll down to move lights with lighthouse
@@ -498,17 +499,16 @@ const Mission = () => {
                 </defs>
               </svg>
             </Block>
-
-            {/* <Columns.Column size={4} multiline="false">
-            
-              <svg
-                className="lighthouse"
-                src="https://user-images.githubusercontent.com/22308837/179900938-b5304222-ed48-46b6-bb28-a6a7ce0dfa29.png"
-                alt="Light house for ambient light"
-                size="small"
-              />
-          </Columns.Column> */}
           </motion.div>
+        </Columns.Column>
+
+        <Columns.Column>
+          <Image
+            className="lighthouse"
+            src={Lighthouse}
+            alt="Light house for ambient light"
+            width="500" height="500"
+          />
         </Columns.Column>
       </Columns>
     </Container>

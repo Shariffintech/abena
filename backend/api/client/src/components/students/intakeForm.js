@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "bulma/css/bulma.min.css";
 import StepOneIntake from"./stepOneIntake";
 import StepTwoIntake from"./stepTwoIntake";
-import { useDispatch, useSelector } from "react-redux";
-import { DateTime } from "luxon";
-import { progressCircle } from "../utilityComponents/progressCircle";
-import { nextFrame } from "@tensorflow/tfjs";
+// import { useDispatch, useSelector } from "react-redux";
+// import { DateTime } from "luxon";
+// import { progressCircle } from "../utilityComponents/progressCircle";
+// import { nextFrame } from "@tensorflow/tfjs";
 
 // to do: add chat function with twilio record parent, teacher convo when completing this form
 
@@ -32,9 +32,7 @@ function IntakeForm() {
   //   });
   // }
 
-  // handleChange = input => e => {
-  //   setPrimaryDiagnosis(e.target.value);
-  // };
+
   
   return (
    

@@ -9,7 +9,7 @@
 //   "students/getStudents",
 //   async (thunkAPI) => {
 //     try {
-//       return fetch(`http://localhost:3001//api/v1/classrooms/${classroom.id}/students/${student.id}`).then((res) =>
+//       return fetch(`/api/v1/classrooms/${classroom.id}/students/${student.id}`).then((res) =>
 //         res.json()
 //       );
 //     } catch (error) {
@@ -22,7 +22,7 @@
 //   "students/addStudent",
 //   async (thunkAPI) => {
 //     try {
-//       return await fetch(`http://localhost:3001//api/v1/classrooms/${classroom.id}/students`, {
+//       return await fetch(`/api/v1/classrooms/${classroom.id}/students`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",

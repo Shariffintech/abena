@@ -4,7 +4,7 @@
 // export const api = {
 //   getStrategies: async (thunkAPI) => {
 //     try {
-//       return fetch(`http://localhost:3000/api/v1/strategies`)
+//       return fetch(`/api/v1/strategies`)
 //         .then((res) => res.json())
 //         .then((data) => {
 //           thunkAPI.dispatch(addStrategies(data));
@@ -16,7 +16,7 @@
 
 //   post: async (thunkAPI) => {
 //     try {
-//       return await fetch(`http://localhost:3000/api/v1/strategies`, {
+//       return await fetch(`/api/v1/strategies`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
