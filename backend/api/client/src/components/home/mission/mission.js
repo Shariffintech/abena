@@ -258,7 +258,7 @@ const Mission = () => {
               when a concern arises while keeping all stakeholders involved
               along the way! Stay informed with the launch of Abena DMS in{" "}
               <strong className="bold-blu">
-                2022 and the next phase of education.
+                2022 and the next phase of early childhood education.
               </strong>
             </p>
           </div>

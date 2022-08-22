@@ -51,7 +51,7 @@ export default function NavBar() {
                 <Navbar.Item href="#">
                   <Link to="/"><strong>Home</strong></Link>
                 </Navbar.Item>
-
+{/* 
                 <Navbar.Dropdown>
                   <Navbar.Item
                     href="#"
@@ -73,7 +73,7 @@ export default function NavBar() {
                   >
                     <Link to="/whyabena">Why Abena?</Link>
                   </Navbar.Item>
-                </Navbar.Dropdown>
+                </Navbar.Dropdown> */}
               </Navbar.Item>
 
               {/* <Navbar.Item href="#">
