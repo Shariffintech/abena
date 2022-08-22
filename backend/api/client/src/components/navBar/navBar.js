@@ -49,7 +49,7 @@ export default function NavBar() {
             <Navbar.Container>
               <Navbar.Item hoverable href="#">
                 <Navbar.Item href="#">
-                  <Link to="/home">Home</Link>
+                  <Link to="/"><strong>Home</strong></Link>
                 </Navbar.Item>
 
                 <Navbar.Dropdown>
@@ -86,7 +86,7 @@ export default function NavBar() {
                 </Navbar.Item> */}
 
                 <Navbar.Item href="#">
-                  <Link to="/blog">Blog</Link>
+                  <Link to="/blog"><strong>Blog</strong></Link>
                 </Navbar.Item>
 
                 {/* <Navbar.Item href="#">
