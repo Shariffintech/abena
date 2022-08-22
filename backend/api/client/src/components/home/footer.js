@@ -26,14 +26,19 @@ const FrameWorks = () => {
        
           <Columns.Column className=" is-5 pt-4">
           <Form.Field className="email-input">
+          <p className="newsletter-blurb">As our product and community continues to evolve so does the opportunity to uplift the ECE community! <br/> <br/>Subscribe to our monthly newsletter below.</p>
+
+          <br/>
             <Form.Control>
               <Form.Input placeholder="Email Address" type="text" />
             </Form.Control>
             </Form.Field>
           </Columns.Column>
+
         
          <Columns.Column className=" is-3 pt-4">
-            <Button className="newsletterButton">Sign up for our newsletter</Button>
+
+            <Button className="newsletterButton">Subscribe</Button>
         </Columns.Column>
       </Columns>
     </Container>

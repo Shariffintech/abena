@@ -2824,7 +2824,7 @@ div.icon-text {
     background-color: transparent;
     border-radius: 6px;
     margin-left: 25px;
-    drop-shadow: none;
+
 }
 
 .ambient-light{
@@ -3033,6 +3033,14 @@ div.icon-text {
     ;
 
     filter: blur(100px);
+
+}
+
+.newsletter-blurb{
+    max-width:750px;
+   color: #ffffff;
+   font-weight: 600;
+   font-size: 24px;
 
 }
 
@@ -5833,12 +5841,12 @@ print {
 }
 .email-input{
     max-width:750px;
-   padding-top: 125px;
+ 
     
 }
 
 .newsletterButton{
-    top: 125px;
+    top: 204px;
 }
 .newsletterColumn{
     width: 650;
@@ -6440,7 +6448,7 @@ print {
     -ms-overflow-y: visible;
 }
 
-.modal-card-head,
+.modal-card-head, 
 .modal-card-foot {
     align-items: center;
     background-color: whitesmoke;
