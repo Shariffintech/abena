@@ -3,6 +3,7 @@ import Mission from "./mission/mission";
 import Team from "./team";
 import FrameWorks from "./frameWorks";
 import WhyAbena from "./whyAbena";
+import Footer from "./footer";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <FrameWorks />
       <Team />
       <WhyAbena />
+      <Footer/>
     </div>
   );
 }

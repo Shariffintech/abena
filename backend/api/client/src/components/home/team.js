@@ -80,12 +80,9 @@ export default function Team(props) {
                     <p className="team-description">
                       4+ yrs of exp working on startups (FinTech, SaaS).
                     </p>
-                    <p className="team-description">
-                      Passion for learning.
-                    </p>
 
                     <p className="team-description">
-                      Adamant about building products that make people's lives
+                    Passion for learning. Adamant about building products that make people's lives
                       better.
                     </p>
 

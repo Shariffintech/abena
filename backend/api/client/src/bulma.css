@@ -5815,6 +5815,37 @@ print {
     padding: 0.75rem;
 }
 
+.footer-img{
+  position:relative;
+
+  max-width:250px;
+  max-height:250px;
+    width:100%;
+    height: 250px;
+}
+
+.newsletter{
+    background-color: #22215B;
+    width:100%;
+    height: 400px;
+    margin:"auto";
+   
+}
+.email-input{
+    max-width:750px;
+   padding-top: 125px;
+    
+}
+
+.newsletterButton{
+    top: 125px;
+}
+.newsletterColumn{
+    width: 650;
+    height: 250;
+    left:40%;
+}
+
 .card-footer-item:not(:last-child) {
     border-right: 1px solid #ededed;
 }
