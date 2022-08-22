@@ -3,6 +3,7 @@ import { Container, Block, Columns, Image } from "react-bulma-components";
 
 import { motion } from "framer-motion";
 import JoinBetaButton from "../joinBeta/joinBetaButton";
+import ProductHunt from '../productHunt';
 import "../../../style.css";
 import Lighthouse from "../../../assets/lighthouse.png";
 
@@ -264,9 +265,11 @@ const Mission = () => {
           <div className="eclipse" />
 
           <Columns className="join-beta-button">
-            <Columns.Column>
+            <Columns.Column className="is-4">
               <JoinBetaButton onBetaSubmit={(e) => setEmail(e.target.value)} />
             </Columns.Column>
+            <Columns.Column>
+            <ProductHunt/></Columns.Column>
           </Columns>
         </Columns.Column>
 

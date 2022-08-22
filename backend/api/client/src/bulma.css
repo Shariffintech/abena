@@ -5846,6 +5846,10 @@ print {
     left:40%;
 }
 
+/* .product-hunt{
+
+} */
+
 .card-footer-item:not(:last-child) {
     border-right: 1px solid #ededed;
 }
