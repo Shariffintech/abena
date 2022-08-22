@@ -76,39 +76,39 @@ export default function NavBar() {
                 </Navbar.Dropdown>
               </Navbar.Item>
 
-              <Navbar.Item href="#">
+              {/* <Navbar.Item href="#">
                 <Link to="/students">My Classroom</Link>
-              </Navbar.Item>
+              </Navbar.Item> */}
 
               <Navbar.Container position="end">
-                <Navbar.Item href="#">
+                {/* <Navbar.Item href="#">
                   <Link to="/strategies">Strategy Portal</Link>
-                </Navbar.Item>
+                </Navbar.Item> */}
 
                 <Navbar.Item href="#">
                   <Link to="/blog">Blog</Link>
                 </Navbar.Item>
 
-                <Navbar.Item href="#">
+                {/* <Navbar.Item href="#">
                   <Link to="/intake">Create Intake</Link>
-                </Navbar.Item>
+                </Navbar.Item> */}
 
-                <Navbar.Item href="#">
+                {/* <Navbar.Item href="#">
                   <Link to="/teacherqna">Teacher Q&A</Link>
-                </Navbar.Item>
+                </Navbar.Item> */}
 
-                <Navbar.Item href="#">
+                {/* <Navbar.Item href="#">
                   <Link to="/strategies">
                     <StrategyModal />
                   </Link>
-                </Navbar.Item>
+                </Navbar.Item> */}
 
-                <Button.Group navbar>
+                {/* <Button.Group navbar>
                   <Button color="primary">
                     <strong>Sign Up</strong>
                   </Button>
                   <Button color="light">Log in</Button>
-                </Button.Group>
+                </Button.Group> */}
               </Navbar.Container>
             </Navbar.Container>
           </Navbar.Menu>

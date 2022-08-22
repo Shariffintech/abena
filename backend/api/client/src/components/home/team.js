@@ -10,7 +10,7 @@ export default function Team(props) {
       <h1 className="team-title is-size-1-desktop" align="center" top="">
         Team
       </h1>
-      <Columns multiline="false" centered="true">
+      <Columns className="team-cards" multiline="false" centered="true">
         <Columns.Column size="one-third">
           <motion.div
             className="team-image"
@@ -20,7 +20,7 @@ export default function Team(props) {
             onHoverEnd={() => setIsHovered(false)}
           >
             <Block>
-              <Card>
+              <Card borderRadius={50}>
                 <Card.Content>
                   <img
                     className="shawna-team-image ml-6"
