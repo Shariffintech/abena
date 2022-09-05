@@ -3051,6 +3051,35 @@ div.icon-text {
 
 }
 
+.backgroundImage{
+    background: radial-gradient(53.9% 53.9% at 77.01% 30.21%, #F0F0F0 0%, #EFBCF4 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+;
+
+}
+
+.typeformBetaButton{
+    all:unset;
+    font-family:Helvetica,Arial,sans-serif;
+    display:inline-block;
+    max-width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    background-color:#0445AF;
+    color:#FFFFFF;
+    font-size:20px;
+    border-radius:25px;
+    padding:0 33px;
+    font-weight:bold;
+    height:50px;
+    cursor:pointer;
+    line-height:50px;
+    text-align:center;
+    margin:0;
+    text-decoration:none;
+}
+
 .newsletter-blurb{
     max-width:750px;
    color: #ffffff;

@@ -1,13 +1,13 @@
 import "./joinBeta.css";
 import React, { Suspense, useState } from "react";
-import { motion, MotionConfig, useMotionValue} from "framer-motion";
+import { motion, MotionConfig, useMotionValue } from "framer-motion";
 import { Shapes } from "./Shapes";
 import { transition } from "./settings";
 import useMeasure from "react-use-measure";
+import { Button } from "react-bulma-components";
+import useScript from './useScript';
 
 export default function JoinBetaButton(props) {
-
-
   const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);
@@ -19,10 +19,12 @@ export default function JoinBetaButton(props) {
     mouseY.set(0);
   };
 
+  useScript('//embed.typeform.com/next/embed.js');
+
   return (
     <MotionConfig transition={transition}>
       <motion.button
-        style={{borderRadius: 0 }}
+        style={{ borderRadius: 0 }}
         ref={ref}
         initial={false}
         animate={isHover ? "hover" : "rest"}
@@ -30,7 +32,7 @@ export default function JoinBetaButton(props) {
         variants={{
           rest: { scale: 1 },
           hover: { scale: 1.5 },
-          press: { scale: 1.4 }
+          press: { scale: 1.4 },
         }}
         onHoverStart={() => {
           resetMousePosition();
@@ -52,7 +54,7 @@ export default function JoinBetaButton(props) {
           className="shapes"
           variants={{
             rest: { opacity: 0 },
-            hover: { opacity: 1 }
+            hover: { opacity: 1 },
           }}
         >
           <div className="pink blush" />
@@ -72,7 +74,15 @@ export default function JoinBetaButton(props) {
           variants={{ hover: { scale: 0.85 }, press: { scale: 1.1 } }}
           className="label"
         >
-        Join Beta
+          <Button
+            data-tf-popup="KTL6D9wg"
+            data-tf-iframe-props="title=Abena Beta Sign Up Form"
+            data-tf-medium="snippet"
+            className="typeformBetaButton"
+            
+          >
+            Join Beta
+          </Button>
         </motion.div>
       </motion.button>
     </MotionConfig>
