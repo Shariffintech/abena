@@ -9,6 +9,8 @@ import {
   Columns,
 } from "react-bulma-components";
 import animatedLighthouse from "../../assets/animated-lighthouse.png";
+import discordButton from "../../assets/discord.png";
+import { Link } from "react-router-dom";
 
 const FrameWorks = () => {
   // to do: load frameworks like a carousel
@@ -23,22 +25,31 @@ const FrameWorks = () => {
             alt="animated-lighthouse"
           />
         </Columns.Column>
-       
-          <Columns.Column className=" is-5 pt-4">
-          <Form.Field className="email-input">
-          <p className="newsletter-blurb">As our product and community continues to evolve so does the opportunity to uplift the ECE community! <br/> <br/>Subscribe to our monthly newsletter below.</p>
 
-          <br/>
+        <Columns.Column className=" is-5 pt-4">
+          <Form.Field className="email-input">
+            <p className="newsletter-blurb">
+              As our product and community continues to evolve so does the
+              opportunity to grow the online ECE community! <br /> <br />
+              Join our discord here!
+            </p>
+
+            <br />
             <Form.Control>
               <Form.Input placeholder="Email Address" type="text" />
             </Form.Control>
-            </Form.Field>
-          </Columns.Column>
+          </Form.Field>
+        </Columns.Column>
 
-        
-         <Columns.Column className=" is-3 pt-4">
-
-            <Button className="newsletterButton">Subscribe</Button>
+        <Columns.Column className=" is-3 pt-4">
+          <Link to="https://discord.gg/XkKEBmMf">
+            <Image
+             
+              alt="discord-button"
+              className="discord-button"
+              src={discordButton}
+            />
+          </Link>
         </Columns.Column>
       </Columns>
     </Container>

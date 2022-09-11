@@ -36,9 +36,7 @@ const WhyAbena = () => {
                 </h3>
 
                 <p>
-                  Add or remove features that are tailored to supporting your
-                  classroom needs. Remove all the services that you don’t use
-                  from our offerings.
+                  Use data driven decision making to customize the learning goals of your classroom.
                 </p>
               </Block>
 
@@ -51,8 +49,7 @@ const WhyAbena = () => {
                   Monitor students academic needs in real time and spare no
                   detail with complete transparency to the students profile.
                   Teachers will be empowered with insights that will allow them
-                  to follow a students success path and help get the student
-                  back on track.
+                  to help increase the likelihood of a students success. 
                 </p>
               </Block>
             </Columns.Column>
@@ -66,7 +63,7 @@ const WhyAbena = () => {
 
               <p>
                 The classroom environment has never been more equipped, with
-                Abena DMS teachers are now prepared to track social and
+                Abena® DMS teachers are now prepared to track social and
                 emotional behavior using the MTSS framework. Abena gives
                 educators back the time and attention that they need in order to
                 supports students needs. We believe in tracking behavioral,
@@ -94,9 +91,7 @@ const WhyAbena = () => {
 
               <p>
                 You can tailor your policy to fit your budgets and your needs
-                because we believe that life insurance isn’t a one-size-fits-all
-                solution for your family. Get the policy that’s best for your
-                family today.
+                because we believe that Abena® DMS should be accessible to every educator! Suscribe today!
               </p>
             </Block>
 

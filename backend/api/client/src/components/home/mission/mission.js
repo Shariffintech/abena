@@ -223,7 +223,7 @@ const Mission = () => {
             </h1>
 
             <p className="paragraph-1">
-              At Abena, our goal is to help our teachers be thoughtful and
+              At Abena® DMS, our goal is to help our teachers be thoughtful and
               intentional as they support the{" "}
               <strong className="bold-blu">
                 academic, social emotional, developmental and behavioral needs
@@ -237,7 +237,7 @@ const Mission = () => {
 
             <br />
             <p className="paragraph-2">
-              Abena DMS is a clever tool used to boost data-driven decision
+              Abena® DMS is a clever tool used to boost data-driven decision
               making and demystifying complexities of using SEL, PBIS. RTI and
               MTSS in the classroom. This integrated approach for supporting
               children encourages all team members to{" "}
@@ -256,7 +256,7 @@ const Mission = () => {
               A few specific area we're elevating in our system is how to
               proactively support the needs of all children and rapidly respond
               when a concern arises while keeping all stakeholders involved
-              along the way! Stay informed with the launch of Abena DMS in{" "}
+              along the way! Stay informed with the launch of Abena® DMS in{" "}
               <strong className="bold-blu">
                 2022 and the next phase of early childhood education.
               </strong>
