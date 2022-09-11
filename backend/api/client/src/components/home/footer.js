@@ -15,6 +15,11 @@ import { Link } from "react-router-dom";
 const FrameWorks = () => {
   // to do: load frameworks like a carousel
 
+  const handleClick = () => {
+    window.open("https://discord.gg/XkKEBmMf");
+  };
+
+
   return (
     <Container className="newsletter pt-6">
       <Columns margin="auto" className="newsletterColumn ml-6">
@@ -31,26 +36,29 @@ const FrameWorks = () => {
             <p className="newsletter-blurb">
               As our product and community continues to evolve so does the
               opportunity to grow the online ECE community! <br /> <br />
-              Join our discord here!
+              Join our community discord!     
+              
+            <Image
+             
+             alt="discord-button"
+             className="discord-button"
+             src={discordButton}
+             onClick = {handleClick}
+             style={{ maxWidth: '25%', maxHeight: '25%' }}
+           />
             </p>
 
             <br />
-            <Form.Control>
-              <Form.Input placeholder="Email Address" type="text" />
-            </Form.Control>
+       
+       
+
           </Form.Field>
         </Columns.Column>
 
-        <Columns.Column className=" is-3 pt-4">
-          <Link to="https://discord.gg/XkKEBmMf">
-            <Image
-             
-              alt="discord-button"
-              className="discord-button"
-              src={discordButton}
-            />
-          </Link>
-        </Columns.Column>
+     
+       
+        
+
       </Columns>
     </Container>
   );
