@@ -45,12 +45,17 @@
     "three": "^0.139.2",
     "web-vitals": "^2.1.4"
   },
+    "workspaces": [
+      "backend/api/*"
+    ]
+  ,
   "scripts": {
     "start": "PORT=4000 react-scripts start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
+  
   "browserslist": {
     "production": [
       ">0.2%",
