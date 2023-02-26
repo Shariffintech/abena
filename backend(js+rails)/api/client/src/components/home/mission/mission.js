@@ -8,24 +8,7 @@ import "../../../style.css";
 import Lighthouse from "../../../assets/lighthouse.png";
 
 const Mission = () => {
-  // to do: add event listeners for scroll down to move lights with lighthouse
-  // to do: add nav bar with links to scroll to: team, mission, why abena dms, api documentation, pricing (coming soon) sections
-  // to do: link product hunt button to product hunt page
-  // to do: setup emailing list through sendgrid after users join beta
-  // to do: show (count) place in line for educators
-  // as you scroll kids will reposition into the mtss pyramid
-
-  // const handleScroll = (e) => {
-  //   const scrollTop = e.target.scrollTop;
-  //   const scrollHeight = e.target.scrollHeight;
-  //   const clientHeight = e.target.clientHeight;
-
-  //   if (scrollTop + clientHeight === scrollHeight) {
-  //     console.log("scroll to bottom");
-  //   }
-  // };
-
-  // setup listener window.scrolly flash every 40 seconds
+  
 
   return (
     // to do: sort out styling of text, add link to product hunt page for PH button
@@ -221,46 +204,11 @@ const Mission = () => {
             <h1 className="mission-title pb-6" align="center">
               Mission
             </h1>
-
-            <p className="paragraph-1">
-              At Abena® DMS, our goal is to help our teachers be thoughtful and
-              intentional as they support the{" "}
-              <strong className="bold-blu">
-                academic, social emotional, developmental and behavioral needs
-                of children{" "}
-              </strong>{" "}
-              in their classroom. We have discovered an ideal way to build a
-              product that resonates with this mission and have developed a
-              roadmap to attend to the unique needs and interactions among
-              children, teachers, parents and community-based partners.
-            </p>
-
             <br />
             <p className="paragraph-2">
-              Abena® DMS is a clever tool used to boost data-driven decision
-              making and demystifying complexities of using SEL, PBIS. RTI and
-              MTSS in the classroom. This integrated approach for supporting
-              children encourages all team members to{" "}
-              <strong className="bold-blu">streamline communication</strong> and
-              easily pick-up dialogue where each stakeholder may leave off. By
-              simplifying methods for gathering, analyzing and storing critical
-              data,{" "}
-              <strong className="bold-blu">
-                child outcomes may be improved.{" "}
-              </strong>
+              Abena® is an adaptive early childhood tool that allows teachers to focus on supporting childcare students in the classroom instead of using cumbersome paper-driven processes to onboard and track the progress of new students. 
             </p>
-
             <br />
-
-            <p className="paragraph-3">
-              A few specific area we're elevating in our system is how to
-              proactively support the needs of all children and rapidly respond
-              when a concern arises while keeping all stakeholders involved
-              along the way! Stay informed with the launch of Abena® DMS in{" "}
-              <strong className="bold-blu">
-                2022 and the next phase of early childhood education.
-              </strong>
-            </p>
           </div>
           <div className="eclipse" />
 
