@@ -14,7 +14,7 @@ scroll through and apply strategies to students
 
 submit comments to strategies for public transparency
 
-deploy abena to a mono repo with railway
+deploy abena to a mono repo with railway.
 
 This app utilizes the power of Redux Toolkit to manage state instead of vanilla Redux.
 
