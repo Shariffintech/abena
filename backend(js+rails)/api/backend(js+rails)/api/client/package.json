@@ -50,7 +50,7 @@
   }
   ,
   "scripts": {
-    "start": "PORT=4000 react-scripts start",
+    "start": "PORT=4001 react-scripts start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
