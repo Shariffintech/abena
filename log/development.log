@@ -1,0 +1,30 @@
+Started GET "/static/js/main.9e2ce6e2.js" for 127.0.0.1 at 2023-07-24 16:18:06 -0400
+Started GET "/static/css/main.0c6423ff.css" for 127.0.0.1 at 2023-07-24 16:18:06 -0400
+
+ActiveRecord::ConnectionNotEstablished - connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?:
+
+
+ActiveRecord::ConnectionNotEstablished - connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?:
+
+Started GET "/static/css/main.0c6423ff.css" for 127.0.0.1 at 2023-07-24 17:02:23 -0400
+Started GET "/static/js/main.9e2ce6e2.js" for 127.0.0.1 at 2023-07-24 17:02:23 -0400
+
+ActiveRecord::ConnectionNotEstablished - connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?:
+
+
+ActiveRecord::ConnectionNotEstablished - connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?:
+
+Started GET "/static/js/main.9e2ce6e2.js" for 127.0.0.1 at 2023-07-24 17:04:00 -0400
+Started GET "/static/css/main.0c6423ff.css" for 127.0.0.1 at 2023-07-24 17:04:00 -0400
+
+ActiveRecord::ConnectionNotEstablished - connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?:
+
+
+ActiveRecord::ConnectionNotEstablished - connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?:
+
