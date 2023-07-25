@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useStyles } from "react";
 import { Link } from "react-router-dom";
-import "../../bulma.css";
+// import "../../bulma.css";
 import "../../App.css";
 import { Navbar, Image, Section, Button } from "react-bulma-components";
 import StrategyModal from "../modals/strategyModal";

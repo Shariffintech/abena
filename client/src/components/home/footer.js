@@ -8,7 +8,7 @@ import {
   Container,
   Columns,
 } from "react-bulma-components";
-import animatedLighthouse from "../../assets/animated-lighthouse.png";
+// import animatedLighthouse from "../../assets/animated-lighthouse.png";
 import discordButton from "../../assets/discord.png";
 import { Link } from "react-router-dom";
 
