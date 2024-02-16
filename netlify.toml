@@ -3,7 +3,7 @@
   # Directory to change to before starting a build.
   # This is where we will look for package.json/.nvmrc/etc.
   # If not set, defaults to the root directory.
-  base = "backend/api/"
+  base = "backend_react_rails/api/"
   publish = " "
   command = "foreman start -f Procfile.dev"
   environment = { RUBY_VERSION = "2.6.8" }
