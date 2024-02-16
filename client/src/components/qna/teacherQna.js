@@ -1,7 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-// import * as tf from "../../../node_modules/@tensorflow/tfjs";
-// import * as qna from "../../../node_modules/@tensorflow/qna";
-// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { BallTriangle } from "react-loader-spinner";
 import { Fragment } from "react";
 import { Form } from "react-bulma-components";
@@ -18,14 +15,14 @@ export default function TeacherQna() {
   const [answer, setAnswer] = useState();
   const [model, setModel] = useState(null);
 
-  // 4. Load Tensorflow Model
+  // Load Tensorflow Model
   const loadModel = async () => {
     const loadedModel = await qna.load();
     setModel(loadedModel);
     console.log("Model loaded.");
   };
 
-  // 5. Handle Questions
+  // Handle Questions
   const answerQuestion = async (e) => {
     if (e.which === 13 && model !== null) {
       console.log("Question submitted.");
@@ -42,7 +39,7 @@ export default function TeacherQna() {
     loadModel();
   }, []);
 
-  // 2. Setup input, question and result area
+  // Setup input, question and result area
   return (
     <div className="App">
       <header className="App-header">
